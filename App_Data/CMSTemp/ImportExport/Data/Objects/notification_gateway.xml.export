@@ -1,0 +1,18 @@
+﻿<notification_gateway version="6.0">
+  <NewDataSet>
+    <notification_gateway>
+      <GatewayID>2</GatewayID>
+      <GatewayName>SMSNotification</GatewayName>
+      <GatewayDisplayName>SMS Notification</GatewayDisplayName>
+      <GatewayAssemblyName>SMSNotification</GatewayAssemblyName>
+      <GatewayClassName>SMSNotification.SMSNotificationGateway</GatewayClassName>
+      <GatewayDescription>SMS notification gateway</GatewayDescription>
+      <GatewaySupportsEmail>false</GatewaySupportsEmail>
+      <GatewaySupportsPlainText>true</GatewaySupportsPlainText>
+      <GatewaySupportsHTMLText>false</GatewaySupportsHTMLText>
+      <GatewayLastModified>2009-12-29T05:25:39.413-05:00</GatewayLastModified>
+      <GatewayGUID>cd495edb-392a-4394-87b2-6916a931ae88</GatewayGUID>
+      <GatewayEnabled>true</GatewayEnabled>
+    </notification_gateway>
+  </NewDataSet>
+</notification_gateway>

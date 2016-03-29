@@ -1,0 +1,323 @@
+﻿<cms_webpart version="6.0">
+  <NewDataSet>
+    <cms_webpart>
+      <WebPartID>1013</WebPartID>
+      <WebPartName>basicform</WebPartName>
+      <WebPartDisplayName>basicform</WebPartDisplayName>
+      <WebPartDescription></WebPartDescription>
+      <WebPartFileName>Custom/basicform.ascx</WebPartFileName>
+      <WebPartProperties>&lt;form&gt;&lt;/form&gt;</WebPartProperties>
+      <WebPartCategoryID>185</WebPartCategoryID>
+      <WebPartGUID>ed8eaab0-4cdf-4941-8f6f-54a1c3bc962f</WebPartGUID>
+      <WebPartLastModified>2014-02-10T09:18:51.793-05:00</WebPartLastModified>
+      <WebPartType>0</WebPartType>
+      <WebPartLoadGeneration>0</WebPartLoadGeneration>
+      <WebPartLastSelection>2014-02-10T09:15:34.293-05:00</WebPartLastSelection>
+      <WebPartDefaultValues>&lt;form&gt;&lt;/form&gt;</WebPartDefaultValues>
+    </cms_webpart>
+    <cms_webpart>
+      <WebPartID>1014</WebPartID>
+      <WebPartName>cmsform</WebPartName>
+      <WebPartDisplayName>cmsform</WebPartDisplayName>
+      <WebPartDescription></WebPartDescription>
+      <WebPartFileName>Custom/cmsform.ascx</WebPartFileName>
+      <WebPartProperties>&lt;form&gt;&lt;/form&gt;</WebPartProperties>
+      <WebPartCategoryID>185</WebPartCategoryID>
+      <WebPartGUID>47bf21c6-8f05-4e54-a2a9-cffd991c68e2</WebPartGUID>
+      <WebPartLastModified>2014-02-10T09:19:12.977-05:00</WebPartLastModified>
+      <WebPartType>0</WebPartType>
+      <WebPartLoadGeneration>0</WebPartLoadGeneration>
+      <WebPartDefaultValues>&lt;form&gt;&lt;/form&gt;</WebPartDefaultValues>
+    </cms_webpart>
+    <cms_webpart>
+      <WebPartID>561</WebPartID>
+      <WebPartName>CustomRegistrationForm</WebPartName>
+      <WebPartDisplayName>Custom registration form</WebPartDisplayName>
+      <WebPartDescription>Allows visitors to register on the website as new users. The displayed registration interface is based on an alternative form.</WebPartDescription>
+      <WebPartFileName>Membership/Registration/CustomRegistrationForm.ascx</WebPartFileName>
+      <WebPartProperties>&lt;form&gt;&lt;category name="Design" /&gt;&lt;field column="AlternativeForm" fieldcaption="Alternative form" visible="true" defaultvalue="cms.user.RegistrationForm" columntype="text" fieldtype="CustomUserControl" allowempty="false" isPK="false" system="false" columnsize="400" fielddescription="Can be used to select the alternative form that will be displayed by the web part. To manage these alternative forms, go to CMS Site Manager -&amp;gt; System tables -&amp;gt; User -&amp;gt; Alternative forms. Here you can create a completely custom form or modify the behaviour of a field e.g. set the regular expressions used to define the allowed format for user names." publicfield="false" spellcheck="true" guid="a06a2e40-b303-442d-97bc-46d30efcd182" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;selectalternativeform&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;category name="Registration form settings" /&gt;&lt;field column="AssignToRoles" fieldcaption="Assign user to roles" visible="true" columntype="text" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="false" columnsize="500" fielddescription="{$documentation.webpartproperties.registrationassigntoroles$}" publicfield="false" spellcheck="true" guid="fd3bf7b4-6e6f-438b-a1fb-e5999374fabb" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;simplecheckboxroleselector&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="AssignToSites" fieldcaption="Assign to sites" visible="true" columntype="text" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="false" columnsize="500" fielddescription="{$documentation.webpartproperties.registrationassigntosites$}" publicfield="false" spellcheck="true" guid="ebd95d79-e692-404f-b17b-c88a94088b8c" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;simplecheckboxsiteselector&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="RedirectToURL" fieldcaption="Redirect to URL" visible="true" columntype="text" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="false" columnsize="500" fielddescription="Specifies the URL of the page to which users will be redirected upon successful registration. For example: ~/clientportal.aspx" publicfield="false" spellcheck="true" guid="e850b6db-e986-4912-a21a-f4b9aad25289" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="DisplayCaptcha" fieldcaption="Display CAPTCHA control" visible="true" defaultvalue="false" columntype="boolean" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="false" fielddescription="Indicates if a CAPTCHA check should be required for registration. Enabling this can help prevent bots from registering on the website." publicfield="false" spellcheck="true" guid="37fcad3d-a206-4678-ac77-1873ff01f53b" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;checkboxcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="RegistrationErrorMessage" fieldcaption="Registration error message" visible="true" columntype="text" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="false" columnsize="250" fielddescription="Can be used to enter a message that will be displayed if the registration fails. If empty, a default error message will be used." publicfield="false" spellcheck="true" guid="a12affec-357c-4e58-9431-39e7f4adb57b" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="StartingAliasPath" fieldcaption="Starting alias path" visible="true" columntype="text" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="false" columnsize="500" fielddescription="{$documentation.webpartproperties.startingaliaspath$}" publicfield="false" spellcheck="true" guid="159e6016-c3ae-470f-88ba-d7bbaae687c0" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;selectsinglepath&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;category name="Label text settings" /&gt;&lt;field column="ButtonText" fieldcaption="Button text" visible="true" columntype="text" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="false" columnsize="100" fielddescription="Sets the caption of the button used to submit the registration form." publicfield="false" spellcheck="true" guid="749073df-5586-4e86-b7fd-864e8a1b4878" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;/settings&gt;&lt;/field&gt;&lt;category name="Extended settings" /&gt;&lt;field column="EnableUserAfterRegistration" fieldcaption="Enable user after registration" visible="true" defaultvalue="true" columntype="boolean" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="false" fielddescription="{$documentation.webpartproperties.enableuserafterregistration$}" publicfield="false" spellcheck="true" guid="7c622ff9-2175-488e-8d40-6d4b28d35d35" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;checkboxcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="SendWelcomeEmail" fieldcaption="Send welcome e-mail" visible="true" defaultvalue="true" columntype="boolean" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="false" fielddescription="{$documentation.webpartproperties.sendwelcomeemail$}" publicfield="false" spellcheck="true" guid="e7874a87-8cb3-449b-b0d9-e22d855047c2" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;checkboxcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="NotifyAdministrator" fieldcaption="Notify administrator about new registrations" visible="true" defaultvalue="false" columntype="boolean" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="false" fielddescription="Indicates if an e-mail should be sent to the administrator when a user registers. If the registration requires the administrators approval, the notification uses the Membership - Notification - Waiting for approval e-mail template. If the administrator's approval is not required, the notification is based on the Membership - Notification - New registration template." publicfield="false" spellcheck="true" guid="842bbb12-fa54-4d9f-9186-7c0005047c95" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;checkboxcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="FromAddress" fieldcaption="From e-mail address" visible="true" columntype="text" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="false" columnsize="200" fielddescription="Sets the address from which the e-mail notifications will be sent." publicfield="false" spellcheck="true" guid="4e817fa5-4532-4b37-8e74-ad80aceee297" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="ToAddress" fieldcaption="To e-mail address" visible="true" columntype="text" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="false" columnsize="200" fielddescription="Sets the e-mail address of the administrator to which notifications will be sent." publicfield="false" spellcheck="true" guid="79e463d0-3743-4482-a017-f92d8b07277e" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="DisplayMessage" fieldcaption="Display message after registration" visible="true" columntype="text" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="false" columnsize="200" fielddescription="Text that will be displayed to users after they submit the registration form. For example: &amp;quot;Thank you for your registration. Your user account now needs to be approved by the administrator.&amp;quot;" publicfield="false" spellcheck="true" guid="f5dbe7c2-37f5-4f22-bc6a-23ed104998a7" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="ApprovalPage" fieldcaption="E-mail confirmation page" visible="true" defaultvalue="~/CMSPages/Dialogs/UserRegistration.aspx" columntype="text" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="false" columnsize="200" fielddescription="{$documentation.webpartproperties.registrationapprovalpage$}" publicfield="false" spellcheck="true" guid="70b711c7-1808-4ab3-beff-852bb6d1ccbd" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;/settings&gt;&lt;/field&gt;&lt;category name="Conversion tracking" /&gt;&lt;field column="TrackConversionName" fieldcaption="Track conversion name" visible="true" columntype="text" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="false" columnsize="400" fielddescription="Selects the conversion that will be logged when a user successfully completes their registration via the web part." publicfield="false" spellcheck="true" guid="b7b0195f-92d4-466e-85e2-02442e3d42de" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;conversionselector&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="ConversionValue" fieldcaption="Conversion name" visible="true" columntype="text" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="false" columnsize="200" fielddescription="{$documentation.webpartproperties.conversionvalue$}" publicfield="false" spellcheck="false" guid="7a828c83-7bdd-4ecc-a82f-b008a256fcbc" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;/settings&gt;&lt;/field&gt;&lt;/form&gt;</WebPartProperties>
+      <WebPartCategoryID>374</WebPartCategoryID>
+      <WebPartDocumentation>&lt;font size="2"&gt;For additonal information about registration options, please see the &lt;/font&gt;&lt;a href="http://devnet.kentico.com/docs/devguide/available_registration_web_parts.htm" target="_blank"&gt;&lt;font size="2"&gt;User registration&lt;/font&gt;&lt;/a&gt;&amp;nbsp;&lt;font size="2"&gt;chapter&amp;nbsp;of the Kentico CMS Developer&amp;#39;s Guide.&lt;/font&gt;</WebPartDocumentation>
+      <WebPartGUID>2752508c-81c2-4a67-85e1-ac22cca7d706</WebPartGUID>
+      <WebPartLastModified>2014-02-22T01:56:11.607-05:00</WebPartLastModified>
+      <WebPartType>0</WebPartType>
+      <WebPartLoadGeneration>1</WebPartLoadGeneration>
+      <WebPartLastSelection>2014-02-22T01:56:11.597-05:00</WebPartLastSelection>
+    </cms_webpart>
+    <cms_webpart>
+      <WebPartID>1017</WebPartID>
+      <WebPartName>CustomTableInputEdit</WebPartName>
+      <WebPartDisplayName>Custom table input edit</WebPartDisplayName>
+      <WebPartDescription>This webpart allows you to select a custom tables base or alternative form and perform inserts and edits.  You can specify messages to display after submission or redirect to a URL.</WebPartDescription>
+      <WebPartFileName>CustomTables/CustomTableInputEdit.ascx</WebPartFileName>
+      <WebPartProperties>&lt;form&gt;&lt;category name="CustomTableData" caption="Custom Table Data" /&gt;&lt;field column="CustomTableName" fieldcaption="Custom table" visible="true" columntype="text" fieldtype="CustomUserControl" allowempty="false" isPK="false" system="false" columnsize="150" fielddescription="The custom table you wish to insert data into." publicfield="false" spellcheck="true" guid="8f66517f-b33f-4128-a84d-d14f104ab837" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;customtableselector&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="AlternativeFormFullName" fieldcaption="Alternative form" visible="true" columntype="text" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="false" columnsize="150" fielddescription="Alternative form of the custom table you wish to use.  If not selected, the default will be used." publicfield="false" spellcheck="true" guid="f9ca1f62-9135-4f67-9260-4e92b668c46d" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;selectalternativeform&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="CheckPermissions" fieldcaption="Check insert/update permissions" visible="true" defaultvalue="false" columntype="boolean" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="false" fielddescription="Check insert and update permissions if checked." publicfield="false" spellcheck="true" guid="7ed8f096-2741-49e7-997d-0cd4c923562f" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;checkboxcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;category name="Display" /&gt;&lt;field column="SelectedItemID" fieldcaption="Item ID to edit" visible="true" columntype="text" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="false" columnsize="100" fielddescription="ID of the item to edit.  Can use querystring macro {?QueryStringParameter?} to set the value.  If left blank it will assume you are performing an insert.  If populated it will assume you are updating a record." publicfield="false" spellcheck="true" guid="0e30d483-f020-4ddc-85b1-4610d761aa1f" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UseColonBehindLabel" fieldcaption="Use colon after label" visible="true" defaultvalue="true" columntype="boolean" fieldtype="CustomUserControl" allowempty="false" isPK="false" system="false" fielddescription="Display a colon after the label text." publicfield="false" spellcheck="true" guid="526e56a3-c7b2-40b7-88e0-b92bb80b620f" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;checkboxcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="SubmitButtonText" fieldcaption="Submit button text" visible="true" defaultvalue="Submit" columntype="text" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="false" columnsize="100" fielddescription="Text to display on the submit button" publicfield="false" spellcheck="true" guid="d2675740-1b18-453b-9887-9362d73a1363" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="SubmitButtonCssClass" fieldcaption="Submit button css class" visible="true" columntype="text" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="false" columnsize="100" fielddescription="Css class you wish to assign to the submit button." publicfield="false" spellcheck="true" guid="6f3280f4-38ce-4b11-9267-e6d3bc7f53ba" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="DisplayFormAfterSubmit" fieldcaption="Display form after submit" visible="true" defaultvalue="false" columntype="boolean" fieldtype="CustomUserControl" allowempty="false" isPK="false" system="false" fielddescription="Do you want to display the form after you submit the form?" publicfield="false" spellcheck="true" guid="3a39598d-3429-419b-ae14-7a0d972db565" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;checkboxcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="DisplayMessageAfterSubmit" fieldcaption="Display message after submit" visible="true" defaultvalue="false" columntype="boolean" fieldtype="CustomUserControl" allowempty="false" isPK="false" system="false" publicfield="false" spellcheck="true" guid="3c7cbab1-c70f-4c1d-8562-d9b630362afa" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;checkboxcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="InsertMessageText" fieldcaption="Insert message text" visible="true" columntype="text" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="false" columnsize="500" fielddescription="Text to display after a form is submitted for insert.  Relies on the DisplayMessageAfterSubmit field." publicfield="false" spellcheck="true" guid="59fae4da-e248-49c6-843a-211dc9d94110" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UpdateMessageText" fieldcaption="Update message text" visible="true" columntype="text" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="false" columnsize="500" fielddescription="Text to display after a form is submitted for update.  Relies on the DisplayMessageAfterSubmit field." publicfield="false" spellcheck="true" guid="333a1509-d029-4627-90e8-95e5d93c62c3" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="RedirectAfterSubmit" fieldcaption="Redirect after submit" visible="true" defaultvalue="false" columntype="boolean" fieldtype="CustomUserControl" allowempty="false" isPK="false" system="false" fielddescription="Choose to redirect to a page after you submit the form." publicfield="false" spellcheck="true" guid="fc0d5095-f12f-483a-91b0-8026989d0daa" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;checkboxcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="RedirectUrl" fieldcaption="Redirect URL" visible="true" columntype="text" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="false" columnsize="100" fielddescription="URL to redirect to after form submit." publicfield="false" spellcheck="true" guid="1bac5be4-f8c6-44aa-b3ff-042634a17bfa" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;/settings&gt;&lt;/field&gt;&lt;/form&gt;</WebPartProperties>
+      <WebPartCategoryID>217</WebPartCategoryID>
+      <WebPartGUID>2499366f-867c-4f3f-937f-7ec856a75cbb</WebPartGUID>
+      <WebPartLastModified>2014-02-10T11:35:18.063-05:00</WebPartLastModified>
+      <WebPartType>0</WebPartType>
+      <WebPartLoadGeneration>0</WebPartLoadGeneration>
+      <WebPartLastSelection>2014-02-10T11:35:18.06-05:00</WebPartLastSelection>
+      <WebPartDefaultValues>&lt;form&gt;&lt;/form&gt;</WebPartDefaultValues>
+    </cms_webpart>
+    <cms_webpart>
+      <WebPartID>1015</WebPartID>
+      <WebPartName>dataform</WebPartName>
+      <WebPartDisplayName>dataform</WebPartDisplayName>
+      <WebPartDescription></WebPartDescription>
+      <WebPartFileName>Custom/dataform.ascx</WebPartFileName>
+      <WebPartProperties>&lt;form&gt;&lt;/form&gt;</WebPartProperties>
+      <WebPartCategoryID>185</WebPartCategoryID>
+      <WebPartGUID>15860e5e-b7b2-4975-9788-cd8ef0358668</WebPartGUID>
+      <WebPartLastModified>2014-02-10T09:19:37.033-05:00</WebPartLastModified>
+      <WebPartType>0</WebPartType>
+      <WebPartLoadGeneration>0</WebPartLoadGeneration>
+      <WebPartDefaultValues>&lt;form&gt;&lt;/form&gt;</WebPartDefaultValues>
+    </cms_webpart>
+    <cms_webpart>
+      <WebPartID>577</WebPartID>
+      <WebPartName>DocumentsDataSource</WebPartName>
+      <WebPartDisplayName>Documents data source</WebPartDisplayName>
+      <WebPartDescription>Creates a data source containing specified documents. This data may then be provided to listing web parts (such as a Basic repeater) in order to be displayed.</WebPartDescription>
+      <WebPartFileName>/DataSources/DocumentsDataSource.ascx</WebPartFileName>
+      <WebPartProperties>&lt;form&gt;&lt;category name="Content" /&gt;&lt;field column="Path" fieldcaption="Path" visible="true" columntype="text" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="false" columnsize="450" fielddescription="{$documentation.webpartproperties.path$}" publicfield="false" spellcheck="true" guid="4e149ee5-b2ab-4c62-b5db-c5b346d595ef" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;selectpath&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;category name="Content filter" /&gt;&lt;field column="ClassNames" fieldcaption="Document types" visible="true" columntype="text" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="false" columnsize="1000" fielddescription="{$documentation.webpartproperties.documenttypes$}" publicfield="false" spellcheck="true" guid="c5e6d3cd-e24b-4697-a00e-27d2d32d257e" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;selectclassnames&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="CategoryName" fieldcaption="Category name" visible="true" columntype="text" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="false" columnsize="200" fielddescription="Code name of the category. Documents from this category and its subcategories will be filtered out." publicfield="false" spellcheck="true" guid="4965356e-e046-4737-b2da-7aa49b30e6c2" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;DisplayPersonalCategories&gt;False&lt;/DisplayPersonalCategories&gt;&lt;controlname&gt;categoryselector&lt;/controlname&gt;&lt;DisplayGeneralCategories&gt;True&lt;/DisplayGeneralCategories&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="CombineWithDefaultCulture" fieldcaption="Combine with default culture" visible="true" columntype="text" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="false" columnsize="5" fielddescription="{$documentation.webpartproperties.combinewithculture$}" publicfield="false" spellcheck="true" guid="f0a2756d-c659-4556-96a0-7d133aa26c0a" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;radiobuttonscontrol&lt;/controlname&gt;&lt;repeatdirection&gt;vertical&lt;/repeatdirection&gt;&lt;options&gt;&amp;lt;item value="true" text="Yes" /&amp;gt;&amp;lt;item value="false" text="No" /&amp;gt;&amp;lt;item value="" text="Use site settings" /&amp;gt;&lt;/options&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="CultureCode" fieldcaption="Culture code" visible="true" columntype="text" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="false" columnsize="20" fielddescription="{$documentation.webpartproperties.culturecode$}" publicfield="false" spellcheck="true" guid="2c1bcc4b-4e17-44f2-b80d-964eb3ce88d1" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;selectculture&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="MaxRelativeLevel" fieldcaption="Maximum nesting level" visible="true" defaultvalue="-1" columntype="integer" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="false" fielddescription="{$documentation.webpartproperties.maxnestinglevel$}" publicfield="false" spellcheck="true" guid="490d4956-4a77-410c-8854-f1aeda72aaa2" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="OrderBy" fieldcaption="ORDER BY Expression" visible="true" columntype="text" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="false" columnsize="500" fielddescription="{$documentation.webpartproperties.orderby$}" publicfield="false" spellcheck="true" guid="66905a72-ab02-451b-b6c7-aacbaa46822a" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;orderby&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="SelectOnlyPublished" fieldcaption="Select only published" visible="true" defaultvalue="true" columntype="boolean" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="false" fielddescription="{$documentation.webpartproperties.selectpublished$}" publicfield="false" spellcheck="true" guid="c605c028-4802-4ec8-a04e-bca11fd54915" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;checkboxcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="SelectTopN" fieldcaption="Select top N documents" visible="true" columntype="integer" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="false" fielddescription="{$documentation.webpartproperties.selecttopndocuments$}" publicfield="false" spellcheck="true" guid="41d37c3f-2456-4a8b-8af6-551181188d71" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;FilterEnabled&gt;False&lt;/FilterEnabled&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="SiteName" fieldcaption="Site name" visible="true" columntype="text" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="false" columnsize="200" fielddescription="{$documentation.webpartproperties.sitename$}" publicfield="false" spellcheck="true" guid="67128c49-1414-4e23-a764-69a5231b3527" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;selectsite&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="WhereCondition" fieldcaption="WHERE condition" visible="true" columntype="text" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="false" columnsize="500" fielddescription="{$documentation.webpartproperties.where$}" publicfield="false" spellcheck="true" guid="ae8ab8f4-e84b-4d49-8442-3219cf8405ed" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;wherecondition&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="Columns" fieldcaption="Columns" visible="true" columntype="text" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="false" columnsize="500" fielddescription="{$documentation.webpartproperties.columns$}" publicfield="false" spellcheck="false" guid="dae8953b-8992-4cd0-8dba-e6c8b32c3502" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;columns&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="FilterOutDuplicates" fieldcaption="Filter out duplicates" visible="true" defaultvalue="false" columntype="boolean" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="false" fielddescription="{$documentation.webpartproperties.filterduplicates$}" publicfield="false" spellcheck="true" guid="7c4aeb10-65c9-45b5-91d5-560f9f47a091" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;checkboxcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="EnableSelectedItem" fieldcaption="Enable selected item" visible="true" defaultvalue="true" columntype="boolean" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="false" fielddescription="If checked, the datasource will provide only the currently selected document - if its type is included in the 'Document types' property." publicfield="false" spellcheck="true" guid="606a9d22-395c-4dee-be2c-da60a717a0ec" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;checkboxcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="FilterName" fieldcaption="Filter name" visible="true" columntype="text" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="false" columnsize="200" fielddescription="{$documentation.webpartproperties.filtername$}" publicfield="false" spellcheck="true" guid="ab9342a2-161c-4ced-8fdf-c456135733ff" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;/settings&gt;&lt;/field&gt;&lt;category name="System settings" /&gt;&lt;field column="CheckPermissions" fieldcaption="Check permissions" visible="true" defaultvalue="false" columntype="boolean" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="false" fielddescription="{$documentation.webpartproperties.checkperm$}" publicfield="false" spellcheck="true" guid="4de89aac-13f2-4e65-8dd2-209244ed6dec" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;checkboxcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="CacheItemName" fieldcaption="Cache item name" visible="true" columntype="text" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="false" columnsize="200" fielddescription="{$documentation.webpartproperties.cacheitemname$}" publicfield="false" spellcheck="true" guid="7a5a99f2-f489-4753-8cd1-27306bc21d9c" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="CacheMinutes" fieldcaption="Cache minutes" visible="true" columntype="integer" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="false" fielddescription="{$documentation.webpartproperties.cacheminutes$}" publicfield="false" spellcheck="true" guid="994cc70f-f38f-4840-af99-1328b134a5fc" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="CacheDependencies" fieldcaption="Cache dependencies" visible="true" columntype="longtext" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="false" fielddescription="{$documentation.webpartproperties.cachedependencies$}" publicfield="false" spellcheck="true" guid="e538e91e-dbdd-4d10-aec8-51acfc3760d3" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;cachedependencies&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;/form&gt;</WebPartProperties>
+      <WebPartCategoryID>221</WebPartCategoryID>
+      <WebPartDocumentation></WebPartDocumentation>
+      <WebPartGUID>f88853c5-28d9-4444-bb5c-952e6a10cb8e</WebPartGUID>
+      <WebPartLastModified>2014-01-27T23:19:21.12-05:00</WebPartLastModified>
+      <WebPartType>1</WebPartType>
+      <WebPartLoadGeneration>1</WebPartLoadGeneration>
+      <WebPartLastSelection>2014-01-27T23:19:21.117-05:00</WebPartLastSelection>
+    </cms_webpart>
+    <cms_webpart>
+      <WebPartID>1016</WebPartID>
+      <WebPartName>formdefinition</WebPartName>
+      <WebPartDisplayName>formdefinition</WebPartDisplayName>
+      <WebPartDescription></WebPartDescription>
+      <WebPartFileName>Custom/formdefinition.ascx</WebPartFileName>
+      <WebPartProperties>&lt;form&gt;&lt;/form&gt;</WebPartProperties>
+      <WebPartCategoryID>185</WebPartCategoryID>
+      <WebPartGUID>ef470d08-e748-477f-88b2-56c7c9086894</WebPartGUID>
+      <WebPartLastModified>2014-02-10T09:19:56.417-05:00</WebPartLastModified>
+      <WebPartType>0</WebPartType>
+      <WebPartLoadGeneration>0</WebPartLoadGeneration>
+      <WebPartDefaultValues>&lt;form&gt;&lt;/form&gt;</WebPartDefaultValues>
+    </cms_webpart>
+    <cms_webpart>
+      <WebPartID>1012</WebPartID>
+      <WebPartName>BizFormF</WebPartName>
+      <WebPartDisplayName>On-line formF</WebPartDisplayName>
+      <WebPartDescription>The On-line form web part allows you to insert your own on-line form on the page.</WebPartDescription>
+      <WebPartFileName>BizForms/bizformFF.ascx</WebPartFileName>
+      <WebPartProperties>&lt;form&gt;&lt;category name="BizForm settings" /&gt;&lt;field column="BizFormName" fieldcaption="Form name" visible="true" columntype="text" fieldtype="CustomUserControl" allowempty="false" isPK="false" system="false" columnsize="100" fielddescription="Name of the BizForm form that should be displayed." publicfield="false" spellcheck="true" guid="e79c26fb-d9eb-41d5-9420-d284c7c7f80c" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;bizformselector&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="SiteName" fieldcaption="Site name" visible="true" columntype="text" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="false" columnsize="200" fielddescription="{$documentation.webpartproperties.sitename$}" publicfield="false" spellcheck="true" guid="15ec3eee-5c40-4a9f-9c1f-0a16921ccaa3" external="true" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;selectsite&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="AlternativeFormName" fieldcaption="Alternative form name" visible="true" columntype="text" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="false" columnsize="200" fielddescription="Alternative form full name (ClassName.AlternativeFormName). Alternative form definition and layout are used if specified." publicfield="false" spellcheck="true" guid="6aea5d78-c802-4eff-89f0-419c5f054f46" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;selectalternativeform&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UseColonBehindLabel" fieldcaption="Use colon (:) in labels" visible="true" defaultvalue="true" columntype="boolean" fieldtype="CustomUserControl" allowempty="false" isPK="false" system="false" fielddescription="Indicates if the colon (:) should be used behind the label text." publicfield="false" spellcheck="true" guid="8c180d0e-a2cd-4d43-a89c-bdbf0f890fb1" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;checkboxcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="ValidationErrorMessage" fieldcaption="Validation error message" visible="true" columntype="text" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="false" columnsize="250" fielddescription="This message will be displayed after validation failed. Default error message will be used if this one is not set." publicfield="false" spellcheck="true" guid="7537e7dd-0f1d-422b-9577-95674620b774" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="RolesNotification" fieldcaption="Roles a Notificar" visible="true" columntype="text" fieldtype="CustomUserControl" allowempty="false" isPK="false" system="false" columnsize="200" fielddescription="Seleccione los roles a los cuales desea notificar via email, los datos contenidos en el formulario" publicfield="false" spellcheck="true" guid="731d5dd2-054d-4432-b4cf-a0683481c4fd" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;roleselector&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;category name="Conversion tracking" /&gt;&lt;field column="TrackConversionName" fieldcaption="Track conversion name" visible="true" columntype="text" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="false" columnsize="400" fielddescription="Selects the conversion that will be logged when a user successfully submits the displayed form." publicfield="false" spellcheck="false" guid="d1a135f0-9ada-43bc-8df8-f0290a26df57" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;conversionselector&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="ConversionValue" fieldcaption="Conversion value" visible="true" columntype="text" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="false" columnsize="200" fielddescription="{$documentation.webpartproperties.conversionvalue$}" publicfield="false" spellcheck="false" guid="ec004a76-9875-4063-bc51-2c46342554d9" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;/settings&gt;&lt;/field&gt;&lt;/form&gt;</WebPartProperties>
+      <WebPartCategoryID>185</WebPartCategoryID>
+      <WebPartDocumentation></WebPartDocumentation>
+      <WebPartGUID>5c12ef15-768b-4d96-ad3d-b3e9119df149</WebPartGUID>
+      <WebPartLastModified>2014-02-07T23:55:08.117-05:00</WebPartLastModified>
+      <WebPartType>0</WebPartType>
+      <WebPartLoadGeneration>1</WebPartLoadGeneration>
+      <WebPartLastSelection>2014-02-07T21:46:53.663-05:00</WebPartLastSelection>
+    </cms_webpart>
+    <cms_webpartcategory>
+      <CategoryID>249</CategoryID>
+      <CategoryDisplayName>All web parts</CategoryDisplayName>
+      <CategoryName>/</CategoryName>
+      <CategoryGUID>d782b5c3-27f3-45e6-a5cc-86c1944e2c8d</CategoryGUID>
+      <CategoryLastModified>2009-10-23T15:21:21-05:00</CategoryLastModified>
+      <CategoryImagePath></CategoryImagePath>
+      <CategoryPath>/</CategoryPath>
+      <CategoryOrder>1</CategoryOrder>
+      <CategoryLevel>0</CategoryLevel>
+      <CategoryChildCount>47</CategoryChildCount>
+      <CategoryWebPartChildCount>0</CategoryWebPartChildCount>
+    </cms_webpartcategory>
+    <cms_webpartcategory>
+      <CategoryID>164</CategoryID>
+      <CategoryDisplayName>Membership</CategoryDisplayName>
+      <CategoryParentID>249</CategoryParentID>
+      <CategoryName>Membership</CategoryName>
+      <CategoryGUID>9d58eec4-fb81-4dfb-87bb-e6bfbca98a08</CategoryGUID>
+      <CategoryLastModified>2009-08-28T11:02:39-05:00</CategoryLastModified>
+      <CategoryImagePath></CategoryImagePath>
+      <CategoryPath>/Membership</CategoryPath>
+      <CategoryOrder>27</CategoryOrder>
+      <CategoryLevel>1</CategoryLevel>
+      <CategoryChildCount>6</CategoryChildCount>
+      <CategoryWebPartChildCount>0</CategoryWebPartChildCount>
+    </cms_webpartcategory>
+    <cms_webpartcategory>
+      <CategoryID>185</CategoryID>
+      <CategoryDisplayName>Forms</CategoryDisplayName>
+      <CategoryParentID>249</CategoryParentID>
+      <CategoryName>BizForms</CategoryName>
+      <CategoryGUID>0b4a9270-13de-4b08-9ec4-1073fdef9f58</CategoryGUID>
+      <CategoryLastModified>2011-06-17T15:26:50-05:00</CategoryLastModified>
+      <CategoryImagePath></CategoryImagePath>
+      <CategoryPath>/BizForms</CategoryPath>
+      <CategoryOrder>15</CategoryOrder>
+      <CategoryLevel>1</CategoryLevel>
+      <CategoryChildCount>0</CategoryChildCount>
+      <CategoryWebPartChildCount>6</CategoryWebPartChildCount>
+    </cms_webpartcategory>
+    <cms_webpartcategory>
+      <CategoryID>217</CategoryID>
+      <CategoryDisplayName>Custom tables</CategoryDisplayName>
+      <CategoryParentID>249</CategoryParentID>
+      <CategoryName>CustomTables</CategoryName>
+      <CategoryGUID>cdadf49c-ed8b-4679-87e1-9cf857b4b121</CategoryGUID>
+      <CategoryLastModified>2009-08-28T11:01:58-05:00</CategoryLastModified>
+      <CategoryImagePath></CategoryImagePath>
+      <CategoryPath>/CustomTables</CategoryPath>
+      <CategoryOrder>8</CategoryOrder>
+      <CategoryLevel>1</CategoryLevel>
+      <CategoryChildCount>0</CategoryChildCount>
+      <CategoryWebPartChildCount>5</CategoryWebPartChildCount>
+    </cms_webpartcategory>
+    <cms_webpartcategory>
+      <CategoryID>221</CategoryID>
+      <CategoryDisplayName>Data sources</CategoryDisplayName>
+      <CategoryParentID>249</CategoryParentID>
+      <CategoryName>DataSources</CategoryName>
+      <CategoryGUID>36984e99-1ff8-464a-8788-b1ab4afaa585</CategoryGUID>
+      <CategoryLastModified>2009-08-28T11:02:01-05:00</CategoryLastModified>
+      <CategoryImagePath></CategoryImagePath>
+      <CategoryPath>/DataSources</CategoryPath>
+      <CategoryOrder>10</CategoryOrder>
+      <CategoryLevel>1</CategoryLevel>
+      <CategoryChildCount>2</CategoryChildCount>
+      <CategoryWebPartChildCount>15</CategoryWebPartChildCount>
+    </cms_webpartcategory>
+    <cms_webpartcategory>
+      <CategoryID>374</CategoryID>
+      <CategoryDisplayName>Logon &amp; Registration</CategoryDisplayName>
+      <CategoryParentID>164</CategoryParentID>
+      <CategoryName>MembershipLogonRegistration</CategoryName>
+      <CategoryGUID>d01e7e0e-fa1e-4a29-ac4b-940bfcba4c1e</CategoryGUID>
+      <CategoryLastModified>2010-08-13T16:45:09-05:00</CategoryLastModified>
+      <CategoryImagePath></CategoryImagePath>
+      <CategoryPath>/Membership/MembershipLogonRegistration</CategoryPath>
+      <CategoryOrder>4</CategoryOrder>
+      <CategoryLevel>2</CategoryLevel>
+      <CategoryChildCount>0</CategoryChildCount>
+      <CategoryWebPartChildCount>11</CategoryWebPartChildCount>
+    </cms_webpartcategory>
+    <cms_metafile>
+      <MetaFileID>1968</MetaFileID>
+      <MetaFileObjectID>561</MetaFileObjectID>
+      <MetaFileObjectType>cms.webpart</MetaFileObjectType>
+      <MetaFileGroupName>Thumbnail</MetaFileGroupName>
+      <MetaFileName>customregistration.png</MetaFileName>
+      <MetaFileExtension>.png</MetaFileExtension>
+      <MetaFileSize>3211</MetaFileSize>
+      <MetaFileMimeType>image/png</MetaFileMimeType>
+      <MetaFileImageWidth>64</MetaFileImageWidth>
+      <MetaFileImageHeight>64</MetaFileImageHeight>
+      <MetaFileGUID>12af8e34-a7db-4a3c-91b6-015d2be471e1</MetaFileGUID>
+      <MetaFileLastModified>2010-08-04T15:50:25-05:00</MetaFileLastModified>
+    </cms_metafile>
+    <cms_metafile>
+      <MetaFileID>1832</MetaFileID>
+      <MetaFileObjectID>577</MetaFileObjectID>
+      <MetaFileObjectType>cms.webpart</MetaFileObjectType>
+      <MetaFileGroupName>Thumbnail</MetaFileGroupName>
+      <MetaFileName>datasourcedocuments.png</MetaFileName>
+      <MetaFileExtension>.png</MetaFileExtension>
+      <MetaFileSize>3840</MetaFileSize>
+      <MetaFileMimeType>image/png</MetaFileMimeType>
+      <MetaFileImageWidth>64</MetaFileImageWidth>
+      <MetaFileImageHeight>64</MetaFileImageHeight>
+      <MetaFileGUID>967a4149-62b2-4470-aa05-4ec9d6f0fe95</MetaFileGUID>
+      <MetaFileLastModified>2010-08-04T15:50:58-05:00</MetaFileLastModified>
+    </cms_metafile>
+    <cms_metafile>
+      <MetaFileID>4269</MetaFileID>
+      <MetaFileObjectID>1012</MetaFileObjectID>
+      <MetaFileObjectType>cms.webpart</MetaFileObjectType>
+      <MetaFileGroupName>Thumbnail</MetaFileGroupName>
+      <MetaFileName>bizform.png</MetaFileName>
+      <MetaFileExtension>.png</MetaFileExtension>
+      <MetaFileSize>3382</MetaFileSize>
+      <MetaFileMimeType>image/png</MetaFileMimeType>
+      <MetaFileImageWidth>64</MetaFileImageWidth>
+      <MetaFileImageHeight>64</MetaFileImageHeight>
+      <MetaFileGUID>ce0903fb-7d8a-4c39-bbfe-4de332b49932</MetaFileGUID>
+      <MetaFileLastModified>2014-02-07T21:44:56.477-05:00</MetaFileLastModified>
+    </cms_metafile>
+    <cms_metafile>
+      <MetaFileID>4270</MetaFileID>
+      <MetaFileObjectID>1017</MetaFileObjectID>
+      <MetaFileObjectType>cms.webpart</MetaFileObjectType>
+      <MetaFileGroupName>Thumbnail</MetaFileGroupName>
+      <MetaFileName>custominput.png</MetaFileName>
+      <MetaFileExtension>.png</MetaFileExtension>
+      <MetaFileSize>5068</MetaFileSize>
+      <MetaFileMimeType>image/png</MetaFileMimeType>
+      <MetaFileImageWidth>64</MetaFileImageWidth>
+      <MetaFileImageHeight>64</MetaFileImageHeight>
+      <MetaFileGUID>f49ad21a-a91c-4a71-ba5e-a26616ff0cb7</MetaFileGUID>
+      <MetaFileLastModified>2013-05-04T12:03:51.84-05:00</MetaFileLastModified>
+    </cms_metafile>
+    <export_task>
+      <TaskID>1</TaskID>
+      <TaskTitle>Delete Web part 'on-line form F'</TaskTitle>
+      <TaskData>&lt;NewDataSet&gt;&lt;CMS_WebPart&gt;
+  &lt;WebPartID&gt;1011&lt;/WebPartID&gt;
+  &lt;WebPartName&gt;on-lineformF&lt;/WebPartName&gt;
+  &lt;WebPartDisplayName&gt;on-line form F&lt;/WebPartDisplayName&gt;
+  &lt;WebPartDescription /&gt;
+  &lt;WebPartFileName&gt;BizForms/bizformF.ascx&lt;/WebPartFileName&gt;
+  &lt;WebPartProperties&gt;&amp;lt;form&amp;gt;&amp;lt;/form&amp;gt;&lt;/WebPartProperties&gt;
+  &lt;WebPartCategoryID&gt;185&lt;/WebPartCategoryID&gt;
+  &lt;WebPartGUID&gt;3a0a0133-7cfd-4803-96e4-f1955337d8cf&lt;/WebPartGUID&gt;
+  &lt;WebPartLastModified&gt;2014-02-07T21:42:27.126-05:00&lt;/WebPartLastModified&gt;
+  &lt;WebPartLoadGeneration&gt;0&lt;/WebPartLoadGeneration&gt;
+  &lt;WebPartLastSelection&gt;2014-02-07T21:42:27.124-05:00&lt;/WebPartLastSelection&gt;
+  &lt;WebPartDefaultValues&gt;&amp;lt;form&amp;gt;&amp;lt;/form&amp;gt;&lt;/WebPartDefaultValues&gt;
+&lt;/CMS_WebPart&gt;&lt;CMS_WebPartCategory&gt;
+  &lt;CategoryID&gt;249&lt;/CategoryID&gt;
+  &lt;CategoryDisplayName&gt;All web parts&lt;/CategoryDisplayName&gt;
+  &lt;CategoryName&gt;/&lt;/CategoryName&gt;
+  &lt;CategoryGUID&gt;d782b5c3-27f3-45e6-a5cc-86c1944e2c8d&lt;/CategoryGUID&gt;
+  &lt;CategoryLastModified&gt;2009-10-23T08:21:21-05:00&lt;/CategoryLastModified&gt;
+  &lt;CategoryImagePath /&gt;
+  &lt;CategoryPath&gt;/&lt;/CategoryPath&gt;
+  &lt;CategoryOrder&gt;1&lt;/CategoryOrder&gt;
+  &lt;CategoryLevel&gt;0&lt;/CategoryLevel&gt;
+  &lt;CategoryChildCount&gt;47&lt;/CategoryChildCount&gt;
+  &lt;CategoryWebPartChildCount&gt;0&lt;/CategoryWebPartChildCount&gt;
+&lt;/CMS_WebPartCategory&gt;&lt;CMS_WebPartCategory&gt;
+  &lt;CategoryID&gt;185&lt;/CategoryID&gt;
+  &lt;CategoryDisplayName&gt;Forms&lt;/CategoryDisplayName&gt;
+  &lt;CategoryParentID&gt;249&lt;/CategoryParentID&gt;
+  &lt;CategoryName&gt;BizForms&lt;/CategoryName&gt;
+  &lt;CategoryGUID&gt;0b4a9270-13de-4b08-9ec4-1073fdef9f58&lt;/CategoryGUID&gt;
+  &lt;CategoryLastModified&gt;2011-06-17T15:26:50-05:00&lt;/CategoryLastModified&gt;
+  &lt;CategoryImagePath /&gt;
+  &lt;CategoryPath&gt;/BizForms&lt;/CategoryPath&gt;
+  &lt;CategoryOrder&gt;15&lt;/CategoryOrder&gt;
+  &lt;CategoryLevel&gt;1&lt;/CategoryLevel&gt;
+  &lt;CategoryChildCount&gt;0&lt;/CategoryChildCount&gt;
+  &lt;CategoryWebPartChildCount&gt;2&lt;/CategoryWebPartChildCount&gt;
+&lt;/CMS_WebPartCategory&gt;&lt;CMS_MetaFile&gt;
+  &lt;MetaFileID&gt;3900&lt;/MetaFileID&gt;
+  &lt;MetaFileObjectID&gt;1011&lt;/MetaFileObjectID&gt;
+  &lt;MetaFileObjectType&gt;cms.webpart&lt;/MetaFileObjectType&gt;
+  &lt;MetaFileGroupName&gt;Thumbnail&lt;/MetaFileGroupName&gt;
+  &lt;MetaFileName&gt;Edit.png&lt;/MetaFileName&gt;
+  &lt;MetaFileExtension&gt;.png&lt;/MetaFileExtension&gt;
+  &lt;MetaFileSize&gt;770&lt;/MetaFileSize&gt;
+  &lt;MetaFileMimeType&gt;image/x-png&lt;/MetaFileMimeType&gt;
+  &lt;MetaFileBinary /&gt;
+  &lt;MetaFileImageWidth&gt;16&lt;/MetaFileImageWidth&gt;
+  &lt;MetaFileImageHeight&gt;16&lt;/MetaFileImageHeight&gt;
+  &lt;MetaFileGUID&gt;087b074c-1170-493b-b8d6-07188cf66768&lt;/MetaFileGUID&gt;
+  &lt;MetaFileLastModified&gt;2011-09-15T14:54:05-05:00&lt;/MetaFileLastModified&gt;
+  &lt;MetaFileTitle /&gt;
+  &lt;MetaFileDescription&gt;vgjdfgjj   ghfdgsdf 2asfsdf&lt;/MetaFileDescription&gt;
+&lt;/CMS_MetaFile&gt;&lt;ObjectTranslation&gt;&lt;ClassName&gt;cms_webpartcategory&lt;/ClassName&gt;&lt;ID&gt;185&lt;/ID&gt;&lt;CodeName&gt;BizForms&lt;/CodeName&gt;&lt;/ObjectTranslation&gt;&lt;ObjectTranslation&gt;&lt;ClassName&gt;cms_webpartcategory&lt;/ClassName&gt;&lt;ID&gt;249&lt;/ID&gt;&lt;CodeName&gt;/&lt;/CodeName&gt;&lt;/ObjectTranslation&gt;&lt;/NewDataSet&gt;</TaskData>
+      <TaskTime>2014-02-07T21:43:56.313-05:00</TaskTime>
+      <TaskType>DELETEOBJ</TaskType>
+      <TaskObjectType>cms.webpart</TaskObjectType>
+      <TaskObjectID>1011</TaskObjectID>
+    </export_task>
+  </NewDataSet>
+</cms_webpart>

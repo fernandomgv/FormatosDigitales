@@ -1,0 +1,36 @@
+﻿<cms_info version="6.0">
+  <NewDataSet>
+    <cms_info>
+      <Key>machinename</Key>
+      <Value>PER1459</Value>
+    </cms_info>
+    <cms_info>
+      <Key>domainname</Key>
+      <Value>localhost:7959</Value>
+    </cms_info>
+    <cms_info>
+      <Key>currentuser</Key>
+      <Value>administrator</Value>
+    </cms_info>
+    <cms_info>
+      <Key>starttime</Key>
+      <Value>2/25/2014 6:30:54 PM</Value>
+    </cms_info>
+    <cms_info>
+      <Key>systemversion</Key>
+      <Value>0.0.0.0 </Value>
+    </cms_info>
+    <cms_info>
+      <Key>hotfixversion</Key>
+      <Value>23</Value>
+    </cms_info>
+    <cms_info>
+      <Key>webapplication</Key>
+      <Value>False</Value>
+    </cms_info>
+    <cms_info>
+      <Key>timestamp</Key>
+      <Value>1/1/2014 6:32:55 PM</Value>
+    </cms_info>
+  </NewDataSet>
+</cms_info>

@@ -1,0 +1,284 @@
+﻿/* !L - has an effect to layout ... do not change or delete unless you want to change the menu behavior */
+
+.Horizontal 
+{	
+	float: left;	/* !L */
+	width: 100%;	
+}
+.Horizontal ul 
+{
+	float:left;     /* !L */
+	width: 100%;	/* !L */
+	
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	z-index: 100;
+}
+.Horizontal li 
+{
+	display: inline;	/* !L */
+	float: left;		/* !L */
+}
+.Horizontal a
+{
+	display: block;		/* !L */
+	margin: 0;
+	padding: 2px 3px;
+	width: 112px;
+	
+	text-decoration: none;	
+}
+.Horizontal ul ul
+{
+	position: absolute;	/* !L */
+	z-index: 500;		/* !L */
+}
+.Horizontal ul ul li
+{
+	display: block;		/* !L */
+	clear: left;		/* !L */
+	position: relative;	/* !L */
+	z-index: 550;	
+}
+.Horizontal ul ul ul
+{
+	top: -1px;			/* !L - should be the negation of UL border-width */
+	left: 100%;			/* !L */		
+	z-index: 600;	
+}
+.Horizontal ul ul,
+.Horizontal ul li:hover ul ul,
+.Horizontal ul ul li:hover ul ul
+{display: none;}		/* !L */
+
+.Horizontal ul li:hover ul,
+.Horizontal ul ul li:hover ul,
+.Horizontal ul ul ul li:hover ul
+{display: block;}		/* !L */
+
+/* Styles specified for Horizontal1 CMSListMenu */
+#Horizontal1 /*means first UL*/
+{
+	font-family: Arial;
+	font-size: 12px;
+	background-color: #e2e2e2;
+	border: 1px solid #c2c2c2;	
+}
+#Horizontal1 li
+{
+	border-width: 1px;
+	border-style: solid;
+	border-color: #e2e2e2;
+	padding: 0px;
+}
+#Horizontal1 a
+{
+	color: Black;
+	background-color: #e2e2e2;
+}
+#Horizontal1 a:hover {
+	color: white;		
+	background: #808080;
+	
+	background-image: url(images/bottom_button2.png);
+	background-repeat: no-repeat;
+	background-position: bottom right;	
+}
+#Horizontal1 ul /*add to .Horizontal ul ul */
+{
+	border-bottom: 2px solid #c2c2c2;
+	width: 120px;
+/*	border-style: solid;
+	border-width: 1px;	
+	border-color: #a2e2e2 #c2c2c2 #c2c2c2 #c2c2c2*/
+}
+#Horizontal1 ul ul
+{
+	border-right: 2px solid #c2c2c2;
+	border-bottom: 0px solid white;
+	/*border-style: solid;
+	border-width: 1px;	
+	border-color: #e2e2e2 #c2c2c2 #c2c2c2 #c2c2c2	*/
+}
+
+/* Styles specified for Horizontal2 CMSListMenu */
+#Horizontal2 /*means first UL*/
+{
+	font-family: Verdana;
+	font-weight: bold;
+	font-size: 12px;
+	background-color: white;
+	border-bottom: 2px solid #c2c2c2;	
+}
+#Horizontal2 a
+{
+	color: #808080;
+	background-color: white;
+	padding-bottom: 5px;
+	text-align: center;	
+
+	white-space: nowrap;	
+}
+#Horizontal2 a:hover
+{
+	color: Black;		
+	background-color: white;
+		
+	background-image: url(images/button_bottom.gif);
+	background-repeat: no-repeat;
+	background-position: center 115%;
+}
+#Horizontal2 ul
+{
+	border-top: 2px solid black;
+	/*border-right: 2px solid black;*/
+	border-bottom: 2px solid #c2c2c2;
+	border-left: 2px solid #c2c2c2;
+	background-color: black;
+	/*width: auto;*/
+	width: 137px;	/* width should be width(tag a)+2px ... those make the right-border of submenu (color of right-border is in fact background-color) */
+}
+#Horizontal2 ul a
+{
+	padding-top: 2px;
+	padding-left: 20px;
+	text-align: left;
+}
+#Horizontal2 ul a:hover
+{
+	background-image: url(images/button_right_p.gif);
+	background-repeat: no-repeat;
+	background-position: 0 50%;	
+}
+#Horizontal2 ul ul
+{	
+	/* there is style margin-left:1px needed to be add only for IE, see CMSListMenu example for details */
+	/*width: 100%;*/
+	border-left: 0px solid #e2e2e2;
+	width: 137px;
+	top: -2px;
+}
+
+/* class Vertical */
+
+.Vertical
+{	
+	width: 150px;	
+	font-family: Arial;
+	font-size: 12px;
+	background-color: #e2e2e2;
+	border: 1px solid #c2c2c2;	
+}
+.Vertical ul 
+{		
+	list-style: none;
+	margin: 0;
+	padding: 0;	
+}
+.Vertical li 
+{
+	position:relative;	/* !L */	
+}
+.Vertical a
+{
+	display: block;		/* !L */
+	margin: 0;
+	padding: 2px 0px 2px 10px;
+	
+	color: black;
+	width: 140px;
+
+	text-decoration: none;
+	
+	background-image: url(images/menuitem.gif);
+	background-repeat: no-repeat;
+	background-position: 0 50%;
+	background-color: #e2e2e2;			
+}
+.Vertical a:hover
+{
+	color:White;
+	background: #808080;
+	background-image: url(images/menuitem_hover.gif);
+	background-repeat: no-repeat;
+	background-position: 0 50%;		
+}
+.Vertical ul ul
+{
+	position: absolute;	/* !L */
+	z-index: 100;		/* !L */
+	top: -1px;			/* !L - should be the negation of UL border-width*/
+	left: 100%;			/* !L */
+	width: 100%;		/* !L */
+	
+	border: 1px solid #c2c2c2;		
+}
+
+#Vertical ul,
+#Vertical li:hover ul ul,
+#Vertical ul li:hover ul ul
+{display: none;}		/* !L */
+
+#Vertical li:hover ul,
+#Vertical ul li:hover ul,
+#Vertical ul ul li:hover ul
+{display: block;}		/* !L */
+
+.DropDown 
+{
+	position: relative;	/* !L */
+	width: 150px;
+	height: 20px;
+	z-index: 1;
+	
+	font-family: Arial;
+	font-size: 12px;
+	background-color: #e2e2e2;
+	border: 2px solid #808080;	
+}
+div.DropDown:hover ul
+{
+	z-index: 10;		/* !L */
+	visibility: visible;/* !L */
+}
+div.DropDown ul:hover
+{	
+	background-color: White; /* this allows to get over the last item of dropDownList, otherwise will be closed. */
+}
+.DropDown ul 
+{	
+	z-index: -10;		/* !L */
+	visibility: hidden; /* !L */
+	
+	position: absolute;	/* !L */
+	top: 20px;			/* !L */
+	
+	width: 150px;
+
+	list-style: none;
+	margin: 0;
+	padding: 0;	
+}
+.DropDown li 
+{	
+	position:relative;	/* !L */
+}
+.DropDown a
+{
+	display: block;		/* !L */
+	margin: 0;
+	padding: 2px 3px;
+
+	color: Black;
+	background-color: #e2e2e2;			
+	text-decoration: none;
+}
+.DropDown a:hover {
+	color: white;
+	background: #b2b2b2;
+}
+.DropDown ul ul
+{
+	display: none;		/* !L */
+}

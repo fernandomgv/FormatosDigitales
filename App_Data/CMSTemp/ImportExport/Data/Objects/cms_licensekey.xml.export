@@ -1,0 +1,29 @@
+﻿<cms_licensekey version="6.0">
+  <NewDataSet>
+    <cms_licensekey>
+      <LicenseKeyID>2</LicenseKeyID>
+      <LicenseDomain>127.0.0.1</LicenseDomain>
+      <LicenseKey>CX06-20130620-L1OPR9</LicenseKey>
+      <LicenseEdition>X</LicenseEdition>
+      <LicenseExpiration>6/20/2013</LicenseExpiration>
+      <LicenseServers>0</LicenseServers>
+    </cms_licensekey>
+    <cms_licensekey>
+      <LicenseKeyID>3</LicenseKeyID>
+      <LicenseDomain>localhost</LicenseDomain>
+      <LicenseKey>DOMAIN:localhostPRODUCT:CX065EXPIRATION:00000000PACKAGES:ADVSERVERS:0
+</LicenseKey>
+      <LicenseEdition>X</LicenseEdition>
+      <LicenseExpiration>00000000</LicenseExpiration>
+      <LicenseServers>0</LicenseServers>
+    </cms_licensekey>
+    <cms_licensekey>
+      <LicenseKeyID>1</LicenseKeyID>
+      <LicenseDomain>localhostx</LicenseDomain>
+      <LicenseKey>CX06-20130620-L1OPR9</LicenseKey>
+      <LicenseEdition>X</LicenseEdition>
+      <LicenseExpiration>6/20/2013</LicenseExpiration>
+      <LicenseServers>0</LicenseServers>
+    </cms_licensekey>
+  </NewDataSet>
+</cms_licensekey>

@@ -1,0 +1,864 @@
+﻿<cms_systemtable version="6.0">
+  <NewDataSet>
+    <cms_class>
+      <ClassID>59</ClassID>
+      <ClassDisplayName>User</ClassDisplayName>
+      <ClassName>cms.user</ClassName>
+      <ClassUsesVersioning>false</ClassUsesVersioning>
+      <ClassIsDocumentType>false</ClassIsDocumentType>
+      <ClassIsCoupledClass>true</ClassIsCoupledClass>
+      <ClassXmlSchema>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"&gt;
+  &lt;xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true"&gt;
+    &lt;xs:complexType&gt;
+      &lt;xs:choice minOccurs="0" maxOccurs="unbounded"&gt;
+        &lt;xs:element name="CMS_User"&gt;
+          &lt;xs:complexType&gt;
+            &lt;xs:sequence&gt;
+              &lt;xs:element name="UserID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" /&gt;
+              &lt;xs:element name="UserName"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="100" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="FirstName" minOccurs="0"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="100" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="MiddleName" minOccurs="0"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="100" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="LastName" minOccurs="0"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="100" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="FullName" minOccurs="0"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="450" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="Email" minOccurs="0"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="100" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="UserPassword"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="100" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="PreferredCultureCode" minOccurs="0"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="10" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="PreferredUICultureCode" minOccurs="0"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="10" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="UserEnabled" type="xs:boolean" /&gt;
+              &lt;xs:element name="UserIsEditor" type="xs:boolean" /&gt;
+              &lt;xs:element name="UserIsGlobalAdministrator" type="xs:boolean" /&gt;
+              &lt;xs:element name="UserIsExternal" type="xs:boolean" minOccurs="0" /&gt;
+              &lt;xs:element name="UserPasswordFormat" minOccurs="0"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="10" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="UserCreated" type="xs:dateTime" minOccurs="0" /&gt;
+              &lt;xs:element name="LastLogon" type="xs:dateTime" minOccurs="0" /&gt;
+              &lt;xs:element name="UserStartingAliasPath" minOccurs="0"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="200" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="UserGUID" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" type="xs:string" /&gt;
+              &lt;xs:element name="UserLastModified" type="xs:dateTime" /&gt;
+              &lt;xs:element name="UserLastLogonInfo" minOccurs="0"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="2147483647" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="UserIsHidden" type="xs:boolean" minOccurs="0" /&gt;
+              &lt;xs:element name="UserVisibility" minOccurs="0"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="2147483647" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="UserIsDomain" type="xs:boolean" minOccurs="0" /&gt;
+              &lt;xs:element name="UserHasAllowedCultures" type="xs:boolean" minOccurs="0" /&gt;
+              &lt;xs:element name="UserSiteManagerDisabled" type="xs:boolean" minOccurs="0" /&gt;
+              &lt;xs:element name="Cultivos" minOccurs="0"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="100" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="TerritorioId" minOccurs="0"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="100" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+            &lt;/xs:sequence&gt;
+          &lt;/xs:complexType&gt;
+        &lt;/xs:element&gt;
+      &lt;/xs:choice&gt;
+    &lt;/xs:complexType&gt;
+    &lt;xs:unique name="Constraint1" msdata:PrimaryKey="true"&gt;
+      &lt;xs:selector xpath=".//CMS_User" /&gt;
+      &lt;xs:field xpath="UserID" /&gt;
+    &lt;/xs:unique&gt;
+  &lt;/xs:element&gt;
+&lt;/xs:schema&gt;</ClassXmlSchema>
+      <ClassFormDefinition>&lt;form&gt;&lt;field column="UserID" fieldcaption="UserID" visible="true" columntype="integer" fieldtype="CustomUserControl" allowempty="false" isPK="true" system="true" publicfield="false" spellcheck="true" guid="153b1cec-1580-43ae-adf8-ca0e4879d168" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;labelcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserName" fieldcaption="UserName" visible="true" columntype="text" fieldtype="CustomUserControl" allowempty="false" isPK="false" system="true" columnsize="100" publicfield="false" spellcheck="true" guid="aa4122b7-db14-48a5-885e-07a242f84702" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="FirstName" fieldcaption="FirstName" visible="true" columntype="text" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="true" columnsize="100" publicfield="false" spellcheck="true" guid="60af25ea-ad95-49ba-a446-2ea754cd10be" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="MiddleName" fieldcaption="MiddleName" visible="true" columntype="text" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="true" columnsize="100" publicfield="false" spellcheck="true" guid="bc86d726-a42d-4401-b92a-227e8e280293" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="LastName" fieldcaption="LastName" visible="true" columntype="text" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="true" columnsize="100" publicfield="false" spellcheck="true" guid="67305fcf-928a-45ea-8e29-735f17da0972" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="FullName" fieldcaption="FullName" visible="true" columntype="text" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="true" columnsize="450" publicfield="false" spellcheck="true" guid="5c3003d6-de76-4e96-aca4-cf1efa86b3fa" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="Email" fieldcaption="Email" visible="true" columntype="text" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="true" columnsize="100" publicfield="false" spellcheck="false" guid="fcef0fb3-6145-48ed-8f41-e28b71a665a8" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;FilterEnabled&gt;False&lt;/FilterEnabled&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="TerritorioId" fieldcaption="Territorio" visible="true" columntype="text" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="false" columnsize="100" fielddescription="Indica el territorio al cual pertenece(ra) el Usuario" publicfield="false" spellcheck="true" guid="2bfb14b6-c6fc-4029-ad71-77c60446966e" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;territorioselector&lt;/controlname&gt;&lt;ShowPais&gt;True&lt;/ShowPais&gt;&lt;SelectorWidth&gt;150&lt;/SelectorWidth&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="Cultivos" fieldcaption="Cultivos" visible="true" columntype="text" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="false" columnsize="100" publicfield="false" spellcheck="true" guid="bf6cb161-11c3-44c5-b329-f7b9cb47e7b6" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;testsuscripcioncultivo&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserPassword" fieldcaption="UserPassword" visible="true" columntype="text" fieldtype="CustomUserControl" allowempty="false" isPK="false" system="true" columnsize="100" publicfield="false" spellcheck="true" guid="adaad374-af5a-4e1b-afc7-72b4fb798d19" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="PreferredCultureCode" fieldcaption="PreferredCultureCode" visible="true" columntype="text" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="true" columnsize="10" publicfield="false" spellcheck="true" guid="03d85a82-c928-4967-b793-f33bedb426be" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="PreferredUICultureCode" fieldcaption="PreferredUICultureCode" visible="true" columntype="text" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="true" columnsize="10" publicfield="false" spellcheck="true" guid="d0a047c0-ea96-4422-af97-fff6c35a80de" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserEnabled" fieldcaption="UserEnabled" visible="true" columntype="boolean" fieldtype="CustomUserControl" allowempty="false" isPK="false" system="true" publicfield="false" spellcheck="true" guid="d5d58e7d-6b71-4a51-9226-d7ce166e8580" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;checkboxcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserIsEditor" fieldcaption="UserIsEditor" visible="true" columntype="boolean" fieldtype="CustomUserControl" allowempty="false" isPK="false" system="true" publicfield="false" spellcheck="true" guid="9804fc8b-7b25-4c23-b0f4-f6c57b7ae77f" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;checkboxcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserIsGlobalAdministrator" fieldcaption="UserIsGlobalAdministrator" visible="true" columntype="boolean" fieldtype="CustomUserControl" allowempty="false" isPK="false" system="true" publicfield="false" spellcheck="true" guid="4de4df49-2e8d-4bb5-9fb9-a3da2a9040ba" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;checkboxcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserIsExternal" fieldcaption="UserIsExternal" visible="true" columntype="boolean" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="true" publicfield="false" spellcheck="true" guid="def5feec-077b-4c26-8c4a-005a4a8d82d8" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;checkboxcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserPasswordFormat" fieldcaption="UserPasswordFormat" visible="true" columntype="text" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="true" columnsize="10" publicfield="false" spellcheck="true" guid="d3f178a2-6df1-4651-bec5-864be986332a" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserCreated" fieldcaption="UserCreated" visible="true" columntype="datetime" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="true" publicfield="false" spellcheck="true" guid="d75ebe3e-3d7d-44ab-af34-0ee947c3a3eb" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;calendarcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="LastLogon" fieldcaption="LastLogon" visible="true" columntype="datetime" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="true" publicfield="false" spellcheck="true" guid="8bb80186-0c9b-45cb-91d1-cbec14b8fdc7" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;calendarcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserStartingAliasPath" fieldcaption="UserStartingAliasPath" visible="true" columntype="text" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="true" columnsize="200" publicfield="false" spellcheck="true" guid="e2152255-6ad0-4b88-8497-2b505c64d23c" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserGUID" fieldcaption="UserGUID" visible="true" columntype="guid" fieldtype="CustomUserControl" allowempty="false" isPK="false" system="true" publicfield="false" spellcheck="true" guid="89fae932-ca98-420b-92a0-0fc146856ce3" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;labelcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserLastModified" fieldcaption="UserLastModified" visible="true" columntype="datetime" fieldtype="CustomUserControl" allowempty="false" isPK="false" system="true" publicfield="false" spellcheck="true" guid="e1f9c8fd-8c5d-415c-ad0e-935034d751de" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;calendarcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserLastLogonInfo" fieldcaption="UserLastLogonInfo" visible="true" columntype="longtext" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="true" publicfield="false" spellcheck="true" guid="c17d233f-cd61-42d7-9c98-f96267a12764" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;textareacontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserIsHidden" fieldcaption="UserIsHidden" visible="true" columntype="boolean" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="true" publicfield="false" spellcheck="true" guid="82febdf9-9057-4cea-bbba-de40b8cf653e" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;checkboxcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserVisibility" fieldcaption="UserVisibility" visible="true" columntype="longtext" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="true" publicfield="false" spellcheck="true" guid="150ce55f-7617-4fff-9d31-6f3792291b67" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;textareacontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserIsDomain" fieldcaption="UserIsDomain" visible="true" columntype="boolean" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="true" publicfield="false" spellcheck="true" guid="6ca5c321-81dd-4fbf-8ccc-9df2675839f9" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;checkboxcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserHasAllowedCultures" fieldcaption="UserHasAllowedCultures" visible="true" columntype="boolean" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="true" publicfield="false" spellcheck="true" guid="e7db3339-6c1c-413d-8fa3-fa85d99b8c80" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;checkboxcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserSiteManagerDisabled" fieldcaption="UserLastModified" visible="false" defaultvalue="false" columntype="boolean" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="true" publicfield="false" spellcheck="true" guid="175707eb-d3ee-42b1-bd2b-7c2f67a70449" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;calendarcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;/form&gt;</ClassFormDefinition>
+      <ClassEditingPageUrl></ClassEditingPageUrl>
+      <ClassListPageUrl></ClassListPageUrl>
+      <ClassNodeNameSource></ClassNodeNameSource>
+      <ClassTableName>CMS_User</ClassTableName>
+      <ClassViewPageUrl></ClassViewPageUrl>
+      <ClassPreviewPageUrl></ClassPreviewPageUrl>
+      <ClassFormLayout></ClassFormLayout>
+      <ClassNewPageUrl></ClassNewPageUrl>
+      <ClassShowAsSystemTable>true</ClassShowAsSystemTable>
+      <ClassUsePublishFromTo>false</ClassUsePublishFromTo>
+      <ClassShowTemplateSelection>false</ClassShowTemplateSelection>
+      <ClassSKUMappings></ClassSKUMappings>
+      <ClassIsMenuItemType>false</ClassIsMenuItemType>
+      <ClassNodeAliasSource></ClassNodeAliasSource>
+      <ClassLastModified>2014-02-25T13:44:30.887-05:00</ClassLastModified>
+      <ClassGUID>2e02c378-0f3d-45de-9b2d-b8cf2bd87b55</ClassGUID>
+      <ClassCreateSKU>false</ClassCreateSKU>
+      <ClassIsProduct>false</ClassIsProduct>
+      <ClassIsCustomTable>false</ClassIsCustomTable>
+      <ClassShowColumns></ClassShowColumns>
+      <ClassLoadGeneration>0</ClassLoadGeneration>
+      <ClassSearchTitleColumn>UserNickName</ClassSearchTitleColumn>
+      <ClassSearchContentColumn>UserDescription</ClassSearchContentColumn>
+      <ClassSearchImageColumn></ClassSearchImageColumn>
+      <ClassSearchCreationDateColumn>UserActivationDate</ClassSearchCreationDateColumn>
+      <ClassSearchSettings>&lt;search&gt;&lt;item searchable="True" name="UserID" tokenized="False" content="False" id="906a4b9b-8bf2-4751-a526-121307dae0ae" /&gt;&lt;item searchable="False" name="UserName" tokenized="True" content="True" id="0b94fb3d-764e-4a05-80a4-42ec5f5833f0" /&gt;&lt;item searchable="False" name="FirstName" tokenized="True" content="True" id="fbf31afa-5f01-4cd8-a487-e4a8433ee370" /&gt;&lt;item searchable="False" name="MiddleName" tokenized="True" content="True" id="d57ee511-df4a-41fd-bb4a-5d6370663d5d" /&gt;&lt;item searchable="False" name="LastName" tokenized="True" content="True" id="b3b4766c-5281-473c-ae98-d36f73ce76cf" /&gt;&lt;item searchable="False" name="FullName" tokenized="True" content="True" id="eb5190f9-62f7-4522-ba94-8c81f3ec3b62" /&gt;&lt;item searchable="True" name="Email" tokenized="False" content="False" id="1979c352-532a-4554-a04c-1fa7f511c70b" /&gt;&lt;item searchable="False" name="UserPassword" tokenized="False" content="False" id="d1e89105-5b6f-47f3-8eaf-6d98f6d58dc3" /&gt;&lt;item searchable="False" name="PreferredCultureCode" tokenized="False" content="False" id="e76e7d5a-f101-4efa-83ed-e9e6f1e59582" /&gt;&lt;item searchable="False" name="PreferredUICultureCode" tokenized="False" content="False" id="3cdcff76-c5df-4b71-8286-8c8e8aacccc8" /&gt;&lt;item searchable="False" name="UserEnabled" tokenized="False" content="False" id="1ccb5cd7-9c8c-4315-889f-995859c9fd56" /&gt;&lt;item searchable="False" name="UserIsEditor" tokenized="False" content="False" id="f80dc7fd-48de-4d35-bf29-5e2c84323635" /&gt;&lt;item searchable="False" name="UserIsGlobalAdministrator" tokenized="False" content="False" id="14580190-c5d6-4cf1-9085-9964df955900" /&gt;&lt;item searchable="False" name="UserIsExternal" tokenized="False" content="False" id="05156dd2-91de-44cb-9d86-ee13d6263dfc" /&gt;&lt;item searchable="False" name="UserPasswordFormat" tokenized="False" content="False" id="9f1854bd-4c16-4b27-b7d6-ffff18d8c0c6" /&gt;&lt;item searchable="True" name="UserCreated" tokenized="False" content="False" id="2269b09f-c68b-4d02-a4eb-06caa9d507f7" /&gt;&lt;item searchable="True" name="LastLogon" tokenized="False" content="False" id="a94c7e3a-2ff1-4c24-97bb-e80383533153" /&gt;&lt;item searchable="False" name="UserStartingAliasPath" tokenized="False" content="False" id="6a1bacb5-7540-4597-94ec-f0d80dae4ae2" /&gt;&lt;item searchable="False" name="UserGUID" tokenized="False" content="False" id="b39a8c06-0956-46b0-9f57-1160f56f88ff" /&gt;&lt;item searchable="False" name="UserLastModified" tokenized="False" content="False" id="b013639c-714c-41ad-a3f4-ef17caae4cbb" /&gt;&lt;item searchable="False" name="UserLastLogonInfo" tokenized="False" content="False" id="08f3bfe8-dde6-4141-b991-b96194230424" /&gt;&lt;item searchable="False" name="UserIsHidden" tokenized="False" content="False" id="0bff90b3-efd2-4a7d-adcd-4e22374806e7" /&gt;&lt;item searchable="False" name="UserVisibility" tokenized="False" content="False" id="4594d717-6576-40e7-9b18-2f98544414c2" /&gt;&lt;item searchable="False" name="UserIsDomain" tokenized="False" content="False" id="79fadbf0-ea55-4ecf-873d-fac1ac1b359e" /&gt;&lt;item searchable="False" name="UserHasAllowedCultures" tokenized="False" content="False" id="c7ef8410-f41e-47c8-86b4-6b78d4e35911" /&gt;&lt;item searchable="False" name="UserSiteManagerDisabled" tokenized="False" content="False" id="a8344b38-c552-4929-8d49-f0d0ea06b102" /&gt;&lt;item searchable="False" name="UserSettingsID" tokenized="False" content="False" id="476b97bf-9ad7-4e8b-b3f4-2119d1fbdbf1" /&gt;&lt;item searchable="False" name="UserNickName" tokenized="True" content="True" id="c63513a9-4a1b-4594-87b2-8ae998a123f8" /&gt;&lt;item searchable="False" name="UserPicture" tokenized="False" content="False" id="8bf2a728-7c12-4a6f-843b-d21856988b8b" /&gt;&lt;item searchable="False" name="UserSignature" tokenized="True" content="True" id="2c59ed93-c6c2-4894-ab8c-c04400f2d16e" /&gt;&lt;item searchable="False" name="UserURLReferrer" tokenized="False" content="False" id="a2d34fe0-7f76-488c-904d-8637d3b0fb6f" /&gt;&lt;item searchable="True" name="UserCampaign" tokenized="False" content="False" id="7ca760d0-7c24-4ade-8f5d-32d6d049d745" /&gt;&lt;item searchable="False" name="UserMessagingNotificationEmail" tokenized="False" content="False" id="8023feac-5337-4bfb-b3b8-7b6ab6f45c4c" /&gt;&lt;item searchable="False" name="UserCustomData" tokenized="False" content="False" id="c1c89fd3-9920-4de5-8549-5741cd129112" /&gt;&lt;item searchable="False" name="UserRegistrationInfo" tokenized="False" content="False" id="96fec15d-70a5-4544-b780-aab02b067c40" /&gt;&lt;item searchable="False" name="UserPreferences" tokenized="False" content="False" id="90a88cf6-3570-4c41-9b4b-54897af93b23" /&gt;&lt;item searchable="False" name="UserActivationDate" tokenized="False" content="False" id="db7bb756-65cc-4d60-9068-461e6db2723a" /&gt;&lt;item searchable="False" name="UserActivatedByUserID" tokenized="False" content="False" id="b3b77c0a-601c-4188-a19e-068dc11927ce" /&gt;&lt;item searchable="False" name="UserTimeZoneID" tokenized="False" content="False" id="60da5e8e-47d3-4d8e-afc4-7fbafb3a8545" /&gt;&lt;item searchable="False" name="UserAvatarID" tokenized="False" content="False" id="25a29893-a1ef-4b0c-bd36-0e40a52f8434" /&gt;&lt;item searchable="False" name="UserBadgeID" tokenized="False" content="False" id="511368d2-579a-48bb-971e-34d84f91993a" /&gt;&lt;item searchable="False" name="UserShowSplashScreen" tokenized="False" content="False" id="3aca1ef8-0dbb-4c47-b886-997e9296869e" /&gt;&lt;item searchable="False" name="UserActivityPoints" tokenized="False" content="False" id="842bc3f5-99d4-4b81-947b-59b8e7018b69" /&gt;&lt;item searchable="False" name="UserForumPosts" tokenized="False" content="False" id="a1a195d6-0e50-4297-a416-7a5ada5f0079" /&gt;&lt;item searchable="False" name="UserBlogComments" tokenized="False" content="False" id="f26fc147-1200-480a-be20-4498ce903d80" /&gt;&lt;item searchable="False" name="UserGender" tokenized="False" content="False" id="6c259ec2-12e4-40d2-b081-ab6f728810da" /&gt;&lt;item searchable="False" name="UserDateOfBirth" tokenized="False" content="False" id="40215bd4-6097-456d-9af9-8fa42f8b2f3f" /&gt;&lt;item searchable="False" name="UserMessageBoardPosts" tokenized="False" content="False" id="7ed05964-2022-4720-be24-29c772e18582" /&gt;&lt;item searchable="False" name="UserSettingsUserGUID" tokenized="False" content="False" id="78e65697-f010-4f1e-9286-a796f926bbb2" /&gt;&lt;item searchable="False" name="UserSettingsUserID" tokenized="False" content="False" id="d84f6ded-9648-4f79-9d55-ab6c63cdc16b" /&gt;&lt;item searchable="False" name="WindowsLiveID" tokenized="False" content="False" id="f30e931b-be81-4b32-8309-f42236ed671f" /&gt;&lt;item searchable="False" name="UserBlogPosts" tokenized="False" content="False" id="a01aef46-15e3-4c4e-9152-edff35522dd9" /&gt;&lt;item searchable="False" name="UserWaitingForApproval" tokenized="False" content="False" id="1d77bf3c-04f1-4821-9099-3ed75067bd3b" /&gt;&lt;item searchable="False" name="UserDialogsConfiguration" tokenized="False" content="False" id="dfe24bcd-67f8-4d3c-b5ec-8aa9aacefcfa" /&gt;&lt;item searchable="False" name="UserDescription" tokenized="True" content="True" id="46622599-1885-477c-b3ba-e756e5e8148c" /&gt;&lt;item searchable="False" name="UserUsedWebParts" tokenized="False" content="False" id="ca5ec30c-e8ed-4c2d-8abd-9e4484e65db6" /&gt;&lt;item searchable="False" name="UserUsedWidgets" tokenized="False" content="False" id="1cec03a7-83ef-4f40-a99b-375c08a937dc" /&gt;&lt;item searchable="False" name="UserFacebookID" tokenized="False" content="False" id="1bbd4ba6-e98a-4e35-af2b-c4953a6caa87" /&gt;&lt;item searchable="False" name="UserLinkedInID" tokenized="False" content="False" id="d80eb0f7-b04e-40b8-b492-ac19be22fa32" /&gt;&lt;item searchable="False" name="UserAuthenticationGUID" tokenized="False" content="False" id="7711ec33-cdf7-494b-b8b4-2ba23cdfa845" /&gt;&lt;item searchable="False" name="UserSkype" tokenized="False" content="False" id="8b51b6a3-0e20-496f-b779-eeb0e1aef4dd" /&gt;&lt;item searchable="False" name="UserIM" tokenized="False" content="False" id="b9d42962-eee7-4927-b823-92bab31af520" /&gt;&lt;item searchable="False" name="UserPhone" tokenized="False" content="False" id="cfbdf268-5d6e-4c38-bb41-9324cc62fcd5" /&gt;&lt;item searchable="False" name="UserPosition" tokenized="False" content="False" id="2ca6ad24-911b-4885-bee5-931b47a684ff" /&gt;&lt;item searchable="False" name="UserBounces" tokenized="False" content="False" id="59eff77a-ab9f-4049-877b-e0759e960c1d" /&gt;&lt;/search&gt;</ClassSearchSettings>
+      <ClassSearchEnabled>true</ClassSearchEnabled>
+      <ClassSKUDefaultDepartmentName></ClassSKUDefaultDepartmentName>
+      <ClassContactMapping>&lt;form&gt;&lt;field column="ContactBirthday" mappedtofield="UserDateOfBirth" /&gt;&lt;field column="ContactEmail" mappedtofield="Email" /&gt;&lt;field column="ContactFirstName" mappedtofield="FirstName" /&gt;&lt;field column="ContactGender" mappedtofield="UserGender" /&gt;&lt;field column="ContactLastName" mappedtofield="LastName" /&gt;&lt;field column="ContactMiddleName" mappedtofield="MiddleName" /&gt;&lt;field column="ContactMobilePhone" mappedtofield="UserPhone" /&gt;&lt;/form&gt;</ClassContactMapping>
+      <ClassContactOverwriteEnabled>false</ClassContactOverwriteEnabled>
+      <ClassSKUDefaultProductType>PRODUCT</ClassSKUDefaultProductType>
+    </cms_class>
+    <cms_query>
+      <QueryID>14212</QueryID>
+      <QueryName>GetTerritorioAdministrado</QueryName>
+      <QueryTypeID>0</QueryTypeID>
+      <QueryText>select * from GetTerritorioAdministrado(@UserIDCurrent,@UserID,'manager')</QueryText>
+      <QueryRequiresTransaction>false</QueryRequiresTransaction>
+      <ClassID>59</ClassID>
+      <QueryIsLocked>true</QueryIsLocked>
+      <QueryLastModified>2014-02-25T13:44:30.867-05:00</QueryLastModified>
+      <QueryGUID>c853184b-3bbe-4998-89a6-e96c76ae9db2</QueryGUID>
+      <QueryLoadGeneration>0</QueryLoadGeneration>
+      <QueryIsCustom>true</QueryIsCustom>
+    </cms_query>
+    <cms_query>
+      <QueryID>14183</QueryID>
+      <QueryName>GetUserbyRoles</QueryName>
+      <QueryTypeID>0</QueryTypeID>
+      <QueryText>SELECT * 
+FROM CMS_User 
+WHERE UserID IN (SELECT UserID FROM View_CMS_UserRole_Joined WHERE (@roles LIKE '%;'+ RoleName+';%')) </QueryText>
+      <QueryRequiresTransaction>false</QueryRequiresTransaction>
+      <ClassID>59</ClassID>
+      <QueryIsLocked>true</QueryIsLocked>
+      <QueryLastModified>2014-02-08T02:07:00.443-05:00</QueryLastModified>
+      <QueryGUID>b08a16bb-1570-46cd-ae15-2f25eae8e785</QueryGUID>
+      <QueryLoadGeneration>0</QueryLoadGeneration>
+      <QueryIsCustom>true</QueryIsCustom>
+    </cms_query>
+    <cms_alternativeform>
+      <FormID>124</FormID>
+      <FormDisplayName>Registration form</FormDisplayName>
+      <FormName>RegistrationForm</FormName>
+      <FormClassID>59</FormClassID>
+      <FormDefinition>&lt;form&gt;&lt;field column="UserID" visible="false" /&gt;&lt;field column="UserName" fieldcaption="User name"&gt;&lt;settings&gt;&lt;controlname&gt;username&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="FirstName" fieldcaption="First name" minstringlength="1" validationerrormessage="Please enter some first name." /&gt;&lt;field column="MiddleName" visible="false" /&gt;&lt;field column="LastName" fieldcaption="Last name" minstringlength="1" validationerrormessage="Please enter some last name." /&gt;&lt;field column="FullName" fieldcaption="Full name" visible="false" allowempty="false" /&gt;&lt;field column="Email" minstringlength="5" validationerrormessage="Please enter some email."&gt;&lt;settings&gt;&lt;controlname&gt;emailinput&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserPassword" fieldcaption="Password" minstringlength="2"&gt;&lt;settings&gt;&lt;controlname&gt;passwordconfirmator&lt;/controlname&gt;&lt;showstrength&gt;True&lt;/showstrength&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="PreferredCultureCode" visible="false" /&gt;&lt;field column="PreferredUICultureCode" visible="false" /&gt;&lt;field column="UserEnabled" visible="false" defaultvalue="false" /&gt;&lt;field column="UserIsEditor" visible="false" defaultvalue="false" /&gt;&lt;field column="UserIsGlobalAdministrator" visible="false" defaultvalue="false" /&gt;&lt;field column="UserIsExternal" visible="false" defaultvalue="false" /&gt;&lt;field column="UserPasswordFormat" visible="false" /&gt;&lt;field column="UserCreated" visible="false"&gt;&lt;settings&gt;&lt;editTime&gt;false&lt;/editTime&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="LastLogon" visible="false"&gt;&lt;settings&gt;&lt;editTime&gt;false&lt;/editTime&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserStartingAliasPath" visible="false" /&gt;&lt;field column="UserGUID" visible="false" /&gt;&lt;field column="UserLastModified" visible="false"&gt;&lt;settings&gt;&lt;editTime&gt;false&lt;/editTime&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserLastLogonInfo" visible="false" /&gt;&lt;field column="UserIsHidden" visible="false" defaultvalue="false" /&gt;&lt;field column="UserVisibility" visible="false" /&gt;&lt;field column="UserSettingsID" visible="false" /&gt;&lt;field column="UserNickName" visible="false" /&gt;&lt;field column="UserPicture" visible="false" /&gt;&lt;field column="UserSignature" visible="false" /&gt;&lt;field column="UserURLReferrer" visible="false" /&gt;&lt;field column="UserCampaign" visible="false" /&gt;&lt;field column="UserMessagingNotificationEmail" visible="false" /&gt;&lt;field column="UserCustomData" visible="false" /&gt;&lt;field column="UserRegistrationInfo" visible="false" /&gt;&lt;field column="UserPreferences" visible="false" /&gt;&lt;field column="UserActivationDate" visible="false" /&gt;&lt;field column="UserActivatedByUserID" visible="false" /&gt;&lt;field column="UserTimeZoneID" fieldcaption="Time zone" visible="false"&gt;&lt;settings&gt;&lt;controlname&gt;timezoneselector&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserAvatarID" fieldcaption="Avatar" visible="false"&gt;&lt;settings&gt;&lt;controlname&gt;useravatarselector&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserBadgeID" visible="false" /&gt;&lt;field column="UserShowSplashScreen" visible="false" /&gt;&lt;field column="UserActivityPoints" visible="false" /&gt;&lt;field column="UserForumPosts" visible="false" /&gt;&lt;field column="UserBlogComments" visible="false" /&gt;&lt;field column="UserGender" fieldcaption="Gender"&gt;&lt;settings&gt;&lt;controlname&gt;radiobuttonscontrol&lt;/controlname&gt;&lt;repeatdirection&gt;horizontal&lt;/repeatdirection&gt;&lt;options&gt;&amp;lt;item value="1" text="{$general.male$}" /&amp;gt;&amp;lt;item value="2" text="{$general.female$}" /&amp;gt;&lt;/options&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserDateOfBirth" fieldcaption="Date of birth" visible="false"&gt;&lt;settings&gt;&lt;EditTime&gt;false&lt;/EditTime&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserMessageBoardPosts" visible="false" /&gt;&lt;field column="UserSettingsUserGUID" visible="false" /&gt;&lt;field column="UserSettingsUserID" visible="false" /&gt;&lt;field column="UserBlogPosts" visible="false" /&gt;&lt;/form&gt;</FormDefinition>
+      <FormLayout>&lt;table class="CustomRegistrationForm"&gt;
+	&lt;tbody&gt;
+		&lt;tr&gt;
+			&lt;td&gt;
+				$$label:UserName$$&lt;/td&gt;
+			&lt;td&gt;
+				$$input:UserName$$$$validation:UserName$$&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;
+				$$label:FirstName$$&lt;/td&gt;
+			&lt;td&gt;
+				$$input:FirstName$$$$validation:FirstName$$&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;
+				$$label:LastName$$&lt;/td&gt;
+			&lt;td&gt;
+				$$input:LastName$$$$validation:LastName$$&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;
+				$$label:Email$$&lt;/td&gt;
+			&lt;td&gt;
+				$$input:Email$$$$validation:Email$$&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td style="vertical-align: top; padding-top: 6px;" valign="top"&gt;
+				&lt;span class="EditingFormLabel"&gt;$$label:UserPassword$$&lt;/span&gt;
+				&lt;div style="margin-top: 44px;"&gt;
+					&lt;span class="EditingFormLabel"&gt;Confirm password:&lt;/span&gt;&lt;/div&gt;
+			&lt;/td&gt;
+			&lt;td&gt;
+				$$input:UserPassword$$$$validation:UserPassword$$&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;
+				$$label:UserGender$$&lt;/td&gt;
+			&lt;td&gt;
+				$$input:UserGender$$$$validation:UserGender$$&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+</FormLayout>
+      <FormGUID>005a6c1c-a442-4229-ba5c-80f423dea704</FormGUID>
+      <FormLastModified>2011-10-21T10:17:12.53-05:00</FormLastModified>
+      <FormCoupledClassID>1768</FormCoupledClassID>
+    </cms_alternativeform>
+    <cms_alternativeform>
+      <FormID>125</FormID>
+      <FormDisplayName>Display profile</FormDisplayName>
+      <FormName>DisplayProfile</FormName>
+      <FormClassID>59</FormClassID>
+      <FormDefinition>&lt;form&gt;&lt;field column="UserID" visible="false" dependsonanotherfield="false" /&gt;&lt;field column="UserName" fieldcaption="Name" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;viewsecuretext&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="FirstName" visible="false" dependsonanotherfield="false" /&gt;&lt;field column="MiddleName" visible="false" dependsonanotherfield="false" /&gt;&lt;field column="LastName" visible="false" dependsonanotherfield="false" /&gt;&lt;field column="FullName" fieldcaption="Full name" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;viewsecuretext&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="Email" visibility="authenticated" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;labelcontrol&lt;/controlname&gt;&lt;FilterMode /&gt;&lt;FilterEnabled /&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserPassword" visible="false" dependsonanotherfield="false" /&gt;&lt;field column="PreferredCultureCode" visible="false" dependsonanotherfield="false" /&gt;&lt;field column="PreferredUICultureCode" visible="false" dependsonanotherfield="false" /&gt;&lt;field column="UserEnabled" visible="false" defaultvalue="false" dependsonanotherfield="false" /&gt;&lt;field column="UserIsEditor" visible="false" defaultvalue="false" dependsonanotherfield="false" /&gt;&lt;field column="UserIsGlobalAdministrator" visible="false" defaultvalue="false" dependsonanotherfield="false" /&gt;&lt;field column="UserIsExternal" visible="false" defaultvalue="false" dependsonanotherfield="false" /&gt;&lt;field column="UserPasswordFormat" visible="false" dependsonanotherfield="false" /&gt;&lt;field column="UserCreated" fieldcaption="Created" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;viewdate&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="LastLogon" visible="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;editTime&gt;false&lt;/editTime&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserStartingAliasPath" visible="false" dependsonanotherfield="false" /&gt;&lt;field column="UserGUID" visible="false" dependsonanotherfield="false" /&gt;&lt;field column="UserLastModified" visible="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;editTime&gt;false&lt;/editTime&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserLastLogonInfo" visible="false" dependsonanotherfield="false" /&gt;&lt;field column="UserIsHidden" visible="false" defaultvalue="false" dependsonanotherfield="false" /&gt;&lt;field column="UserVisibility" visible="false" dependsonanotherfield="false" /&gt;&lt;field column="UserIsDomain" dependsonanotherfield="false" /&gt;&lt;field column="UserHasAllowedCultures" dependsonanotherfield="false" /&gt;&lt;field column="UserSiteManagerDisabled" dependsonanotherfield="false" /&gt;&lt;field column="UserSettingsID" visible="false" dependsonanotherfield="false" /&gt;&lt;field column="UserNickName" dependsonanotherfield="false" /&gt;&lt;field column="UserPicture" visible="false" dependsonanotherfield="false" /&gt;&lt;field column="UserSignature" visible="false" dependsonanotherfield="false" /&gt;&lt;field column="UserURLReferrer" visible="false" dependsonanotherfield="false" /&gt;&lt;field column="UserCampaign" visible="false" dependsonanotherfield="false" /&gt;&lt;field column="UserMessagingNotificationEmail" visible="false" dependsonanotherfield="false" /&gt;&lt;field column="UserCustomData" visible="false" dependsonanotherfield="false" /&gt;&lt;field column="UserRegistrationInfo" visible="false" dependsonanotherfield="false" /&gt;&lt;field column="UserPreferences" visible="false" dependsonanotherfield="false" /&gt;&lt;field column="UserActivationDate" visible="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;viewdate&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserActivatedByUserID" visible="false" dependsonanotherfield="false" /&gt;&lt;field column="UserTimeZoneID" visible="false" dependsonanotherfield="false" /&gt;&lt;field column="UserAvatarID" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;viewuseravatar&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserBadgeID" fieldcaption="Badge" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;viewbadgeimage&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserShowSplashScreen" visible="false" defaultvalue="false" dependsonanotherfield="false" /&gt;&lt;field column="UserActivityPoints" fieldcaption="Community points" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;viewintegernumber&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserForumPosts" fieldcaption="Forum posts" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;viewintegernumber&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserBlogComments" fieldcaption="Blog comments" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;viewintegernumber&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserGender" fieldcaption="Gender" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;viewusergender&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserDateOfBirth" fieldcaption="Date of birth" dependsonanotherfield="false" visibility=""&gt;&lt;settings&gt;&lt;controlname&gt;viewdate&lt;/controlname&gt;&lt;DisplayNow /&gt;&lt;TimeZoneType /&gt;&lt;EditTime /&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserMessageBoardPosts" fieldcaption="Message board posts" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;viewintegernumber&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserSettingsUserGUID" visible="false" dependsonanotherfield="false" /&gt;&lt;field column="UserSettingsUserID" visible="false" dependsonanotherfield="false" /&gt;&lt;field column="WindowsLiveID" dependsonanotherfield="false" /&gt;&lt;field column="UserBlogPosts" fieldcaption="Blog posts" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;viewintegernumber&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserWaitingForApproval" dependsonanotherfield="false" /&gt;&lt;field column="UserDialogsConfiguration" dependsonanotherfield="false" /&gt;&lt;field column="UserDescription" dependsonanotherfield="false" /&gt;&lt;field column="UserUsedWebParts" dependsonanotherfield="false" /&gt;&lt;field column="UserUsedWidgets" dependsonanotherfield="false" /&gt;&lt;field column="UserFacebookID" dependsonanotherfield="false" /&gt;&lt;field column="UserAuthenticationGUID" dependsonanotherfield="false" /&gt;&lt;field column="UserSkype" dependsonanotherfield="false" /&gt;&lt;field column="UserIM" dependsonanotherfield="false" /&gt;&lt;field column="UserPhone" dependsonanotherfield="false" /&gt;&lt;field column="UserPosition" dependsonanotherfield="false" /&gt;&lt;field column="UserBounces" dependsonanotherfield="false" /&gt;&lt;/form&gt;</FormDefinition>
+      <FormLayout>&lt;table cellpadding="2"&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td rowspan="8" colspan="2"&gt;$$input:UserAvatarID$$&lt;/td&gt;
+            &lt;td colspan="2"&gt;
+            &lt;div style="font-size: 20px; font-weight: bold;"&gt;$$input:UserName$$&lt;/div&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;strong&gt;$$label:UserBadgeID$$&lt;/strong&gt;&lt;/td&gt;
+            &lt;td&gt;$$input:UserBadgeID$$&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;strong&gt;$$label:FullName$$&lt;/strong&gt;&lt;/td&gt;
+            &lt;td&gt;$$input:FullName$$&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&amp;nbsp;&lt;/td&gt;
+            &lt;td&gt;&amp;nbsp;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;strong&gt;$$label:Email$$&lt;/strong&gt;&lt;/td&gt;
+            &lt;td&gt;$$input:Email$$&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;strong&gt;$$label:UserCreated$$&lt;/strong&gt;&lt;/td&gt;
+            &lt;td&gt;$$input:UserCreated$$&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;strong&gt;$$label:UserGender$$&lt;/strong&gt;&lt;/td&gt;
+            &lt;td&gt;$$input:UserGender$$&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;strong&gt;$$label:UserDateOfBirth$$&lt;/strong&gt;&lt;/td&gt;
+            &lt;td&gt;$$input:UserDateOfBirth$$&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;strong&gt;$$label:UserForumPosts$$&lt;/strong&gt;&lt;/td&gt;
+            &lt;td&gt;$$input:UserForumPosts$$&lt;/td&gt;
+            &lt;td&gt;&amp;nbsp;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;strong&gt;$$label:UserMessageBoardPosts$$&lt;/strong&gt;&lt;/td&gt;
+            &lt;td&gt;$$input:UserMessageBoardPosts$$&lt;/td&gt;
+            &lt;td&gt;&amp;nbsp;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;strong&gt;$$label:UserBlogPosts$$&lt;/strong&gt;&lt;/td&gt;
+            &lt;td&gt;$$input:UserBlogPosts$$&lt;/td&gt;
+            &lt;td&gt;&amp;nbsp;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;strong&gt;$$label:UserBlogComments$$&lt;/strong&gt;&lt;/td&gt;
+            &lt;td&gt;$$input:UserBlogComments$$&lt;/td&gt;
+            &lt;td colspan="2"&gt;&amp;nbsp;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;strong&gt;$$label:UserActivityPoints$$&lt;/strong&gt;&lt;/td&gt;
+            &lt;td&gt;$$input:UserActivityPoints$$&lt;/td&gt;
+            &lt;td colspan="2"&gt;&amp;nbsp;&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</FormLayout>
+      <FormGUID>58c69789-2f4b-4e9b-b557-cabf89c65064</FormGUID>
+      <FormLastModified>2011-02-25T06:34:20.84-05:00</FormLastModified>
+      <FormCoupledClassID>1768</FormCoupledClassID>
+    </cms_alternativeform>
+    <cms_alternativeform>
+      <FormID>128</FormID>
+      <FormDisplayName>Edit profile</FormDisplayName>
+      <FormName>EditProfile</FormName>
+      <FormClassID>59</FormClassID>
+      <FormDefinition>&lt;form&gt;&lt;field column="UserID" visible="false" dependsonanotherfield="false" /&gt;&lt;field column="UserName" fieldcaption="Username" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;viewsecuretext&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="FirstName" visible="false" dependsonanotherfield="false" /&gt;&lt;field column="MiddleName" visible="false" dependsonanotherfield="false" /&gt;&lt;field column="LastName" visible="false" dependsonanotherfield="false" /&gt;&lt;field column="FullName" fieldcaption="Full name" allowempty="false" dependsonanotherfield="false" /&gt;&lt;field column="Email" visibility="authenticated" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;emailinput&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserPassword" visible="false" dependsonanotherfield="false" /&gt;&lt;field column="PreferredCultureCode" visible="false" dependsonanotherfield="false" /&gt;&lt;field column="PreferredUICultureCode" visible="false" dependsonanotherfield="false" /&gt;&lt;field column="UserEnabled" visible="false" dependsonanotherfield="false" /&gt;&lt;field column="UserIsEditor" visible="false" dependsonanotherfield="false" /&gt;&lt;field column="UserIsGlobalAdministrator" visible="false" dependsonanotherfield="false" /&gt;&lt;field column="UserIsExternal" visible="false" defaultvalue="false" dependsonanotherfield="false" /&gt;&lt;field column="UserPasswordFormat" visible="false" dependsonanotherfield="false" /&gt;&lt;field column="UserCreated" fieldcaption="User created" visible="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;viewdate&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="LastLogon" visible="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;editTime&gt;false&lt;/editTime&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserStartingAliasPath" visible="false" dependsonanotherfield="false" /&gt;&lt;field column="UserGUID" visible="false" dependsonanotherfield="false" /&gt;&lt;field column="UserLastModified" visible="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;editTime&gt;false&lt;/editTime&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserLastLogonInfo" visible="false" dependsonanotherfield="false" /&gt;&lt;field column="UserIsHidden" visible="false" defaultvalue="false" dependsonanotherfield="false" /&gt;&lt;field column="UserVisibility" visible="false" dependsonanotherfield="false" /&gt;&lt;field column="UserIsDomain" visible="false" defaultvalue="false" dependsonanotherfield="false" /&gt;&lt;field column="UserHasAllowedCultures" visible="false" defaultvalue="false" dependsonanotherfield="false" /&gt;&lt;field column="UserSiteManagerDisabled" dependsonanotherfield="false" /&gt;&lt;field column="UserSettingsID" visible="false" dependsonanotherfield="false" /&gt;&lt;field column="UserNickName" fieldcaption="Nickname" dependsonanotherfield="false" /&gt;&lt;field column="UserPicture" visible="false" dependsonanotherfield="false" /&gt;&lt;field column="UserSignature" fieldcaption="Signature" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;rows&gt;5&lt;/rows&gt;&lt;cols&gt;33&lt;/cols&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserURLReferrer" visible="false" dependsonanotherfield="false" /&gt;&lt;field column="UserCampaign" visible="false" dependsonanotherfield="false" /&gt;&lt;field column="UserMessagingNotificationEmail" fieldcaption="Messaging notification e-mail" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;emailinput&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserCustomData" visible="false" dependsonanotherfield="false" /&gt;&lt;field column="UserRegistrationInfo" visible="false" dependsonanotherfield="false" /&gt;&lt;field column="UserPreferences" visible="false" dependsonanotherfield="false" /&gt;&lt;field column="UserActivationDate" visible="false" dependsonanotherfield="false" /&gt;&lt;field column="UserActivatedByUserID" visible="false" dependsonanotherfield="false" /&gt;&lt;field column="UserTimeZoneID" fieldcaption="Time zone" fielddescription="Enables user to select his timezone." dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;timezoneselector&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserAvatarID" fieldcaption="Avatar" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;useravatarselector&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserBadgeID" visible="false" dependsonanotherfield="false" /&gt;&lt;field column="UserShowSplashScreen" visible="false" dependsonanotherfield="false" /&gt;&lt;field column="UserActivityPoints" visible="false" dependsonanotherfield="false" /&gt;&lt;field column="UserForumPosts" visible="false" dependsonanotherfield="false" /&gt;&lt;field column="UserBlogComments" visible="false" dependsonanotherfield="false" /&gt;&lt;field column="UserGender" fieldcaption="Gender" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;radiobuttonscontrol&lt;/controlname&gt;&lt;repeatdirection&gt;horizontal&lt;/repeatdirection&gt;&lt;options&gt;&lt;item value="1" text="{$General.Male$}" /&gt;&lt;item value="2" text="{$General.Female$}" /&gt;&lt;/options&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserDateOfBirth" fieldcaption="Date of birth" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;DisplayNow&gt;false&lt;/DisplayNow&gt;&lt;EditTime&gt;false&lt;/EditTime&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserMessageBoardPosts" visible="false" dependsonanotherfield="false" /&gt;&lt;field column="UserSettingsUserGUID" visible="false" dependsonanotherfield="false" /&gt;&lt;field column="UserSettingsUserID" visible="false" dependsonanotherfield="false" /&gt;&lt;field column="WindowsLiveID" dependsonanotherfield="false" /&gt;&lt;field column="UserBlogPosts" visible="false" dependsonanotherfield="false" /&gt;&lt;field column="UserWaitingForApproval" visible="false" dependsonanotherfield="false" /&gt;&lt;field column="UserDialogsConfiguration" visible="false" dependsonanotherfield="false" /&gt;&lt;field column="UserDescription" visible="false" dependsonanotherfield="false" /&gt;&lt;field column="UserUsedWebParts" dependsonanotherfield="false" /&gt;&lt;field column="UserUsedWidgets" dependsonanotherfield="false" /&gt;&lt;field column="UserFacebookID" dependsonanotherfield="false" /&gt;&lt;field column="UserAuthenticationGUID" dependsonanotherfield="false" /&gt;&lt;field column="UserSkype" dependsonanotherfield="false" /&gt;&lt;field column="UserIM" dependsonanotherfield="false" /&gt;&lt;field column="UserPhone" dependsonanotherfield="false" /&gt;&lt;field column="UserPosition" dependsonanotherfield="false" /&gt;&lt;field column="UserBounces" visible="false" dependsonanotherfield="false" /&gt;&lt;/form&gt;</FormDefinition>
+      <FormLayout></FormLayout>
+      <FormGUID>ae8d424c-7eed-4b91-a555-f87c0df05597</FormGUID>
+      <FormLastModified>2011-02-25T04:08:10.947-05:00</FormLastModified>
+      <FormCoupledClassID>1768</FormCoupledClassID>
+    </cms_alternativeform>
+    <cms_alternativeform>
+      <FormID>129</FormID>
+      <FormDisplayName>Edit profile (MyDesk) </FormDisplayName>
+      <FormName>EditProfileMyDesk</FormName>
+      <FormClassID>59</FormClassID>
+      <FormDefinition>&lt;form&gt;&lt;field column="UserID" visible="false" /&gt;&lt;field column="UserName" fieldcaption="{$general.username$}"&gt;&lt;settings&gt;&lt;controlname&gt;viewsecuretext&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="FirstName" fieldcaption="{$general.firstname$}" /&gt;&lt;field column="MiddleName" visible="false" /&gt;&lt;field column="LastName" fieldcaption="{$general.lastname$}" /&gt;&lt;field column="FullName" fieldcaption="{$general.fullname$}" allowempty="false"&gt;&lt;settings&gt;&lt;controlname&gt;viewsecuretext&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="Email" fieldcaption="{$general.email$}"&gt;&lt;settings&gt;&lt;controlname&gt;emailinput&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserPassword" visible="false" /&gt;&lt;field column="PreferredCultureCode" fieldcaption="{$MyDesk.MyProfile.Culture$}"&gt;&lt;settings&gt;&lt;controlname&gt;sitecultureselector&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="PreferredUICultureCode" fieldcaption="{$MyDesk.MyProfile.UICulture$}"&gt;&lt;settings&gt;&lt;controlname&gt;uicultureselector&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserEnabled" visible="false" /&gt;&lt;field column="UserIsEditor" visible="false" /&gt;&lt;field column="UserIsGlobalAdministrator" visible="false" /&gt;&lt;field column="UserIsExternal" visible="false" defaultvalue="false" /&gt;&lt;field column="UserPasswordFormat" visible="false" /&gt;&lt;field column="UserCreated" visible="false"&gt;&lt;settings&gt;&lt;editTime&gt;false&lt;/editTime&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="LastLogon" visible="false"&gt;&lt;settings&gt;&lt;editTime&gt;false&lt;/editTime&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserStartingAliasPath" visible="false" /&gt;&lt;field column="UserGUID" visible="false" /&gt;&lt;field column="UserLastModified" visible="false"&gt;&lt;settings&gt;&lt;editTime&gt;false&lt;/editTime&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserLastLogonInfo" visible="false" /&gt;&lt;field column="UserIsHidden" visible="false" defaultvalue="false" /&gt;&lt;field column="UserSettingsID" visible="false" /&gt;&lt;field column="UserNickName" fieldcaption="{$general.nickname$}" /&gt;&lt;field column="UserPicture" visible="false" /&gt;&lt;field column="UserSignature" fieldcaption="{$general.signature$}" controlcssclass="TextAreaField"&gt;&lt;settings&gt;&lt;size&gt;200&lt;/size&gt;&lt;rows&gt;5&lt;/rows&gt;&lt;cols&gt;33&lt;/cols&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserURLReferrer" visible="false" /&gt;&lt;field column="UserCampaign" visible="false" /&gt;&lt;field column="UserMessagingNotificationEmail" fieldcaption="{$Messaging.NotificationEmail$}"&gt;&lt;settings&gt;&lt;controlname&gt;emailinput&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserCustomData" visible="false" /&gt;&lt;field column="UserRegistrationInfo" visible="false" /&gt;&lt;field column="UserPreferences" visible="false" /&gt;&lt;field column="UserActivationDate" visible="false" /&gt;&lt;field column="UserActivatedByUserID" visible="false" /&gt;&lt;field column="UserTimeZoneID" fieldcaption="{$general.timezone$}"&gt;&lt;settings&gt;&lt;controlname&gt;timezoneselector&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserAvatarID" fieldcaption="{$general.avatar$}"&gt;&lt;settings&gt;&lt;controlname&gt;useravatarselector&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserBadgeID" visible="false" /&gt;&lt;field column="UserShowSplashScreen" fieldcaption="{$adm.user.lblusershowsplashscreen$}" defaultvalue="false"&gt;&lt;settings&gt;&lt;controlname&gt;checkboxcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserActivityPoints" visible="false" /&gt;&lt;field column="UserForumPosts" visible="false" /&gt;&lt;field column="UserBlogComments" visible="false" /&gt;&lt;field column="UserGender" fieldcaption="{$general.gender$}"&gt;&lt;settings&gt;&lt;controlname&gt;radiobuttonscontrol&lt;/controlname&gt;&lt;RepeatDirection&gt;horizontal&lt;/RepeatDirection&gt;&lt;Options&gt;1;{$General.Male$}
+2;{$General.Female$}&lt;/Options&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserDateOfBirth" fieldcaption="{$general.DateOfBirth$}"&gt;&lt;settings&gt;&lt;EditTime&gt;False&lt;/EditTime&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserMessageBoardPosts" visible="false" /&gt;&lt;field column="UserSettingsUserGUID" visible="false" /&gt;&lt;field column="UserSettingsUserID" visible="false" /&gt;&lt;field column="UserBlogPosts" visible="false" /&gt;&lt;field column="UserWaitingForApproval" visible="false" /&gt;&lt;field column="UserSkype" fieldcaption="Skype account" visible="true" /&gt;&lt;field column="UserIM" fieldcaption="IM" visible="true" /&gt;&lt;field column="UserPhone" fieldcaption="Phone number" visible="true" /&gt;&lt;/form&gt;</FormDefinition>
+      <FormLayout>&lt;table cellspacing="2" cellpadding="2"&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;$$label:UserName$$&lt;/td&gt;
+            &lt;td&gt;$$input:UserName$$ $$validation:UserName$$&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;$$label:FullName$$&lt;/td&gt;
+            &lt;td&gt;$$input:FullName$$ $$validation:FullName$$&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;$$label:FirstName$$&lt;/td&gt;
+            &lt;td&gt;$$input:FirstName$$ $$validation:FirstName$$&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;$$label:LastName$$&lt;/td&gt;
+            &lt;td&gt;$$input:LastName$$ $$validation:LastName$$&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;$$label:UserNickName$$&lt;/td&gt;
+            &lt;td&gt;$$input:UserNickName$$ $$validation:UserNickName$$&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;$$label:Email$$&lt;/td&gt;
+            &lt;td&gt;$$input:Email$$ $$validation:Email$$&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;$$label:PreferredCultureCode$$&lt;/td&gt;
+            &lt;td&gt;$$input:PreferredCultureCode$$ $$validation:PreferredCultureCode$$&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;$$label:PreferredUICultureCode$$&lt;/td&gt;
+            &lt;td&gt;$$input:PreferredUICultureCode$$ $$validation:PreferredUICultureCode$$&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;$$label:UserMessagingNotificationEmail$$&lt;/td&gt;
+            &lt;td&gt;$$input:UserMessagingNotificationEmail$$ $$validation:UserMessagingNotificationEmail$$&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;$$label:UserTimeZoneID$$&lt;/td&gt;
+            &lt;td&gt;$$input:UserTimeZoneID$$$$validation:UserTimeZoneID$$&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;$$label:UserSignature$$&lt;/td&gt;
+            &lt;td&gt;$$input:UserSignature$$ $$validation:UserSignature$$&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;$$label:UserGender$$&lt;/td&gt;
+            &lt;td&gt;$$input:UserGender$$ $$validation:UserGender$$&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;$$label:UserDateOfBirth$$&lt;/td&gt;
+            &lt;td&gt;$$input:UserDateOfBirth$$ $$validation:UserDateOfBirth$$&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;$$label:UserPhone$$&lt;/td&gt;
+            &lt;td&gt;$$input:UserPhone$$ $$validation:UserPhone$$&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;$$label:UserSkype$$&lt;/td&gt;
+            &lt;td&gt;$$input:UserSkype$$ $$validation:UserSkype$$&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;$$label:UserIM$$&lt;/td&gt;
+            &lt;td&gt;$$input:UserIM$$ $$validation:UserIM$$&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;$$label:UserAvatarID$$&lt;/td&gt;
+            &lt;td&gt;$$input:UserAvatarID$$ $$validation:UserAvatarID$$&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;$$label:UserShowSplashScreen$$&lt;/td&gt;
+            &lt;td&gt;$$input:UserShowSplashScreen$$ $$validation:UserShowSplashScreen$$&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&amp;nbsp;&lt;/td&gt;
+            &lt;td&gt;$$submitbutton$$&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</FormLayout>
+      <FormGUID>8815b022-8e63-4f96-9710-a901e35e04d2</FormGUID>
+      <FormLastModified>2012-01-02T07:45:39.36-05:00</FormLastModified>
+      <FormCoupledClassID>1768</FormCoupledClassID>
+    </cms_alternativeform>
+    <cms_alternativeform>
+      <FormID>150</FormID>
+      <FormDisplayName>Edit profile (Community)</FormDisplayName>
+      <FormName>EditProfileCommunity</FormName>
+      <FormClassID>59</FormClassID>
+      <FormDefinition>&lt;form&gt;&lt;field column="UserID" visible="false" /&gt;&lt;field column="UserName" fieldcaption="Username"&gt;&lt;settings&gt;&lt;controlname&gt;viewsecuretext&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="FirstName" visible="false" /&gt;&lt;field column="MiddleName" visible="false" /&gt;&lt;field column="LastName" visible="false" /&gt;&lt;field column="FullName" fieldcaption="Full name" allowempty="false" /&gt;&lt;field column="Email" allowusertochangevisibility="true" visibility="authenticated" visibilitycontrol="RadioButtonsHorizontalVisibilityControl"&gt;&lt;settings&gt;&lt;controlname&gt;emailinput&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserPassword" visible="false" /&gt;&lt;field column="PreferredCultureCode" visible="false" /&gt;&lt;field column="PreferredUICultureCode" visible="false" /&gt;&lt;field column="UserEnabled" visible="false" /&gt;&lt;field column="UserIsEditor" visible="false" /&gt;&lt;field column="UserIsGlobalAdministrator" visible="false" /&gt;&lt;field column="UserIsExternal" visible="false" defaultvalue="false" /&gt;&lt;field column="UserPasswordFormat" visible="false" /&gt;&lt;field column="UserCreated" visible="false"&gt;&lt;settings&gt;&lt;timezonetype&gt;inherit&lt;/timezonetype&gt;&lt;editTime&gt;false&lt;/editTime&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="LastLogon" visible="false"&gt;&lt;settings&gt;&lt;timezonetype&gt;inherit&lt;/timezonetype&gt;&lt;editTime&gt;false&lt;/editTime&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserStartingAliasPath" visible="false" /&gt;&lt;field column="UserGUID" visible="false" /&gt;&lt;field column="UserLastModified" visible="false"&gt;&lt;settings&gt;&lt;timezonetype&gt;inherit&lt;/timezonetype&gt;&lt;editTime&gt;false&lt;/editTime&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserLastLogonInfo" visible="false" /&gt;&lt;field column="UserIsHidden" visible="false" defaultvalue="false" /&gt;&lt;field column="UserVisibility"&gt;&lt;settings&gt;&lt;controlname&gt;largetextarea&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserSettingsID" visible="false" /&gt;&lt;field column="UserNickName" fieldcaption="Nickname" /&gt;&lt;field column="UserPicture" visible="false" /&gt;&lt;field column="UserSignature" fieldcaption="Signature" controlcssclass="SignatureField"&gt;&lt;settings&gt;&lt;rows&gt;5&lt;/rows&gt;&lt;cols&gt;33&lt;/cols&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserURLReferrer" visible="false" /&gt;&lt;field column="UserCampaign" visible="false" /&gt;&lt;field column="UserMessagingNotificationEmail" fieldcaption="Messaging notification e-mail"&gt;&lt;settings&gt;&lt;controlname&gt;emailinput&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserCustomData" visible="false" /&gt;&lt;field column="UserRegistrationInfo" visible="false" /&gt;&lt;field column="UserPreferences" visible="false" /&gt;&lt;field column="UserActivationDate" visible="false"&gt;&lt;settings&gt;&lt;timezonetype&gt;inherit&lt;/timezonetype&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserActivatedByUserID" visible="false" /&gt;&lt;field column="UserTimeZoneID" fieldcaption="Time zone" fielddescription="Enables user to select his timezone."&gt;&lt;settings&gt;&lt;controlname&gt;timezoneselector&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserAvatarID" fieldcaption="Avatar"&gt;&lt;settings&gt;&lt;controlname&gt;useravatarselector&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserBadgeID" visible="false" /&gt;&lt;field column="UserShowSplashScreen" visible="false" /&gt;&lt;field column="UserActivityPoints" visible="false" /&gt;&lt;field column="UserForumPosts" visible="false" /&gt;&lt;field column="UserBlogComments" visible="false" /&gt;&lt;field column="UserGender" fieldcaption="Gender"&gt;&lt;settings&gt;&lt;controlname&gt;radiobuttonscontrol&lt;/controlname&gt;&lt;RepeatDirection&gt;horizontal&lt;/RepeatDirection&gt;&lt;Options&gt;&lt;item value="1" text="{$General.Male$}" /&gt;&lt;item value="2" text="{$General.Female$}" /&gt;&lt;/Options&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserDateOfBirth" fieldcaption="Date of birth"&gt;&lt;settings&gt;&lt;EditTime&gt;False&lt;/EditTime&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserMessageBoardPosts" visible="false" /&gt;&lt;field column="UserSettingsUserGUID" visible="false" /&gt;&lt;field column="UserSettingsUserID" visible="false" /&gt;&lt;field column="UserBlogPosts" visible="false" /&gt;&lt;field column="UserWaitingForApproval" visible="false" /&gt;&lt;field column="UserSkype" visible="true" /&gt;&lt;field column="UserIM" visible="true" /&gt;&lt;field column="UserPhone" visible="true" /&gt;&lt;field column="UserPosition" visible="true" /&gt;&lt;/form&gt;</FormDefinition>
+      <FormLayout>&lt;table&gt;
+	&lt;tbody&gt;
+		&lt;tr&gt;
+			&lt;td&gt;
+				$$label:UserName$$&lt;/td&gt;
+			&lt;td&gt;
+				$$input:UserName$$ $$validation:UserName$$&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;
+				$$label:FullName$$&lt;/td&gt;
+			&lt;td&gt;
+				$$input:FullName$$ $$validation:FullName$$&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;
+				$$label:Email$$&lt;/td&gt;
+			&lt;td&gt;
+				$$input:Email$$ $$validation:Email$$&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;
+				Display my e-mail to&lt;/td&gt;
+			&lt;td&gt;
+				$$visibility:Email$$&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;
+				$$label:UserNickName$$&lt;/td&gt;
+			&lt;td&gt;
+				$$input:UserNickName$$ $$validation:UserNickName$$&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;
+				$$label:UserSignature$$&lt;/td&gt;
+			&lt;td&gt;
+				$$input:UserSignature$$ $$validation:UserSignature$$&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;
+				$$label:UserMessagingNotificationEmail$$&lt;/td&gt;
+			&lt;td&gt;
+				$$input:UserMessagingNotificationEmail$$ $$validation:UserMessagingNotificationEmail$$&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;
+				$$label:UserTimeZoneID$$&lt;/td&gt;
+			&lt;td&gt;
+				$$input:UserTimeZoneID$$ $$validation:UserTimeZoneID$$&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;
+				$$label:UserAvatarID$$&lt;/td&gt;
+			&lt;td&gt;
+				$$input:UserAvatarID$$ $$validation:UserAvatarID$$&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;
+				$$label:UserGender$$&lt;/td&gt;
+			&lt;td&gt;
+				$$input:UserGender$$ $$validation:UserGender$$&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;
+				$$label:UserDateOfBirth$$&lt;/td&gt;
+			&lt;td&gt;
+				$$input:UserDateOfBirth$$ $$validation:UserDateOfBirth$$&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;&lt;/td&gt;
+			&lt;td&gt;
+				$$submitbutton$$&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;</FormLayout>
+      <FormGUID>52ab7093-1c5a-4af7-b085-b223f67ab909</FormGUID>
+      <FormLastModified>2011-09-08T06:36:49.417-05:00</FormLastModified>
+      <FormCoupledClassID>1768</FormCoupledClassID>
+    </cms_alternativeform>
+    <cms_alternativeform>
+      <FormID>890</FormID>
+      <FormDisplayName>Edit profile (Intranet)</FormDisplayName>
+      <FormName>EditProfileIntranet</FormName>
+      <FormClassID>59</FormClassID>
+      <FormDefinition>&lt;form&gt;&lt;field column="UserID" visible="false" /&gt;&lt;field column="UserName" fieldcaption="User name"&gt;&lt;settings&gt;&lt;controlname&gt;viewsecuretext&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="FirstName" visible="false" /&gt;&lt;field column="MiddleName" visible="false" /&gt;&lt;field column="LastName" visible="false" /&gt;&lt;field column="FullName" fieldcaption="Full name"&gt;&lt;settings&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;FilterEnabled&gt;False&lt;/FilterEnabled&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="Email" allowusertochangevisibility="true" visibilitycontrol="RadioButtonsHorizontalVisibilityControl" visibility=""&gt;&lt;settings&gt;&lt;controlname&gt;emailinput&lt;/controlname&gt;&lt;FilterMode /&gt;&lt;FilterEnabled /&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="Territorio" visibility="" /&gt;&lt;field column="UserPassword" visible="false" /&gt;&lt;field column="PreferredCultureCode" visible="false" /&gt;&lt;field column="PreferredUICultureCode" visible="false" /&gt;&lt;field column="UserEnabled" visible="false" defaultvalue="false" /&gt;&lt;field column="UserIsEditor" visible="false" defaultvalue="false" /&gt;&lt;field column="UserIsGlobalAdministrator" visible="false" defaultvalue="false" /&gt;&lt;field column="UserIsExternal" visible="false" defaultvalue="false" /&gt;&lt;field column="UserPasswordFormat" visible="false" /&gt;&lt;field column="UserCreated" visible="false"&gt;&lt;settings&gt;&lt;displayNow&gt;true&lt;/displayNow&gt;&lt;timezonetype&gt;inherit&lt;/timezonetype&gt;&lt;editTime&gt;false&lt;/editTime&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="LastLogon" visible="false"&gt;&lt;settings&gt;&lt;displayNow&gt;true&lt;/displayNow&gt;&lt;timezonetype&gt;inherit&lt;/timezonetype&gt;&lt;editTime&gt;false&lt;/editTime&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserStartingAliasPath" visible="false" /&gt;&lt;field column="UserGUID" visible="false" /&gt;&lt;field column="UserLastModified" visible="false"&gt;&lt;settings&gt;&lt;displayNow&gt;true&lt;/displayNow&gt;&lt;timezonetype&gt;inherit&lt;/timezonetype&gt;&lt;editTime&gt;false&lt;/editTime&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserLastLogonInfo" visible="false" /&gt;&lt;field column="UserIsHidden" visible="false" defaultvalue="false" /&gt;&lt;field column="UserVisibility" fieldcaption="Display my e-mail to"&gt;&lt;settings&gt;&lt;controlname&gt;labelcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserIsDomain" visible="false" defaultvalue="false" /&gt;&lt;field column="UserHasAllowedCultures" visible="false" defaultvalue="false" /&gt;&lt;field column="UserSettingsID" visible="false" /&gt;&lt;field column="UserNickName" fieldcaption="Nickname" /&gt;&lt;field column="UserPicture" visible="false" /&gt;&lt;field column="UserSignature" fieldcaption="Signature" /&gt;&lt;field column="UserURLReferrer" visible="false" /&gt;&lt;field column="UserCampaign" visible="false" /&gt;&lt;field column="UserMessagingNotificationEmail" fieldcaption="Messaging notification e-mail"&gt;&lt;settings&gt;&lt;controlname&gt;emailinput&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserCustomData" visible="false" /&gt;&lt;field column="UserRegistrationInfo" visible="false" /&gt;&lt;field column="UserPreferences" visible="false" /&gt;&lt;field column="UserActivationDate" visible="false"&gt;&lt;settings&gt;&lt;timezonetype&gt;inherit&lt;/timezonetype&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserActivatedByUserID" visible="false" /&gt;&lt;field column="UserTimeZoneID" fieldcaption="Time zone"&gt;&lt;settings&gt;&lt;controlname&gt;timezoneselector&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserAvatarID" fieldcaption="Avatar"&gt;&lt;settings&gt;&lt;controlname&gt;useravatarselector&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserBadgeID" visible="false" /&gt;&lt;field column="UserShowSplashScreen" visible="false" defaultvalue="false" /&gt;&lt;field column="UserActivityPoints" visible="false" /&gt;&lt;field column="UserForumPosts" visible="false" /&gt;&lt;field column="UserBlogComments" visible="false" /&gt;&lt;field column="UserGender" fieldcaption="Gender"&gt;&lt;settings&gt;&lt;controlname&gt;radiobuttonscontrol&lt;/controlname&gt;&lt;RepeatDirection&gt;vertical&lt;/RepeatDirection&gt;&lt;Options&gt;&amp;lt;item value="1" text="{$General.Male$}" /&amp;gt;&amp;lt;item value="2" text="{$General.Female$}" /&amp;gt;&lt;/Options&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserDateOfBirth" fieldcaption="Date of birth"&gt;&lt;settings&gt;&lt;EditTime&gt;False&lt;/EditTime&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserMessageBoardPosts" visible="false" /&gt;&lt;field column="UserSettingsUserGUID" visible="false" /&gt;&lt;field column="UserSettingsUserID" visible="false" /&gt;&lt;field column="UserBlogPosts" visible="false" /&gt;&lt;field column="UserWaitingForApproval" visible="false" defaultvalue="false" /&gt;&lt;field column="UserDialogsConfiguration" visible="false" /&gt;&lt;field column="UserDescription" visible="false" /&gt;&lt;field column="UserSkype" fieldcaption="Skype account" visible="true" visibility="" /&gt;&lt;field column="UserIM" fieldcaption="Instant messenger" visible="true" visibility="" /&gt;&lt;field column="UserPhone" fieldcaption="Phone number" visible="true" visibility="" /&gt;&lt;field column="UserBounces" visible="false" /&gt;&lt;/form&gt;</FormDefinition>
+      <FormLayout>&lt;table&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;$$label:UserName$$&lt;/td&gt;
+            &lt;td&gt;$$input:UserName$$ $$validation:UserName$$&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;$$label:FullName$$&lt;/td&gt;
+            &lt;td&gt;$$input:FullName$$ $$validation:FullName$$&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;$$label:Email$$&lt;/td&gt;
+            &lt;td&gt;$$input:Email$$ $$validation:Email$$&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;$$label:UserVisibility$$&lt;/td&gt;
+            &lt;td&gt;$$visibility:Email$$&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;$$label:UserNickName$$&lt;/td&gt;
+            &lt;td&gt;$$input:UserNickName$$ $$validation:UserNickName$$&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;$$label:UserSignature$$&lt;/td&gt;
+            &lt;td&gt;$$input:UserSignature$$ $$validation:UserSignature$$&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;$$label:UserMessagingNotificationEmail$$&lt;/td&gt;
+            &lt;td&gt;$$input:UserMessagingNotificationEmail$$ $$validation:UserMessagingNotificationEmail$$&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;$$label:UserTimeZoneID$$&lt;/td&gt;
+            &lt;td&gt;$$input:UserTimeZoneID$$ $$validation:UserTimeZoneID$$&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;$$label:UserAvatarID$$&lt;/td&gt;
+            &lt;td&gt;$$input:UserAvatarID$$ $$validation:UserAvatarID$$&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;$$label:UserGender$$&lt;/td&gt;
+            &lt;td&gt;$$input:UserGender$$ $$validation:UserGender$$&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;$$label:UserDateOfBirth$$&lt;/td&gt;
+            &lt;td&gt;$$input:UserDateOfBirth$$ $$validation:UserDateOfBirth$$&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;$$label:UserSkype$$&lt;/td&gt;
+            &lt;td&gt;$$input:UserSkype$$ $$validation:UserSkype$$&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;$$label:UserIM$$&lt;/td&gt;
+            &lt;td&gt;$$input:UserIM$$ $$validation:UserIM$$&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;$$label:UserPhone$$&lt;/td&gt;
+            &lt;td&gt;$$input:UserPhone$$ $$validation:UserPhone$$&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&amp;nbsp;&lt;/td&gt;
+            &lt;td&gt;$$submitbutton$$&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</FormLayout>
+      <FormGUID>38f17d82-fe29-411e-9711-52e04236c7fe</FormGUID>
+      <FormLastModified>2014-02-04T02:20:39.283-05:00</FormLastModified>
+      <FormCoupledClassID>1768</FormCoupledClassID>
+    </cms_alternativeform>
+    <cms_alternativeform>
+      <FormID>891</FormID>
+      <FormDisplayName>Display profile (Intranet)</FormDisplayName>
+      <FormName>DisplayProfileIntranet</FormName>
+      <FormClassID>59</FormClassID>
+      <FormDefinition>&lt;form&gt;&lt;field column="UserID" visible="false" dependsonanotherfield="false" /&gt;&lt;field column="UserName" fieldcaption="Name" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;viewsecuretext&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="FirstName" visible="false" dependsonanotherfield="false" /&gt;&lt;field column="MiddleName" visible="false" dependsonanotherfield="false" /&gt;&lt;field column="LastName" visible="false" dependsonanotherfield="false" /&gt;&lt;field column="FullName" fieldcaption="Full name" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;viewsecuretext&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="Email" visibility="authenticated" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;labelcontrol&lt;/controlname&gt;&lt;FilterMode /&gt;&lt;FilterEnabled /&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserPassword" visible="false" dependsonanotherfield="false" /&gt;&lt;field column="PreferredCultureCode" visible="false" dependsonanotherfield="false" /&gt;&lt;field column="PreferredUICultureCode" visible="false" dependsonanotherfield="false" /&gt;&lt;field column="UserEnabled" visible="false" defaultvalue="false" dependsonanotherfield="false" /&gt;&lt;field column="UserIsEditor" visible="false" defaultvalue="false" dependsonanotherfield="false" /&gt;&lt;field column="UserIsGlobalAdministrator" visible="false" defaultvalue="false" dependsonanotherfield="false" /&gt;&lt;field column="UserIsExternal" visible="false" defaultvalue="false" dependsonanotherfield="false" /&gt;&lt;field column="UserPasswordFormat" visible="false" dependsonanotherfield="false" /&gt;&lt;field column="UserCreated" fieldcaption="Created" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;timezonetype&gt;inherit&lt;/timezonetype&gt;&lt;controlname&gt;viewdate&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="LastLogon" visible="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;displayNow&gt;true&lt;/displayNow&gt;&lt;timezonetype&gt;inherit&lt;/timezonetype&gt;&lt;editTime&gt;false&lt;/editTime&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserStartingAliasPath" visible="false" dependsonanotherfield="false" /&gt;&lt;field column="UserGUID" visible="false" dependsonanotherfield="false" /&gt;&lt;field column="UserLastModified" visible="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;displayNow&gt;true&lt;/displayNow&gt;&lt;timezonetype&gt;inherit&lt;/timezonetype&gt;&lt;editTime&gt;false&lt;/editTime&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserLastLogonInfo" visible="false" dependsonanotherfield="false" /&gt;&lt;field column="UserIsHidden" visible="false" defaultvalue="false" dependsonanotherfield="false" /&gt;&lt;field column="UserVisibility" visible="false" dependsonanotherfield="false" /&gt;&lt;field column="UserIsDomain" visible="false" defaultvalue="false" dependsonanotherfield="false" /&gt;&lt;field column="UserHasAllowedCultures" visible="false" defaultvalue="false" dependsonanotherfield="false" /&gt;&lt;field column="UserSiteManagerDisabled" dependsonanotherfield="false" /&gt;&lt;field column="UserSettingsID" visible="false" dependsonanotherfield="false" /&gt;&lt;field column="UserNickName" visible="false" dependsonanotherfield="false" /&gt;&lt;field column="UserPicture" visible="false" dependsonanotherfield="false" /&gt;&lt;field column="UserSignature" visible="false" dependsonanotherfield="false" /&gt;&lt;field column="UserURLReferrer" visible="false" dependsonanotherfield="false" /&gt;&lt;field column="UserCampaign" visible="false" dependsonanotherfield="false" /&gt;&lt;field column="UserMessagingNotificationEmail" visible="false" dependsonanotherfield="false" /&gt;&lt;field column="UserCustomData" visible="false" dependsonanotherfield="false" /&gt;&lt;field column="UserRegistrationInfo" visible="false" dependsonanotherfield="false" /&gt;&lt;field column="UserPreferences" visible="false" dependsonanotherfield="false" /&gt;&lt;field column="UserActivationDate" visible="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;timezonetype&gt;inherit&lt;/timezonetype&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserActivatedByUserID" visible="false" dependsonanotherfield="false" /&gt;&lt;field column="UserTimeZoneID" visible="false" dependsonanotherfield="false" /&gt;&lt;field column="UserAvatarID" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;viewuseravatar&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserBadgeID" fieldcaption="Badge" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;viewbadgeimage&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserShowSplashScreen" visible="false" defaultvalue="false" dependsonanotherfield="false" /&gt;&lt;field column="UserActivityPoints" fieldcaption="Community points" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;viewintegernumber&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserForumPosts" fieldcaption="Forum posts" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;viewintegernumber&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserBlogComments" fieldcaption="Blog comments" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;viewintegernumber&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserGender" fieldcaption="Gender" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;viewusergender&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserDateOfBirth" fieldcaption="Date of birth" dependsonanotherfield="false" visibility=""&gt;&lt;settings&gt;&lt;controlname&gt;viewdate&lt;/controlname&gt;&lt;DisplayNow /&gt;&lt;TimeZoneType /&gt;&lt;EditTime /&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserMessageBoardPosts" fieldcaption="Message board posts" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;viewintegernumber&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserSettingsUserGUID" visible="false" dependsonanotherfield="false" /&gt;&lt;field column="UserSettingsUserID" visible="false" dependsonanotherfield="false" /&gt;&lt;field column="WindowsLiveID" dependsonanotherfield="false" /&gt;&lt;field column="UserBlogPosts" fieldcaption="Blog posts" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;viewintegernumber&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserWaitingForApproval" visible="false" defaultvalue="false" dependsonanotherfield="false" /&gt;&lt;field column="UserDialogsConfiguration" visible="false" dependsonanotherfield="false" /&gt;&lt;field column="UserDescription" visible="false" dependsonanotherfield="false" /&gt;&lt;field column="UserUsedWebParts" dependsonanotherfield="false" /&gt;&lt;field column="UserUsedWidgets" dependsonanotherfield="false" /&gt;&lt;field column="UserFacebookID" dependsonanotherfield="false" /&gt;&lt;field column="UserAuthenticationGUID" dependsonanotherfield="false" /&gt;&lt;field column="UserSkype" fieldcaption="Skype account" visible="true" dependsonanotherfield="false" visibility=""&gt;&lt;settings&gt;&lt;controlname&gt;viewsecuretext&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserIM" fieldcaption="Instant messenger" visible="true" dependsonanotherfield="false" visibility=""&gt;&lt;settings&gt;&lt;controlname&gt;viewsecuretext&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserPhone" fieldcaption="Phone number" visible="true" dependsonanotherfield="false" visibility=""&gt;&lt;settings&gt;&lt;controlname&gt;viewsecuretext&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserPosition" fieldcaption="Position" visible="true" dependsonanotherfield="false" visibility=""&gt;&lt;settings&gt;&lt;controlname&gt;viewsecuretext&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserBounces" visible="false" dependsonanotherfield="false" /&gt;&lt;/form&gt;</FormDefinition>
+      <FormLayout>&lt;table width="100%" cellpadding="2"&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td style="width: 140px;"&gt;&lt;strong&gt;$$label:UserPosition$$&lt;/strong&gt;&lt;/td&gt;
+            &lt;td&gt;$$input:UserPosition$$&lt;/td&gt;
+            &lt;td style="width: 150px;"&gt;&lt;strong&gt;$$label:UserForumPosts$$&lt;/strong&gt;&lt;/td&gt;
+            &lt;td&gt;$$input:UserForumPosts$$&lt;/td&gt;
+            &lt;td valign="top" rowspan="8"&gt;$$input:UserAvatarID$$&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;strong&gt;$$label:UserName$$&lt;/strong&gt;&lt;/td&gt;
+            &lt;td&gt;$$input:UserName$$&lt;/td&gt;
+            &lt;td&gt;&lt;strong&gt;$$label:UserMessageBoardPosts$$&lt;/strong&gt;&lt;/td&gt;
+            &lt;td&gt;$$input:UserMessageBoardPosts$$&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;strong&gt;$$label:Email$$&lt;/strong&gt;&lt;/td&gt;
+            &lt;td&gt;$$input:Email$$&lt;/td&gt;
+            &lt;td&gt;&lt;strong&gt;$$label:UserBlogPosts$$&lt;/strong&gt;&lt;/td&gt;
+            &lt;td&gt;$$input:UserBlogPosts$$&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;strong&gt;$$label:UserPhone$$&lt;/strong&gt;&lt;/td&gt;
+            &lt;td&gt;$$input:UserPhone$$&lt;/td&gt;
+            &lt;td&gt;&lt;strong&gt;$$label:UserBlogComments$$&lt;/strong&gt;&lt;/td&gt;
+            &lt;td&gt;$$input:UserBlogComments$$&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;strong&gt;$$label:UserSkype$$&lt;/strong&gt;&lt;/td&gt;
+            &lt;td&gt;$$input:UserSkype$$&lt;/td&gt;
+            &lt;td&gt;&lt;strong&gt;$$label:UserActivityPoints$$&lt;/strong&gt;&lt;/td&gt;
+            &lt;td&gt;$$input:UserActivityPoints$$&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;strong&gt;$$label:UserIM$$&lt;/strong&gt;&lt;/td&gt;
+            &lt;td&gt;$$input:UserIM$$&lt;/td&gt;
+            &lt;td colspan="2"&gt;&amp;nbsp;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;strong&gt;$$label:UserGender$$&lt;/strong&gt;&lt;/td&gt;
+            &lt;td&gt;$$input:UserGender$$&lt;/td&gt;
+            &lt;td colspan="2"&gt;&amp;nbsp;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;strong&gt;$$label:UserDateOfBirth$$&lt;/strong&gt;&lt;/td&gt;
+            &lt;td&gt;$$input:UserDateOfBirth$$&lt;/td&gt;
+            &lt;td colspan="2"&gt;&amp;nbsp;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;strong&gt;$$label:UserCreated$$&lt;/strong&gt;&lt;/td&gt;
+            &lt;td&gt;$$input:UserCreated$$&lt;/td&gt;
+            &lt;td colspan="2"&gt;&amp;nbsp;&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</FormLayout>
+      <FormGUID>bbed0652-dd65-436b-89c9-634cce6a05af</FormGUID>
+      <FormLastModified>2011-02-25T06:46:36.687-05:00</FormLastModified>
+      <FormCoupledClassID>1768</FormCoupledClassID>
+    </cms_alternativeform>
+    <cms_alternativeform>
+      <FormID>1024</FormID>
+      <FormDisplayName>Display profile (Corporate Site)</FormDisplayName>
+      <FormName>DisplayProfileCorporateSite</FormName>
+      <FormClassID>59</FormClassID>
+      <FormDefinition>&lt;form&gt;&lt;field column="UserID" visible="false" /&gt;&lt;field column="UserName" fieldcaption="Name"&gt;&lt;settings&gt;&lt;controlname&gt;viewsecuretext&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="FirstName" visible="false" /&gt;&lt;field column="MiddleName" visible="false" /&gt;&lt;field column="LastName" visible="false" /&gt;&lt;field column="FullName" fieldcaption="Full name"&gt;&lt;settings&gt;&lt;controlname&gt;viewsecuretext&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="Email" fieldcaption="E-mail"&gt;&lt;settings&gt;&lt;controlname&gt;labelcontrol&lt;/controlname&gt;&lt;FilterMode /&gt;&lt;FilterEnabled /&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserPassword" visible="false" /&gt;&lt;field column="PreferredCultureCode" visible="false" /&gt;&lt;field column="PreferredUICultureCode" visible="false" /&gt;&lt;field column="UserEnabled" visible="false" defaultvalue="false" /&gt;&lt;field column="UserIsEditor" visible="false" defaultvalue="false" /&gt;&lt;field column="UserIsGlobalAdministrator" visible="false" defaultvalue="false" /&gt;&lt;field column="UserIsExternal" visible="false" defaultvalue="false" /&gt;&lt;field column="UserPasswordFormat" visible="false" /&gt;&lt;field column="UserCreated" fieldcaption="Created"&gt;&lt;settings&gt;&lt;controlname&gt;viewdate&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="LastLogon" visible="false" /&gt;&lt;field column="UserStartingAliasPath" visible="false" /&gt;&lt;field column="UserGUID" visible="false" /&gt;&lt;field column="UserLastModified" visible="false" /&gt;&lt;field column="UserLastLogonInfo" visible="false" /&gt;&lt;field column="UserIsHidden" visible="false" defaultvalue="false" /&gt;&lt;field column="UserVisibility" visible="false" /&gt;&lt;field column="UserIsDomain" defaultvalue="false" /&gt;&lt;field column="UserSettingsID" visible="false"&gt;&lt;settings&gt;&lt;controlname&gt;labelcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserPicture" visible="false" /&gt;&lt;field column="UserSignature" visible="false"&gt;&lt;settings&gt;&lt;FilterEnabled /&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserURLReferrer" visible="false" /&gt;&lt;field column="UserCampaign" visible="false" /&gt;&lt;field column="UserMessagingNotificationEmail" visible="false" /&gt;&lt;field column="UserCustomData" visible="false"&gt;&lt;settings&gt;&lt;Dialogs_Web_Hide&gt;False&lt;/Dialogs_Web_Hide&gt;&lt;Dialogs_Attachments_Hide&gt;False&lt;/Dialogs_Attachments_Hide&gt;&lt;ShowAdvancedImage&gt;False&lt;/ShowAdvancedImage&gt;&lt;ShowAdvancedUrl&gt;False&lt;/ShowAdvancedUrl&gt;&lt;Dialogs_Anchor_Hide&gt;False&lt;/Dialogs_Anchor_Hide&gt;&lt;Dialogs_Libraries_Hide&gt;False&lt;/Dialogs_Libraries_Hide&gt;&lt;controlname&gt;bbeditorcontrol&lt;/controlname&gt;&lt;Dialogs_Content_Hide&gt;False&lt;/Dialogs_Content_Hide&gt;&lt;Dialogs_Email_Hide&gt;False&lt;/Dialogs_Email_Hide&gt;&lt;Autoresize_Hashtable&gt;True&lt;/Autoresize_Hashtable&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserRegistrationInfo" visible="false"&gt;&lt;settings&gt;&lt;Dialogs_Web_Hide&gt;False&lt;/Dialogs_Web_Hide&gt;&lt;Dialogs_Attachments_Hide&gt;False&lt;/Dialogs_Attachments_Hide&gt;&lt;ShowAdvancedImage&gt;False&lt;/ShowAdvancedImage&gt;&lt;ShowAdvancedUrl&gt;False&lt;/ShowAdvancedUrl&gt;&lt;Dialogs_Anchor_Hide&gt;False&lt;/Dialogs_Anchor_Hide&gt;&lt;Dialogs_Libraries_Hide&gt;False&lt;/Dialogs_Libraries_Hide&gt;&lt;controlname&gt;bbeditorcontrol&lt;/controlname&gt;&lt;Dialogs_Content_Hide&gt;False&lt;/Dialogs_Content_Hide&gt;&lt;Dialogs_Email_Hide&gt;False&lt;/Dialogs_Email_Hide&gt;&lt;Autoresize_Hashtable&gt;True&lt;/Autoresize_Hashtable&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserPreferences" visible="false"&gt;&lt;settings&gt;&lt;Dialogs_Web_Hide&gt;False&lt;/Dialogs_Web_Hide&gt;&lt;Dialogs_Attachments_Hide&gt;False&lt;/Dialogs_Attachments_Hide&gt;&lt;ShowAdvancedImage&gt;False&lt;/ShowAdvancedImage&gt;&lt;ShowAdvancedUrl&gt;False&lt;/ShowAdvancedUrl&gt;&lt;Dialogs_Anchor_Hide&gt;False&lt;/Dialogs_Anchor_Hide&gt;&lt;Dialogs_Libraries_Hide&gt;False&lt;/Dialogs_Libraries_Hide&gt;&lt;controlname&gt;bbeditorcontrol&lt;/controlname&gt;&lt;Dialogs_Content_Hide&gt;False&lt;/Dialogs_Content_Hide&gt;&lt;Dialogs_Email_Hide&gt;False&lt;/Dialogs_Email_Hide&gt;&lt;Autoresize_Hashtable&gt;True&lt;/Autoresize_Hashtable&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserActivationDate" visible="false"&gt;&lt;settings&gt;&lt;controlname&gt;dropdownlistcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserActivatedByUserID" visible="false" /&gt;&lt;field column="UserTimeZoneID" visible="false" /&gt;&lt;field column="UserAvatarID"&gt;&lt;settings&gt;&lt;controlname&gt;viewuseravatar&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserBadgeID"&gt;&lt;settings&gt;&lt;controlname&gt;viewbadgeimage&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserShowSplashScreen" visible="false" defaultvalue="false"&gt;&lt;settings&gt;&lt;controlname&gt;checkboxcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserActivityPoints" fieldcaption="Community points"&gt;&lt;settings&gt;&lt;controlname&gt;viewintegernumber&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserForumPosts" fieldcaption="Forum posts"&gt;&lt;settings&gt;&lt;controlname&gt;viewintegernumber&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserBlogComments" fieldcaption="Blog comments"&gt;&lt;settings&gt;&lt;controlname&gt;viewintegernumber&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserGender" fieldcaption="Gender"&gt;&lt;settings&gt;&lt;controlname&gt;viewusergender&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserDateOfBirth" fieldcaption="Date of birth"&gt;&lt;settings&gt;&lt;controlname&gt;viewdate&lt;/controlname&gt;&lt;DisplayNow /&gt;&lt;TimeZoneType /&gt;&lt;EditTime /&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserMessageBoardPosts" fieldcaption="Message board posts"&gt;&lt;settings&gt;&lt;controlname&gt;viewintegernumber&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserSettingsUserGUID" visible="false" /&gt;&lt;field column="UserSettingsUserID" visible="false" /&gt;&lt;field column="UserBlogPosts" fieldcaption="Blog posts"&gt;&lt;settings&gt;&lt;controlname&gt;viewintegernumber&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;/form&gt;</FormDefinition>
+      <FormLayout>&lt;table cellpadding="2" class="profile"&gt;
+ &lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td class="listBoxWithTeaser image" colspan="2" rowspan="8"&gt;
+    &lt;div class="teaser"&gt;
+     $$input:UserAvatarID$$&lt;/div&gt;
+   &lt;/td&gt;
+   &lt;td colspan="2"&gt;
+    &lt;div class="header"&gt;
+     $$input:UserName$$&lt;/div&gt;
+   &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td&gt;
+    $$input:UserBadgeID$$&lt;/td&gt;
+   &lt;td&gt;
+    &amp;nbsp;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td&gt;
+    &lt;strong&gt;$$label:FullName$$&lt;/strong&gt;&lt;/td&gt;
+   &lt;td&gt;
+    $$input:FullName$$&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td&gt;
+    &amp;nbsp;&lt;/td&gt;
+   &lt;td&gt;
+    &amp;nbsp;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td&gt;
+    &lt;strong&gt;$$label:Email$$&lt;/strong&gt;&lt;/td&gt;
+   &lt;td&gt;
+    $$input:Email$$&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td&gt;
+    &lt;strong&gt;$$label:UserCreated$$&lt;/strong&gt;&lt;/td&gt;
+   &lt;td&gt;
+    $$input:UserCreated$$&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td&gt;
+    &lt;strong&gt;$$label:UserGender$$&lt;/strong&gt;&lt;/td&gt;
+   &lt;td&gt;
+    $$input:UserGender$$&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td&gt;
+    &lt;strong&gt;$$label:UserDateOfBirth$$&lt;/strong&gt;&lt;/td&gt;
+   &lt;td&gt;
+    $$input:UserDateOfBirth$$&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td colspan="2"&gt;
+    &amp;nbsp;&lt;/td&gt;
+   &lt;td colspan="2"&gt;
+    &lt;table class="profileStats"&gt;
+     &lt;tbody&gt;
+      &lt;tr&gt;
+       &lt;td&gt;
+        $$label:UserForumPosts$$&lt;/td&gt;
+       &lt;td&gt;
+        $$input:UserForumPosts$$&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+       &lt;td&gt;
+        $$label:UserMessageBoardPosts$$&lt;/td&gt;
+       &lt;td&gt;
+        $$input:UserMessageBoardPosts$$&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+       &lt;td&gt;
+        $$label:UserBlogPosts$$&lt;/td&gt;
+       &lt;td&gt;
+        $$input:UserBlogPosts$$&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+       &lt;td&gt;
+        $$label:UserBlogComments$$&lt;/td&gt;
+       &lt;td&gt;
+        $$input:UserBlogComments$$&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+       &lt;td&gt;
+        $$label:UserActivityPoints$$&lt;/td&gt;
+       &lt;td&gt;
+        $$input:UserActivityPoints$$&lt;/td&gt;
+      &lt;/tr&gt;
+     &lt;/tbody&gt;
+    &lt;/table&gt;
+   &lt;/td&gt;
+  &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+</FormLayout>
+      <FormGUID>6067eff4-c8bf-4f0e-9775-3b60220dafcd</FormGUID>
+      <FormLastModified>2011-07-20T14:51:47.967-05:00</FormLastModified>
+      <FormCoupledClassID>1768</FormCoupledClassID>
+    </cms_alternativeform>
+    <cms_alternativeform>
+      <FormID>1062</FormID>
+      <FormDisplayName>Suscripcion Productor</FormDisplayName>
+      <FormName>SuscripcionProductor</FormName>
+      <FormClassID>59</FormClassID>
+      <FormDefinition>&lt;form&gt;&lt;field column="UserPassword"&gt;&lt;settings&gt;&lt;controlname&gt;passwordconfirmator&lt;/controlname&gt;&lt;showstrength&gt;True&lt;/showstrength&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserEnabled" visible="false" defaultvalue="false" /&gt;&lt;field column="UserIsEditor" visible="false" defaultvalue="false" /&gt;&lt;field column="UserIsGlobalAdministrator" visible="false" defaultvalue="false" /&gt;&lt;field column="UserGUID" visible="false" /&gt;&lt;field column="UserLastModified" visible="false" /&gt;&lt;field column="UserSettingsID" visible="false"&gt;&lt;settings&gt;&lt;controlname&gt;labelcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserGender"&gt;&lt;settings&gt;&lt;controlname&gt;radiobuttonscontrol&lt;/controlname&gt;&lt;RepeatDirection&gt;vertical&lt;/RepeatDirection&gt;&lt;Options&gt;1;{$General.Male$}
+2;{$General.Female$}&lt;/Options&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserSettingsUserGUID" visible="false" /&gt;&lt;field column="UserSettingsUserID" visible="false" /&gt;&lt;/form&gt;</FormDefinition>
+      <FormLayout>&lt;table&gt;
+	&lt;tbody&gt;
+		&lt;tr&gt;
+			&lt;td&gt;
+				$$label:UserID$$&lt;/td&gt;
+			&lt;td&gt;
+				$$input:UserID$$&lt;br /&gt;
+				$$validation:UserID$$&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;
+				$$label:UserName$$&lt;/td&gt;
+			&lt;td&gt;
+				$$input:UserName$$&lt;br /&gt;
+				$$validation:UserName$$&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;
+				$$label:FirstName$$&lt;/td&gt;
+			&lt;td&gt;
+				$$input:FirstName$$&lt;br /&gt;
+				$$validation:FirstName$$&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;
+				$$label:MiddleName$$&lt;/td&gt;
+			&lt;td&gt;
+				$$input:MiddleName$$&lt;br /&gt;
+				$$validation:MiddleName$$&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;
+				$$label:LastName$$&lt;/td&gt;
+			&lt;td&gt;
+				$$input:LastName$$&lt;br /&gt;
+				$$validation:LastName$$&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;
+				$$label:FullName$$&lt;/td&gt;
+			&lt;td&gt;
+				$$input:FullName$$&lt;br /&gt;
+				$$validation:FullName$$&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;
+				$$label:Email$$&lt;/td&gt;
+			&lt;td&gt;
+				$$input:Email$$&lt;br /&gt;
+				$$validation:Email$$&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;
+				$$label:UserPassword$$&lt;br /&gt;
+				&lt;br /&gt;
+				Confirmar password:&lt;/td&gt;
+			&lt;td&gt;
+				$$input:UserPassword$$&lt;br /&gt;
+				$$validation:UserPassword$$&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;
+				$$label:TerritorioId$$&lt;/td&gt;
+			&lt;td&gt;
+				$$input:TerritorioId$$&lt;br /&gt;
+				$$validation:TerritorioId$$&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;
+				$$label:Cultivos$$&lt;/td&gt;
+			&lt;td&gt;
+				$$input:Cultivos$$&lt;br /&gt;
+				$$validation:Cultivos$$&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;
+				$$label:UserGender$$&lt;/td&gt;
+			&lt;td&gt;
+				$$input:UserGender$$$$validation:UserGender$$&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;br /&gt;
+</FormLayout>
+      <FormGUID>bcc4a49b-b6e4-457e-9704-2c5ec18db8d6</FormGUID>
+      <FormLastModified>2014-02-22T09:57:41.56-05:00</FormLastModified>
+      <FormCoupledClassID>1768</FormCoupledClassID>
+    </cms_alternativeform>
+  </NewDataSet>
+</cms_systemtable>

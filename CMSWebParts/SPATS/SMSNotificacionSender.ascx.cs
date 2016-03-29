@@ -65,6 +65,8 @@ public partial class CMSWebParts_SPATS_SMSNotificacionSender : CMSAbstractWebPar
 
         this.DataBindChildren();
 
+        this.GrdNotificaciones.DataBind();
+
     }
 
     protected void Page_Load(object sender, EventArgs e)

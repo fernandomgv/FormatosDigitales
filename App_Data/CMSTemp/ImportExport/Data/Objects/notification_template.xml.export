@@ -1,0 +1,31 @@
+﻿<notification_template version="6.0">
+  <NewDataSet>
+    <notification_template>
+      <TemplateID>2</TemplateID>
+      <TemplateName>SMSNotification</TemplateName>
+      <TemplateDisplayName>SMS Notification</TemplateDisplayName>
+      <TemplateLastModified>2010-01-06T09:28:57.223-05:00</TemplateLastModified>
+      <TemplateGUID>0cc4856c-c2ce-4ac9-a378-8d2c3419a38c</TemplateGUID>
+    </notification_template>
+    <notification_templatetext>
+      <TemplateTextID>2</TemplateTextID>
+      <TemplateID>2</TemplateID>
+      <GatewayID>1</GatewayID>
+      <TemplateSubject></TemplateSubject>
+      <TemplateHTMLText>&lt;br /&gt;</TemplateHTMLText>
+      <TemplatePlainText></TemplatePlainText>
+      <TemplateTextGUID>7db1dc34-ea0a-4406-b8d9-6fd5b75b21a5</TemplateTextGUID>
+      <TemplateTextLastModified>2010-01-06T09:28:57.19-05:00</TemplateTextLastModified>
+    </notification_templatetext>
+    <notification_templatetext>
+      <TemplateTextID>3</TemplateTextID>
+      <TemplateID>2</TemplateID>
+      <GatewayID>2</GatewayID>
+      <TemplateSubject></TemplateSubject>
+      <TemplateHTMLText></TemplateHTMLText>
+      <TemplatePlainText>Hi {%notificationuser.firstname%}, new document has been added. Check it out right now !</TemplatePlainText>
+      <TemplateTextGUID>96fb0019-d02e-40c2-9caa-a0f07e7823a4</TemplateTextGUID>
+      <TemplateTextLastModified>2010-01-06T09:28:57.223-05:00</TemplateTextLastModified>
+    </notification_templatetext>
+  </NewDataSet>
+</notification_template>

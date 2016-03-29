@@ -1,0 +1,806 @@
+﻿<cms_documenttype version="6.0">
+  <NewDataSet>
+    <cms_class>
+      <ClassID>2981</ClassID>
+      <ClassDisplayName>Intranet department</ClassDisplayName>
+      <ClassName>IntranetPortal.Department</ClassName>
+      <ClassUsesVersioning>false</ClassUsesVersioning>
+      <ClassIsDocumentType>true</ClassIsDocumentType>
+      <ClassIsCoupledClass>true</ClassIsCoupledClass>
+      <ClassXmlSchema>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"&gt;
+  &lt;xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true"&gt;
+    &lt;xs:complexType&gt;
+      &lt;xs:choice minOccurs="0" maxOccurs="unbounded"&gt;
+        &lt;xs:element name="IntranetPortal_Department"&gt;
+          &lt;xs:complexType&gt;
+            &lt;xs:sequence&gt;
+              &lt;xs:element name="DepartmentID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" /&gt;
+              &lt;xs:element name="DepartmentName"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="200" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="DepartmentDescription" minOccurs="0"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="450" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="DepartmentAvatar" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" type="xs:string" minOccurs="0" /&gt;
+              &lt;xs:element name="DepartmentSections" minOccurs="0"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="450" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="DepartmentRoles" minOccurs="0"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="100" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="Pais"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="20" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+            &lt;/xs:sequence&gt;
+          &lt;/xs:complexType&gt;
+        &lt;/xs:element&gt;
+      &lt;/xs:choice&gt;
+    &lt;/xs:complexType&gt;
+    &lt;xs:unique name="Constraint1" msdata:PrimaryKey="true"&gt;
+      &lt;xs:selector xpath=".//IntranetPortal_Department" /&gt;
+      &lt;xs:field xpath="DepartmentID" /&gt;
+    &lt;/xs:unique&gt;
+  &lt;/xs:element&gt;
+&lt;/xs:schema&gt;</ClassXmlSchema>
+      <ClassFormDefinition>&lt;form&gt;&lt;field column="DepartmentID" fieldcaption="DepartmentID" visible="false" columntype="integer" fieldtype="CustomUserControl" allowempty="false" isPK="true" system="true" publicfield="false" spellcheck="true" guid="be9548af-1994-4fc0-b728-e98c6e289c38" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;labelcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="DepartmentName" fieldcaption="Department name" visible="true" columntype="text" fieldtype="CustomUserControl" allowempty="false" isPK="false" system="false" columnsize="200" publicfield="false" spellcheck="true" guid="1d43c63d-bf2b-49d5-93bd-3071b8637528" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="DepartmentDescription" fieldcaption="Department description" visible="true" columntype="text" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="false" columnsize="450" publicfield="false" spellcheck="true" guid="4afaefec-7329-4dd2-9fc0-debc0ba6c97a" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;textareacontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="DepartmentAvatar" fieldcaption="Department avatar" visible="true" columntype="file" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="false" publicfield="false" spellcheck="true" guid="678964be-fdac-404f-8389-c93d229a39e2" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;directuploadcontrol&lt;/controlname&gt;&lt;paging&gt;True&lt;/paging&gt;&lt;changeorder&gt;True&lt;/changeorder&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="DocumentStylesheetID" fieldcaption="Used stylesheet" visible="true" columntype="integer" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="true" publicfield="false" spellcheck="true" guid="ffff9bb1-8402-42a8-9d8a-872251d15c63" external="true" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;documentstylesheetselector&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="DepartmentSections" fieldcaption="Used department sections" visible="true" columntype="text" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="false" columnsize="450" publicfield="false" spellcheck="true" guid="f2178247-e9a8-46bb-865e-a6f8b1ae7119" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;departmentsectionsmanager&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="DepartmentRoles" fieldcaption="Department roles" visible="true" columntype="text" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="false" columnsize="100" publicfield="false" spellcheck="false" guid="e7d2d387-4977-4c63-b349-7ada0df0d974" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;departmentrolesselector&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="Pais" fieldcaption="Pais/Departamento" visible="true" columntype="text" fieldtype="CustomUserControl" allowempty="false" isPK="false" system="false" columnsize="20" publicfield="false" spellcheck="true" guid="ce83ebb8-800d-47ef-9e06-7ce5b2688c5a" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;countryselector&lt;/controlname&gt;&lt;ReturnType&gt;0&lt;/ReturnType&gt;&lt;/settings&gt;&lt;/field&gt;&lt;/form&gt;</ClassFormDefinition>
+      <ClassEditingPageUrl></ClassEditingPageUrl>
+      <ClassListPageUrl></ClassListPageUrl>
+      <ClassNodeNameSource>DepartmentName</ClassNodeNameSource>
+      <ClassTableName>IntranetPortal_Department</ClassTableName>
+      <ClassViewPageUrl></ClassViewPageUrl>
+      <ClassPreviewPageUrl></ClassPreviewPageUrl>
+      <ClassFormLayout></ClassFormLayout>
+      <ClassNewPageUrl></ClassNewPageUrl>
+      <ClassShowAsSystemTable>false</ClassShowAsSystemTable>
+      <ClassUsePublishFromTo>true</ClassUsePublishFromTo>
+      <ClassShowTemplateSelection>false</ClassShowTemplateSelection>
+      <ClassSKUMappings></ClassSKUMappings>
+      <ClassIsMenuItemType>false</ClassIsMenuItemType>
+      <ClassNodeAliasSource></ClassNodeAliasSource>
+      <ClassLastModified>2014-02-20T11:55:19.503-05:00</ClassLastModified>
+      <ClassGUID>7f76434a-fb3a-447e-8777-58266cf38a38</ClassGUID>
+      <ClassCreateSKU>false</ClassCreateSKU>
+      <ClassIsProduct>false</ClassIsProduct>
+      <ClassIsCustomTable>false</ClassIsCustomTable>
+      <ClassShowColumns></ClassShowColumns>
+      <ClassLoadGeneration>0</ClassLoadGeneration>
+      <ClassSearchTitleColumn></ClassSearchTitleColumn>
+      <ClassSearchContentColumn></ClassSearchContentColumn>
+      <ClassSearchImageColumn></ClassSearchImageColumn>
+      <ClassSearchCreationDateColumn></ClassSearchCreationDateColumn>
+      <ClassSearchSettings></ClassSearchSettings>
+      <ClassSearchEnabled>true</ClassSearchEnabled>
+      <ClassSKUDefaultDepartmentName></ClassSKUDefaultDepartmentName>
+      <ClassContactOverwriteEnabled>false</ClassContactOverwriteEnabled>
+      <ClassSKUDefaultProductType>PRODUCT</ClassSKUDefaultProductType>
+    </cms_class>
+    <cms_class>
+      <ClassID>2960</ClassID>
+      <ClassDisplayName>News</ClassDisplayName>
+      <ClassName>CMS.News</ClassName>
+      <ClassUsesVersioning>false</ClassUsesVersioning>
+      <ClassIsDocumentType>true</ClassIsDocumentType>
+      <ClassIsCoupledClass>true</ClassIsCoupledClass>
+      <ClassXmlSchema>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"&gt;
+  &lt;xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true"&gt;
+    &lt;xs:complexType&gt;
+      &lt;xs:choice minOccurs="0" maxOccurs="unbounded"&gt;
+        &lt;xs:element name="CONTENT_News"&gt;
+          &lt;xs:complexType&gt;
+            &lt;xs:sequence&gt;
+              &lt;xs:element name="NewsID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" /&gt;
+              &lt;xs:element name="NewsTitle"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="450" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="NewsReleaseDate" type="xs:dateTime" /&gt;
+              &lt;xs:element name="NewsSummary"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="2147483647" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="NewsText" minOccurs="0"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="2147483647" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="NewsTeaser" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" type="xs:string" minOccurs="0" /&gt;
+              &lt;xs:element name="Color" minOccurs="0"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="100" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+            &lt;/xs:sequence&gt;
+          &lt;/xs:complexType&gt;
+        &lt;/xs:element&gt;
+      &lt;/xs:choice&gt;
+    &lt;/xs:complexType&gt;
+    &lt;xs:unique name="Constraint1" msdata:PrimaryKey="true"&gt;
+      &lt;xs:selector xpath=".//CONTENT_News" /&gt;
+      &lt;xs:field xpath="NewsID" /&gt;
+    &lt;/xs:unique&gt;
+  &lt;/xs:element&gt;
+&lt;/xs:schema&gt;</ClassXmlSchema>
+      <ClassFormDefinition>&lt;form&gt;&lt;field column="NewsID" visible="false" columntype="integer" fieldtype="CustomUserControl" allowempty="false" isPK="true" system="true" publicfield="false" spellcheck="true" guid="3076cf29-df6a-46a3-9e29-b4a58dde1b1d" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false" /&gt;&lt;field column="Color" fieldcaption="Color" visible="true" columntype="text" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="false" columnsize="100" publicfield="false" spellcheck="true" guid="5b31bb8f-d6e2-41d6-bdfb-990d035dee0c" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;colorselector&lt;/controlname&gt;&lt;SelectorWidth&gt;100&lt;/SelectorWidth&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="NewsTitle" fieldcaption="News Title" visible="true" columntype="text" fieldtype="CustomUserControl" allowempty="false" isPK="false" system="false" columnsize="450" publicfield="true" spellcheck="true" guid="bc737625-a5ad-4282-9068-b540890d1134" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="NewsReleaseDate" fieldcaption="Release Date" visible="true" columntype="datetime" fieldtype="CustomUserControl" allowempty="false" isPK="false" system="false" publicfield="false" spellcheck="true" guid="ca3633b8-4b84-4661-86f6-243e228e74e3" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;calendarcontrol&lt;/controlname&gt;&lt;editTime&gt;false&lt;/editTime&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="NewsSummary" fieldcaption="News Summary" visible="true" columntype="longtext" fieldtype="CustomUserControl" allowempty="false" isPK="false" system="false" publicfield="false" spellcheck="true" guid="bbaeddd4-d8e7-4478-986c-c89243b81347" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;htmlareacontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="NewsText" fieldcaption="News Text" visible="true" columntype="longtext" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="false" publicfield="false" spellcheck="true" guid="d319dc82-1112-4fc2-b599-5d3882015534" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;htmlareacontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="NewsTeaser" fieldcaption="Teaser" visible="true" columntype="file" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="false" publicfield="false" spellcheck="true" guid="29c95e7a-0df5-431f-91ca-49fce46b347f" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;directuploadcontrol&lt;/controlname&gt;&lt;paging&gt;True&lt;/paging&gt;&lt;pagingsize&gt;10&lt;/pagingsize&gt;&lt;changeorder&gt;True&lt;/changeorder&gt;&lt;/settings&gt;&lt;/field&gt;&lt;/form&gt;</ClassFormDefinition>
+      <ClassEditingPageUrl></ClassEditingPageUrl>
+      <ClassListPageUrl></ClassListPageUrl>
+      <ClassNodeNameSource>NewsTitle</ClassNodeNameSource>
+      <ClassTableName>CONTENT_News</ClassTableName>
+      <ClassViewPageUrl></ClassViewPageUrl>
+      <ClassPreviewPageUrl></ClassPreviewPageUrl>
+      <ClassFormLayout></ClassFormLayout>
+      <ClassNewPageUrl></ClassNewPageUrl>
+      <ClassShowAsSystemTable>false</ClassShowAsSystemTable>
+      <ClassUsePublishFromTo>true</ClassUsePublishFromTo>
+      <ClassShowTemplateSelection>false</ClassShowTemplateSelection>
+      <ClassSKUMappings></ClassSKUMappings>
+      <ClassIsMenuItemType>false</ClassIsMenuItemType>
+      <ClassNodeAliasSource></ClassNodeAliasSource>
+      <ClassLastModified>2014-01-25T12:20:05.58-05:00</ClassLastModified>
+      <ClassGUID>0f19800e-80a8-4dc5-ba6c-404e5a64ed9e</ClassGUID>
+      <ClassCreateSKU>false</ClassCreateSKU>
+      <ClassIsProduct>false</ClassIsProduct>
+      <ClassIsCustomTable>false</ClassIsCustomTable>
+      <ClassShowColumns></ClassShowColumns>
+      <ClassLoadGeneration>1</ClassLoadGeneration>
+      <ClassSearchTitleColumn>DocumentName</ClassSearchTitleColumn>
+      <ClassSearchContentColumn>NewsSummary</ClassSearchContentColumn>
+      <ClassSearchImageColumn>NewsTeaser</ClassSearchImageColumn>
+      <ClassSearchCreationDateColumn>NewsReleaseDate</ClassSearchCreationDateColumn>
+      <ClassSearchSettings>&lt;search&gt;&lt;item tokenized="False" name="NewsID" content="False" searchable="True" id="081b30d6-b5fd-48d1-a43e-575e94b4c458" /&gt;&lt;item tokenized="True" name="NewsTitle" content="True" searchable="False" id="8be217b3-d6fd-48b1-9a0d-79936d686a54" /&gt;&lt;item tokenized="False" name="NewsReleaseDate" content="False" searchable="True" id="0b38fe32-2a8c-40d7-92a9-cd9b66ae79a3" /&gt;&lt;item tokenized="True" name="NewsSummary" content="True" searchable="False" id="c7d40d34-f893-4af7-81ca-a85f81ef2340" /&gt;&lt;item tokenized="True" name="NewsText" content="True" searchable="False" id="04c7ba9d-904b-453c-bd7e-2e5eb6055792" /&gt;&lt;item tokenized="False" name="NewsTeaser" content="False" searchable="False" id="fb825c10-dda6-4ac4-84d7-ba5a556f6623" /&gt;&lt;/search&gt;</ClassSearchSettings>
+      <ClassSearchEnabled>true</ClassSearchEnabled>
+      <ClassSKUDefaultDepartmentName></ClassSKUDefaultDepartmentName>
+      <ClassContactOverwriteEnabled>false</ClassContactOverwriteEnabled>
+      <ClassSKUDefaultProductType>PRODUCT</ClassSKUDefaultProductType>
+    </cms_class>
+    <cms_query>
+      <QueryID>14014</QueryID>
+      <QueryName>selectlatest</QueryName>
+      <QueryTypeID>0</QueryTypeID>
+      <QueryText>SELECT TOP 3 View_CMS_Tree_Joined.*, CONTENT_News.* 
+FROM 
+   View_CMS_Tree_Joined INNER JOIN CONTENT_News ON View_CMS_Tree_Joined.DocumentForeignKeyValue = CONTENT_News.NewsID 
+WHERE 
+   ClassName = 'CMS.News' 
+AND 
+   NewsReleaseDate &lt;= GetDate() AND Published = 1 
+ORDER BY NewsReleaseDate DESC, NewsTitle</QueryText>
+      <QueryRequiresTransaction>false</QueryRequiresTransaction>
+      <ClassID>2960</ClassID>
+      <QueryIsLocked>true</QueryIsLocked>
+      <QueryLastModified>2010-10-21T09:53:10.383-05:00</QueryLastModified>
+      <QueryGUID>a4690af9-085c-4969-961d-e86e90a7462e</QueryGUID>
+      <QueryLoadGeneration>0</QueryLoadGeneration>
+      <QueryIsCustom>true</QueryIsCustom>
+    </cms_query>
+    <cms_query>
+      <QueryID>14211</QueryID>
+      <QueryName>GetPaisDepartamentobyCode</QueryName>
+      <QueryTypeID>0</QueryTypeID>
+      <QueryText>SELECT ##COLUMNS## 
+FROM  CMS_Country c
+    left outer join CMS_State s
+	on s.CountryID=c.CountryID
+        and s.StateName=@StateName
+where c.CountryName=@CountryName</QueryText>
+      <QueryRequiresTransaction>false</QueryRequiresTransaction>
+      <ClassID>2981</ClassID>
+      <QueryIsLocked>true</QueryIsLocked>
+      <QueryLastModified>2014-02-20T11:55:19.503-05:00</QueryLastModified>
+      <QueryGUID>219144d9-6d05-4ebb-a24d-bcf2998a3bad</QueryGUID>
+      <QueryLoadGeneration>0</QueryLoadGeneration>
+      <QueryIsCustom>true</QueryIsCustom>
+    </cms_query>
+    <cms_transformation>
+      <TransformationID>2496</TransformationID>
+      <TransformationName>AtomItem</TransformationName>
+      <TransformationCode>&lt;entry&gt;
+  &lt;title&gt;&lt;%# EvalCDATA("NewsTitle") %&gt;&lt;/title&gt;
+  &lt;link href="&lt;%# GetAbsoluteUrl(GetDocumentUrlForFeed(), Eval("SiteName")) %&gt;"/&gt;
+  &lt;id&gt;urn:uuid:&lt;%# Eval("NodeGUID") %&gt;&lt;/id&gt;
+  &lt;published&gt;&lt;%# GetAtomDateTime(Eval("NewsReleaseDate")) %&gt;&lt;/published&gt;
+  &lt;updated&gt;&lt;%# GetAtomDateTime(Eval("DocumentModifiedWhen")) %&gt;&lt;/updated&gt;
+  &lt;author&gt;
+    &lt;name&gt;&lt;%# Eval("NodeOwnerFullName") %&gt;&lt;/name&gt;
+  &lt;/author&gt;
+  &lt;summary type="html"&gt;&lt;%# EvalCDATA("NewsSummary") %&gt;&lt;/summary&gt;
+&lt;/entry&gt;</TransformationCode>
+      <TransformationType>ascx</TransformationType>
+      <TransformationClassID>2960</TransformationClassID>
+      <TransformationCheckedOutMachineName></TransformationCheckedOutMachineName>
+      <TransformationCheckedOutFilename></TransformationCheckedOutFilename>
+      <TransformationVersionGUID>2157b1be-427a-44ea-ae27-3c214cac3143</TransformationVersionGUID>
+      <TransformationGUID>d5c242e1-76da-4754-881f-af9e95136e63</TransformationGUID>
+      <TransformationLastModified>2010-08-02T08:18:24.907-05:00</TransformationLastModified>
+      <TransformationIsHierarchical>false</TransformationIsHierarchical>
+      <TransformationHierarchicalXML></TransformationHierarchicalXML>
+      <TransformationCSS></TransformationCSS>
+    </cms_transformation>
+    <cms_transformation>
+      <TransformationID>2497</TransformationID>
+      <TransformationName>CalendarEvent</TransformationName>
+      <TransformationCode>&lt;strong&gt;&lt;a href="&lt;%# ResolveUrl(GetUrl( Eval("NodeAliasPath"), Eval("DocumentUrlPath"))) %&gt;"&gt;
+&lt;%# Eval("NewsTitle",true) %&gt;&lt;/a&gt;&lt;/strong&gt;&amp;nbsp;
+(&lt;%# System.Convert.ToString(Convert.ToDateTime(Eval("NewsReleaseDate"))) %&gt;)&lt;br /&gt;
+&lt;br /&gt;
+&lt;em&gt;
+&lt;%# Eval("NewsSummary") %&gt;
+&lt;/em&gt;</TransformationCode>
+      <TransformationType>ascx</TransformationType>
+      <TransformationClassID>2960</TransformationClassID>
+      <TransformationCheckedOutMachineName></TransformationCheckedOutMachineName>
+      <TransformationCheckedOutFilename></TransformationCheckedOutFilename>
+      <TransformationVersionGUID>30b99868-87b5-4ab3-94d2-75e2bf803038</TransformationVersionGUID>
+      <TransformationGUID>fb196ff2-000d-4167-8085-bd34ecceee1f</TransformationGUID>
+      <TransformationLastModified>2011-03-17T09:13:35.817-05:00</TransformationLastModified>
+      <TransformationIsHierarchical>false</TransformationIsHierarchical>
+      <TransformationHierarchicalXML></TransformationHierarchicalXML>
+      <TransformationCSS></TransformationCSS>
+    </cms_transformation>
+    <cms_transformation>
+      <TransformationID>2498</TransformationID>
+      <TransformationName>CalendarNoEvent</TransformationName>
+      <TransformationCode>No event
+</TransformationCode>
+      <TransformationType>ascx</TransformationType>
+      <TransformationClassID>2960</TransformationClassID>
+      <TransformationCheckedOutMachineName></TransformationCheckedOutMachineName>
+      <TransformationCheckedOutFilename></TransformationCheckedOutFilename>
+      <TransformationVersionGUID>cdeaa69a-fe4a-4b65-855c-d90ada24f869</TransformationVersionGUID>
+      <TransformationGUID>fdd47ae0-7bb8-4f78-8367-c611fd3ef83b</TransformationGUID>
+      <TransformationLastModified>2008-03-13T03:35:00-05:00</TransformationLastModified>
+      <TransformationIsHierarchical>false</TransformationIsHierarchical>
+      <TransformationHierarchicalXML></TransformationHierarchicalXML>
+      <TransformationCSS></TransformationCSS>
+    </cms_transformation>
+    <cms_transformation>
+      <TransformationID>2499</TransformationID>
+      <TransformationName>Default</TransformationName>
+      <TransformationCode>&lt;h1&gt;&lt;%# Eval("NewsTitle",true) %&gt;&lt;/h1&gt;
+&lt;%# GetDateTime("NewsReleaseDate", "d") %&gt;&lt;br/&gt;
+&lt;%# IfEmpty(Eval("NewsTeaser"), "", GetImage("NewsTeaser")) %&gt;
+&lt;%# IfEmpty(Eval("NewsSummary"), "", Eval("NewsSummary") + "&lt;br /&gt;") %&gt;
+&lt;%# Eval("NewsText") %&gt;</TransformationCode>
+      <TransformationType>ascx</TransformationType>
+      <TransformationClassID>2960</TransformationClassID>
+      <TransformationCheckedOutMachineName></TransformationCheckedOutMachineName>
+      <TransformationCheckedOutFilename></TransformationCheckedOutFilename>
+      <TransformationVersionGUID>b7697e08-dc1b-4c22-97dc-3acc57a2ebab</TransformationVersionGUID>
+      <TransformationGUID>03bc30b9-a2ce-4568-a44f-f06e1ab17757</TransformationGUID>
+      <TransformationLastModified>2011-07-20T10:30:40.67-05:00</TransformationLastModified>
+      <TransformationIsHierarchical>false</TransformationIsHierarchical>
+      <TransformationHierarchicalXML></TransformationHierarchicalXML>
+      <TransformationCSS></TransformationCSS>
+    </cms_transformation>
+    <cms_transformation>
+      <TransformationID>2500</TransformationID>
+      <TransformationName>Default_xslt</TransformationName>
+      <TransformationCode>&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"&gt;
+&lt;xsl:output method="xml" omit-xml-declaration="yes" /&gt;
+&lt;xsl:template match="CMS.News"&gt;
+NewsID: &lt;xsl:value-of disable-output-escaping="yes" select="NewsID"/&gt;&lt;br /&gt;
+News Title: &lt;xsl:value-of disable-output-escaping="yes" select="NewsTitle"/&gt;&lt;br /&gt;
+News Summary: &lt;xsl:value-of disable-output-escaping="yes" select="NewsSummary"/&gt;&lt;br /&gt;
+News Text: &lt;xsl:value-of disable-output-escaping="yes" select="NewsText"/&gt;&lt;br /&gt;
+Release Date: &lt;xsl:value-of disable-output-escaping="yes" select="NewsReleaseDate"/&gt;&lt;br /&gt;
+&lt;/xsl:template&gt;
+&lt;/xsl:stylesheet&gt;</TransformationCode>
+      <TransformationType>xslt</TransformationType>
+      <TransformationClassID>2960</TransformationClassID>
+      <TransformationCheckedOutMachineName></TransformationCheckedOutMachineName>
+      <TransformationCheckedOutFilename></TransformationCheckedOutFilename>
+      <TransformationVersionGUID>014621f6-6baa-4465-a061-b150ccb2892b</TransformationVersionGUID>
+      <TransformationGUID>f7156ccb-d209-4d18-bb20-11c9f4c67eaf</TransformationGUID>
+      <TransformationLastModified>2009-12-22T13:54:14.247-05:00</TransformationLastModified>
+      <TransformationIsHierarchical>false</TransformationIsHierarchical>
+      <TransformationHierarchicalXML></TransformationHierarchicalXML>
+      <TransformationCSS></TransformationCSS>
+    </cms_transformation>
+    <cms_transformation>
+      <TransformationID>2501</TransformationID>
+      <TransformationName>EcommerceLatest</TransformationName>
+      <TransformationCode>&lt;p&gt;&lt;strong&gt;&lt;%# GetDate("NewsReleaseDate") %&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="NewsReleaseTitle"&gt;
+&lt;a href="&lt;%# GetDocumentUrl() %&gt;"&gt;&lt;%# StripTags(Eval("NewsSummary")) %&gt;&lt;/a&gt;
+&lt;/div&gt;
+</TransformationCode>
+      <TransformationType>ascx</TransformationType>
+      <TransformationClassID>2960</TransformationClassID>
+      <TransformationCheckedOutMachineName></TransformationCheckedOutMachineName>
+      <TransformationCheckedOutFilename></TransformationCheckedOutFilename>
+      <TransformationVersionGUID>f2d56f08-121d-40cf-b14e-f48a42a7ad81</TransformationVersionGUID>
+      <TransformationGUID>da273f5a-82ba-4c6f-9700-45080f081df2</TransformationGUID>
+      <TransformationLastModified>2011-09-22T09:29:53.983-05:00</TransformationLastModified>
+      <TransformationIsHierarchical>false</TransformationIsHierarchical>
+      <TransformationHierarchicalXML></TransformationHierarchicalXML>
+      <TransformationCSS></TransformationCSS>
+    </cms_transformation>
+    <cms_transformation>
+      <TransformationID>2502</TransformationID>
+      <TransformationName>Latest</TransformationName>
+      <TransformationCode>&lt;div class="NewsLatest"&gt;
+  &lt;div class="NewsTitle"&gt;
+    &lt;%# Eval("NewsTitle",true) %&gt;
+  &lt;/div&gt;
+  &lt;hr size="1" /&gt;
+  &lt;div class="NewsSummary"&gt;
+    &lt;%# Eval("NewsSummary") %&gt;
+  &lt;/div&gt;
+  &lt;a href="&lt;%# GetDocumentUrl() %&gt;" class="LinkMore"&gt;more&lt;/a&gt;
+&lt;/div&gt;</TransformationCode>
+      <TransformationType>ascx</TransformationType>
+      <TransformationClassID>2960</TransformationClassID>
+      <TransformationCheckedOutMachineName></TransformationCheckedOutMachineName>
+      <TransformationCheckedOutFilename></TransformationCheckedOutFilename>
+      <TransformationVersionGUID>fb0ec2ed-582e-4e77-8dc6-b6293ac53098</TransformationVersionGUID>
+      <TransformationGUID>f6566b3c-3c53-434e-90a3-37a271ef7105</TransformationGUID>
+      <TransformationLastModified>2011-03-17T09:14:31.68-05:00</TransformationLastModified>
+      <TransformationIsHierarchical>false</TransformationIsHierarchical>
+      <TransformationHierarchicalXML></TransformationHierarchicalXML>
+      <TransformationCSS></TransformationCSS>
+    </cms_transformation>
+    <cms_transformation>
+      <TransformationID>2503</TransformationID>
+      <TransformationName>MobileNewsPreview</TransformationName>
+      <TransformationCode>&lt;div class="NewsPreviewTitle"&gt;&lt;a href="~/mobile/news/&lt;%# Eval("NewsID") %&gt;.aspx"&gt;&lt;%# Eval("NewsTitle",true) %&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div class="NewsPreviewDate"&gt;&lt;%# GetDateTime("NewsReleaseDate", "d") %&gt;&lt;/div&gt;
+&lt;div class="NewsPreviewSummary"&gt;&lt;%# Eval("NewsSummary") %&gt;&lt;/div&gt;</TransformationCode>
+      <TransformationType>ascx</TransformationType>
+      <TransformationClassID>2960</TransformationClassID>
+      <TransformationCheckedOutMachineName></TransformationCheckedOutMachineName>
+      <TransformationCheckedOutFilename></TransformationCheckedOutFilename>
+      <TransformationVersionGUID>69bfc8b4-5062-4f09-a564-c9e6252425f3</TransformationVersionGUID>
+      <TransformationGUID>03b8d2da-4259-413e-8516-b8c0367ca3ef</TransformationGUID>
+      <TransformationLastModified>2011-03-17T09:14:46.583-05:00</TransformationLastModified>
+      <TransformationIsHierarchical>false</TransformationIsHierarchical>
+      <TransformationHierarchicalXML></TransformationHierarchicalXML>
+      <TransformationCSS></TransformationCSS>
+    </cms_transformation>
+    <cms_transformation>
+      <TransformationID>2504</TransformationID>
+      <TransformationName>NewsDetail</TransformationName>
+      <TransformationCode>&lt;div class="newsItemDetail"&gt;
+&lt;h1&gt;&lt;%# Eval("NewsTitle",true) %&gt;&lt;/h1&gt;
+&lt;div class="NewsSummary"&gt;
+  &lt;%# IfEmpty(Eval("NewsTeaser"), "", GetImage("NewsTeaser")) %&gt;
+  &lt;div class="NewsContent"&gt;
+    &lt;div class="Date"&gt;&lt;%# GetDateTime("NewsReleaseDate", "d") %&gt;&lt;/div&gt;
+    &lt;div class="TextContent"&gt;&lt;%# Eval("NewsSummary") %&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="Clearer"&gt;&amp;nbsp;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="NewsBody"&gt;
+  &lt;div class="TextContent"&gt;&lt;%# Eval("NewsText") %&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</TransformationCode>
+      <TransformationType>ascx</TransformationType>
+      <TransformationClassID>2960</TransformationClassID>
+      <TransformationCheckedOutMachineName></TransformationCheckedOutMachineName>
+      <TransformationCheckedOutFilename></TransformationCheckedOutFilename>
+      <TransformationVersionGUID>d84b89d5-5f17-4b10-866a-6535d126a136</TransformationVersionGUID>
+      <TransformationGUID>aa12392b-941c-4c60-9537-c77d20523f99</TransformationGUID>
+      <TransformationLastModified>2011-03-22T09:09:27.41-05:00</TransformationLastModified>
+      <TransformationIsHierarchical>false</TransformationIsHierarchical>
+      <TransformationHierarchicalXML></TransformationHierarchicalXML>
+      <TransformationCSS></TransformationCSS>
+    </cms_transformation>
+    <cms_transformation>
+      <TransformationID>2505</TransformationID>
+      <TransformationName>newslist</TransformationName>
+      <TransformationCode>&lt;div class="NewsPTitle"&gt;&lt;a href="&lt;%# GetDocumentUrl() %&gt;"&gt;
+  &lt;%# Eval("NewsTitle",true) %&gt;&lt;/a&gt;&amp;nbsp;|&amp;nbsp;&lt;%# GetDateTime("NewsReleaseDate", "MM/dd/yyyy HH:mm") %&gt;
+&lt;/div&gt;
+&lt;div class="NewsPBody"&gt;
+  &lt;div class="TextContent"&gt;&lt;%# Eval("NewsSummary") %&gt;&lt;/div&gt;
+&lt;/div&gt;
+</TransformationCode>
+      <TransformationType>ascx</TransformationType>
+      <TransformationClassID>2960</TransformationClassID>
+      <TransformationCheckedOutMachineName></TransformationCheckedOutMachineName>
+      <TransformationCheckedOutFilename></TransformationCheckedOutFilename>
+      <TransformationVersionGUID>da8ccb56-fc92-44f7-b352-ef7ee31b5dc2</TransformationVersionGUID>
+      <TransformationGUID>6ea5f6e7-fb26-4ed1-a7ee-9aab632cf1bd</TransformationGUID>
+      <TransformationLastModified>2011-06-21T01:50:32.873-05:00</TransformationLastModified>
+      <TransformationIsHierarchical>false</TransformationIsHierarchical>
+      <TransformationHierarchicalXML></TransformationHierarchicalXML>
+      <TransformationCSS xml:space="preserve">
+</TransformationCSS>
+    </cms_transformation>
+    <cms_transformation>
+      <TransformationID>2506</TransformationID>
+      <TransformationName>NewsPreviewWithSummary</TransformationName>
+      <TransformationCode>&lt;div class="TextContent"&gt;
+&lt;div class="NewsPreviewTitle"&gt;&lt;a href="&lt;%# GetDocumentUrl() %&gt;"&gt;&lt;%# Eval("NewsTitle",true) %&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div class="NewsPreviewDate"&gt;&lt;%# GetDateTime("NewsReleaseDate", "d") %&gt;&lt;/div&gt;
+&lt;div class="NewsPreviewSummary TextContent"&gt;&lt;%# Eval("NewsSummary") %&gt;&lt;/div&gt;
+&lt;/div&gt;</TransformationCode>
+      <TransformationType>ascx</TransformationType>
+      <TransformationClassID>2960</TransformationClassID>
+      <TransformationCheckedOutMachineName></TransformationCheckedOutMachineName>
+      <TransformationCheckedOutFilename></TransformationCheckedOutFilename>
+      <TransformationVersionGUID>bcc50acc-b1b4-42cf-be86-ff6d29ea28e8</TransformationVersionGUID>
+      <TransformationGUID>b6d99f3b-30f7-44ea-bb97-ed56bbd0763a</TransformationGUID>
+      <TransformationLastModified>2011-03-22T09:09:45.447-05:00</TransformationLastModified>
+      <TransformationIsHierarchical>false</TransformationIsHierarchical>
+      <TransformationHierarchicalXML></TransformationHierarchicalXML>
+      <TransformationCSS></TransformationCSS>
+    </cms_transformation>
+    <cms_transformation>
+      <TransformationID>2507</TransformationID>
+      <TransformationName>NewsSimple</TransformationName>
+      <TransformationCode>&lt;div class="NewsTitle"&gt;&lt;a href="&lt;%# GetDocumentUrl() %&gt;"&gt;&lt;%# Eval("NewsTitle",true) %&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div class="NewsDate"&gt;&lt;%# GetDateTime("NewsReleaseDate", "d") %&gt;&lt;/div&gt;
+
+</TransformationCode>
+      <TransformationType>ascx</TransformationType>
+      <TransformationClassID>2960</TransformationClassID>
+      <TransformationCheckedOutMachineName></TransformationCheckedOutMachineName>
+      <TransformationCheckedOutFilename></TransformationCheckedOutFilename>
+      <TransformationVersionGUID>a868e8a0-1f8d-4699-89a7-5f1f94a05916</TransformationVersionGUID>
+      <TransformationGUID>bc557536-2941-4077-9dda-6cde615181be</TransformationGUID>
+      <TransformationLastModified>2011-03-17T09:15:29.277-05:00</TransformationLastModified>
+      <TransformationIsHierarchical>false</TransformationIsHierarchical>
+      <TransformationHierarchicalXML></TransformationHierarchicalXML>
+      <TransformationCSS></TransformationCSS>
+    </cms_transformation>
+    <cms_transformation>
+      <TransformationID>2508</TransformationID>
+      <TransformationName>NewsWithSummary</TransformationName>
+      <TransformationCode>&lt;div class="NewsPTitle"&gt;&lt;a href="&lt;%# GetDocumentUrl() %&gt;"&gt;
+  &lt;%# Eval("NewsTitle",true) %&gt;&lt;/a&gt;&amp;nbsp;|&amp;nbsp;&lt;%# GetDateTime("NewsReleaseDate", "d") %&gt;
+&lt;/div&gt;
+&lt;div class="NewsPBody"&gt;
+  &lt;div class="TextContent"&gt;&lt;%# Eval("NewsSummary") %&gt;&lt;/div&gt;
+&lt;/div&gt;</TransformationCode>
+      <TransformationType>ascx</TransformationType>
+      <TransformationClassID>2960</TransformationClassID>
+      <TransformationCheckedOutMachineName></TransformationCheckedOutMachineName>
+      <TransformationCheckedOutFilename></TransformationCheckedOutFilename>
+      <TransformationVersionGUID>4720faec-5a78-4b13-8d5f-b6f2c4216c0d</TransformationVersionGUID>
+      <TransformationGUID>74ae04b6-eb0b-4713-901e-b290d597e465</TransformationGUID>
+      <TransformationLastModified>2011-03-17T09:15:08.017-05:00</TransformationLastModified>
+      <TransformationIsHierarchical>false</TransformationIsHierarchical>
+      <TransformationHierarchicalXML></TransformationHierarchicalXML>
+      <TransformationCSS></TransformationCSS>
+    </cms_transformation>
+    <cms_transformation>
+      <TransformationID>2509</TransformationID>
+      <TransformationName>NewsWithSummaryAndTeasers</TransformationName>
+      <TransformationCode>&lt;div class="NewsTitle"&gt;
+  &lt;a href="&lt;%# GetDocumentUrl() %&gt;"&gt;&lt;%# Eval("NewsTitle",true) %&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class="NewsSummary"&gt;
+  &lt;%# IfEmpty(Eval("NewsTeaser"), "", GetImage("NewsTeaser")) %&gt;
+  &lt;div class="Date"&gt;
+  &lt;%# GetDateTime("NewsReleaseDate", "d") %&gt;
+  &lt;/div&gt;
+  &lt;%# Eval("NewsSummary") %&gt;
+  &lt;div class="Clearer"&gt;&lt;/div&gt;
+&lt;/div&gt;</TransformationCode>
+      <TransformationType>ascx</TransformationType>
+      <TransformationClassID>2960</TransformationClassID>
+      <TransformationCheckedOutMachineName></TransformationCheckedOutMachineName>
+      <TransformationCheckedOutFilename></TransformationCheckedOutFilename>
+      <TransformationVersionGUID>13936d07-c429-4a94-8872-eb65a4291e18</TransformationVersionGUID>
+      <TransformationGUID>988d5b93-1ab5-4f60-86d4-266bb3baf90b</TransformationGUID>
+      <TransformationLastModified>2011-03-17T09:15:58.23-05:00</TransformationLastModified>
+      <TransformationIsHierarchical>false</TransformationIsHierarchical>
+      <TransformationHierarchicalXML></TransformationHierarchicalXML>
+      <TransformationCSS></TransformationCSS>
+    </cms_transformation>
+    <cms_transformation>
+      <TransformationID>2510</TransformationID>
+      <TransformationName>Preview</TransformationName>
+      <TransformationCode>&lt;div class="newsItem"&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href="&lt;%# GetDocumentUrl() %&gt;"&gt;&lt;%# Eval("NewsTitle",true) %&gt;&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;%# StripTags(Eval("NewsSummary")) %&gt;&lt;/p&gt;
+&lt;/div&gt;</TransformationCode>
+      <TransformationType>ascx</TransformationType>
+      <TransformationClassID>2960</TransformationClassID>
+      <TransformationCheckedOutMachineName></TransformationCheckedOutMachineName>
+      <TransformationCheckedOutFilename></TransformationCheckedOutFilename>
+      <TransformationVersionGUID>1b2235b8-3ed3-400f-becb-9fd67fe32999</TransformationVersionGUID>
+      <TransformationGUID>9c843e4e-0d96-4b58-b81c-db5743a9731d</TransformationGUID>
+      <TransformationLastModified>2011-03-17T09:16:11.79-05:00</TransformationLastModified>
+      <TransformationIsHierarchical>false</TransformationIsHierarchical>
+      <TransformationHierarchicalXML></TransformationHierarchicalXML>
+      <TransformationCSS></TransformationCSS>
+    </cms_transformation>
+    <cms_transformation>
+      <TransformationID>2511</TransformationID>
+      <TransformationName>Preview_xslt</TransformationName>
+      <TransformationCode>&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"&gt;&lt;xsl:output method="html" /&gt;
+&lt;xsl:template match="cms.news"&gt;
+NewsID: &lt;xsl:value-of disable-output-escaping="yes" select="NewsID"/&gt;&lt;br /&gt;
+News Title: &lt;xsl:value-of disable-output-escaping="yes" select="NewsTitle"/&gt;&lt;br /&gt;
+News Summary: &lt;xsl:value-of disable-output-escaping="yes" select="NewsSummary"/&gt;&lt;br /&gt;
+News Text: &lt;xsl:value-of disable-output-escaping="yes" select="NewsText"/&gt;&lt;br /&gt;
+Release Date: &lt;xsl:value-of disable-output-escaping="yes" select="NewsReleaseDate"/&gt;&lt;br /&gt;
+&lt;/xsl:template&gt;
+&lt;/xsl:stylesheet&gt;
+</TransformationCode>
+      <TransformationType>xslt</TransformationType>
+      <TransformationClassID>2960</TransformationClassID>
+      <TransformationCheckedOutMachineName></TransformationCheckedOutMachineName>
+      <TransformationCheckedOutFilename></TransformationCheckedOutFilename>
+      <TransformationVersionGUID>ee8e1334-faed-4391-a6fa-e2ae2b17f26d</TransformationVersionGUID>
+      <TransformationGUID>2f10700c-3287-4fd5-8a0d-53ff9914c98e</TransformationGUID>
+      <TransformationLastModified>2008-03-13T03:35:00-05:00</TransformationLastModified>
+      <TransformationIsHierarchical>false</TransformationIsHierarchical>
+      <TransformationHierarchicalXML></TransformationHierarchicalXML>
+      <TransformationCSS></TransformationCSS>
+    </cms_transformation>
+    <cms_transformation>
+      <TransformationID>2512</TransformationID>
+      <TransformationName>RSSItem</TransformationName>
+      <TransformationCode>&lt;item&gt;
+  &lt;guid isPermaLink="false"&gt;&lt;%# Eval("NodeGUID") %&gt;&lt;/guid&gt;
+  &lt;title&gt;&lt;%# EvalCDATA("NewsTitle") %&gt;&lt;/title&gt;
+  &lt;description&gt;&lt;%# EvalCDATA("NewsSummary") %&gt;&lt;/description&gt;
+  &lt;pubDate&gt;&lt;%# GetRSSDateTime(Eval("NewsReleaseDate")) %&gt;&lt;/pubDate&gt;
+  &lt;link&gt;&lt;![CDATA[&lt;%# GetAbsoluteUrl(GetDocumentUrlForFeed(), Eval("SiteName")) %&gt;]]&gt;&lt;/link&gt;     	
+&lt;/item&gt;</TransformationCode>
+      <TransformationType>ascx</TransformationType>
+      <TransformationClassID>2960</TransformationClassID>
+      <TransformationCheckedOutMachineName></TransformationCheckedOutMachineName>
+      <TransformationCheckedOutFilename></TransformationCheckedOutFilename>
+      <TransformationVersionGUID>a77ebe47-7853-4be7-bb05-31bee479c4af</TransformationVersionGUID>
+      <TransformationGUID>295d16e6-af46-444a-ba55-10cb47ee8663</TransformationGUID>
+      <TransformationLastModified>2010-08-02T08:18:55.343-05:00</TransformationLastModified>
+      <TransformationIsHierarchical>false</TransformationIsHierarchical>
+      <TransformationHierarchicalXML></TransformationHierarchicalXML>
+      <TransformationCSS></TransformationCSS>
+    </cms_transformation>
+    <cms_transformation>
+      <TransformationID>2513</TransformationID>
+      <TransformationName>XMLItem</TransformationName>
+      <TransformationCode>&lt;CMS_News&gt;
+  &lt;NewsID&gt;&lt;%# EvalCDATA("NewsID") %&gt;&lt;/NewsID&gt;
+  &lt;NewsTitle&gt;&lt;%# EvalCDATA("NewsTitle") %&gt;&lt;/NewsTitle&gt;
+  &lt;NewsReleaseDate&gt;&lt;%# EvalCDATA("NewsReleaseDate") %&gt;&lt;/NewsReleaseDate&gt;
+  &lt;NewsSummary&gt;&lt;%# EvalCDATA("NewsSummary") %&gt;&lt;/NewsSummary&gt;
+  &lt;NewsText&gt;&lt;%# EvalCDATA("NewsText") %&gt;&lt;/NewsText&gt;
+&lt;/CMS_News&gt;
+
+</TransformationCode>
+      <TransformationType>ascx</TransformationType>
+      <TransformationClassID>2960</TransformationClassID>
+      <TransformationCheckedOutMachineName></TransformationCheckedOutMachineName>
+      <TransformationCheckedOutFilename></TransformationCheckedOutFilename>
+      <TransformationVersionGUID>5d58fa06-4d25-4ee7-ad9c-a071d5d64bad</TransformationVersionGUID>
+      <TransformationGUID>9b387db8-2496-4a7a-b6e2-5c500770c0b5</TransformationGUID>
+      <TransformationLastModified>2010-08-02T08:22:56.707-05:00</TransformationLastModified>
+      <TransformationIsHierarchical>false</TransformationIsHierarchical>
+      <TransformationHierarchicalXML></TransformationHierarchicalXML>
+      <TransformationCSS></TransformationCSS>
+    </cms_transformation>
+    <cms_permission>
+      <PermissionID>7730</PermissionID>
+      <PermissionDisplayName>Read</PermissionDisplayName>
+      <PermissionName>Read</PermissionName>
+      <ClassID>2960</ClassID>
+      <PermissionGUID>9074249f-620e-4907-b191-d5463099b2a0</PermissionGUID>
+      <PermissionLastModified>2008-03-13T03:35:00-05:00</PermissionLastModified>
+      <PermissionDescription>Allows to access document content.</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>1</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>7731</PermissionID>
+      <PermissionDisplayName>Modify</PermissionDisplayName>
+      <PermissionName>Modify</PermissionName>
+      <ClassID>2960</ClassID>
+      <PermissionGUID>10fc27a8-e77e-4fbc-af04-03f9e4a42b18</PermissionGUID>
+      <PermissionLastModified>2008-03-13T03:35:00-05:00</PermissionLastModified>
+      <PermissionDescription>Allows to modify documents.</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>2</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>7732</PermissionID>
+      <PermissionDisplayName>Create Anywhere</PermissionDisplayName>
+      <PermissionName>Create</PermissionName>
+      <ClassID>2960</ClassID>
+      <PermissionGUID>74dc5fad-0475-4e89-b675-019cf1ccbc41</PermissionGUID>
+      <PermissionLastModified>2011-08-23T05:36:46.883-05:00</PermissionLastModified>
+      <PermissionDescription>Allows to create new documents anywhere in the content tree.</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>4</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>7733</PermissionID>
+      <PermissionDisplayName>Delete</PermissionDisplayName>
+      <PermissionName>Delete</PermissionName>
+      <ClassID>2960</ClassID>
+      <PermissionGUID>21b9d9db-30bf-41b4-a655-09bc87de917d</PermissionGUID>
+      <PermissionLastModified>2011-08-23T05:36:46.897-05:00</PermissionLastModified>
+      <PermissionDescription>Allows to remove documents (only to Recycle bin). See also the Destroy document permission.</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>5</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>7734</PermissionID>
+      <PermissionDisplayName>Destroy</PermissionDisplayName>
+      <PermissionName>Destroy</PermissionName>
+      <ClassID>2960</ClassID>
+      <PermissionGUID>686402f8-1d4f-410b-9cc8-fc36d1d061a7</PermissionGUID>
+      <PermissionLastModified>2011-08-23T05:36:46.913-05:00</PermissionLastModified>
+      <PermissionDescription>Allows to completely remove documents.</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>6</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>7735</PermissionID>
+      <PermissionDisplayName>Browse Tree</PermissionDisplayName>
+      <PermissionName>ExploreTree</PermissionName>
+      <ClassID>2960</ClassID>
+      <PermissionGUID>056d0ed2-f0f8-4394-9a6c-caedd0d3e567</PermissionGUID>
+      <PermissionLastModified>2011-08-23T05:36:46.93-05:00</PermissionLastModified>
+      <PermissionDescription>Allows to browse the content tree.</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>7</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>7736</PermissionID>
+      <PermissionDisplayName>Modify Permissions</PermissionDisplayName>
+      <PermissionName>ModifyPermissions</PermissionName>
+      <ClassID>2960</ClassID>
+      <PermissionGUID>de46f2de-6217-420c-bb64-32d1b3037a67</PermissionGUID>
+      <PermissionLastModified>2011-08-23T05:36:46.943-05:00</PermissionLastModified>
+      <PermissionDescription>Allows to manage document-level permissions.</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>8</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>7737</PermissionID>
+      <PermissionDisplayName>Create</PermissionDisplayName>
+      <PermissionName>CreateSpecific</PermissionName>
+      <ClassID>2960</ClassID>
+      <PermissionGUID>5ba5b860-2b7e-4eac-8617-cee2ace3945c</PermissionGUID>
+      <PermissionLastModified>2011-08-23T05:36:46.943-05:00</PermissionLastModified>
+      <PermissionDescription>Allows to create new documents under documents for which the user has the 'Create' document-level permission.</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>3</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>7878</PermissionID>
+      <PermissionDisplayName>Read</PermissionDisplayName>
+      <PermissionName>Read</PermissionName>
+      <ClassID>2981</ClassID>
+      <PermissionGUID>ea324f27-5365-43c5-ad3f-5eebf1866e93</PermissionGUID>
+      <PermissionLastModified>2010-08-19T08:59:10.833-05:00</PermissionLastModified>
+      <PermissionDescription>Allows to access document content.</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>1</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>7879</PermissionID>
+      <PermissionDisplayName>Modify</PermissionDisplayName>
+      <PermissionName>Modify</PermissionName>
+      <ClassID>2981</ClassID>
+      <PermissionGUID>4fdf8ee1-ca78-4b74-b245-b9dd39e1f80c</PermissionGUID>
+      <PermissionLastModified>2010-08-19T08:59:10.917-05:00</PermissionLastModified>
+      <PermissionDescription>Allows to modify documents.</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>2</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>7880</PermissionID>
+      <PermissionDisplayName>Create Anywhere</PermissionDisplayName>
+      <PermissionName>Create</PermissionName>
+      <ClassID>2981</ClassID>
+      <PermissionGUID>8f5579f4-1eb4-4bf5-be1d-b7dc59f7cd6c</PermissionGUID>
+      <PermissionLastModified>2010-08-19T08:59:10.943-05:00</PermissionLastModified>
+      <PermissionDescription>Allows to create new documents anywhere in the content tree.</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>4</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>7881</PermissionID>
+      <PermissionDisplayName>Delete</PermissionDisplayName>
+      <PermissionName>Delete</PermissionName>
+      <ClassID>2981</ClassID>
+      <PermissionGUID>49120eb7-d552-4b3d-a60a-297197bfee6e</PermissionGUID>
+      <PermissionLastModified>2010-08-19T08:59:10.953-05:00</PermissionLastModified>
+      <PermissionDescription>Allows to remove documents (only to Recycle bin). See also the Destroy document permission.</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>5</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>7882</PermissionID>
+      <PermissionDisplayName>Destroy</PermissionDisplayName>
+      <PermissionName>Destroy</PermissionName>
+      <ClassID>2981</ClassID>
+      <PermissionGUID>c25f7f0e-d98b-44b2-97ff-4b651be25dfa</PermissionGUID>
+      <PermissionLastModified>2010-08-19T08:59:11.047-05:00</PermissionLastModified>
+      <PermissionDescription>Allows to completely remove documents.</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>6</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>7883</PermissionID>
+      <PermissionDisplayName>Browse tree</PermissionDisplayName>
+      <PermissionName>ExploreTree</PermissionName>
+      <ClassID>2981</ClassID>
+      <PermissionGUID>0406ba0d-d3f2-450f-9c4f-13a23ed5967b</PermissionGUID>
+      <PermissionLastModified>2010-08-19T08:59:11.06-05:00</PermissionLastModified>
+      <PermissionDescription>Allows to browse the content tree.</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>7</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>7884</PermissionID>
+      <PermissionDisplayName>Modify permissions</PermissionDisplayName>
+      <PermissionName>ModifyPermissions</PermissionName>
+      <ClassID>2981</ClassID>
+      <PermissionGUID>7edd4798-0c46-4fd5-9c9a-886b26aebf87</PermissionGUID>
+      <PermissionLastModified>2010-08-19T08:59:11.073-05:00</PermissionLastModified>
+      <PermissionDescription>Allows to manage document-level permissions.</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>8</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>7885</PermissionID>
+      <PermissionDisplayName>Create</PermissionDisplayName>
+      <PermissionName>CreateSpecific</PermissionName>
+      <ClassID>2981</ClassID>
+      <PermissionGUID>79c35748-e362-4416-9d00-4f4c107b6f79</PermissionGUID>
+      <PermissionLastModified>2011-08-23T05:36:45.963-05:00</PermissionLastModified>
+      <PermissionDescription>Allows to create new documents under documents for which the user has the 'Create' document-level permission.</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>3</PermissionOrder>
+    </cms_permission>
+    <cms_alternativeform>
+      <FormID>1053</FormID>
+      <FormDisplayName>Intranet news</FormDisplayName>
+      <FormName>IntranetNews</FormName>
+      <FormClassID>2960</FormClassID>
+      <FormDefinition>&lt;form&gt;&lt;field column="NewsID" fieldtype="CustomUserControl" ismacro="false" hasdependingfields="false"&gt;&lt;settings&gt;&lt;controlname&gt;labelcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="NewsTitle" fieldtype="CustomUserControl" publicfield="true" spellcheck="true" ismacro="false" hasdependingfields="false" defaultvalue="" fielddescription="" regularexpression="" minstringlength="" maxstringlength="" minnumericvalue="" maxnumericvalue="" mindatetimevalue="" maxdatetimevalue="" validationerrormessage="" captionstyle="" inputcontrolstyle="" fileextensions=""&gt;&lt;settings&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="NewsReleaseDate" fieldtype="CustomUserControl" spellcheck="true" ismacro="false" hasdependingfields="false" defaultvalue="" columnsize="" fielddescription="" regularexpression="" minstringlength="" maxstringlength="" minnumericvalue="" maxnumericvalue="" mindatetimevalue="" maxdatetimevalue="" validationerrormessage="" captionstyle="" inputcontrolstyle="" fileextensions=""&gt;&lt;settings&gt;&lt;controlname&gt;calendarcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="NewsSummary" fieldtype="CustomUserControl" visibility="none" ismacro="false" hasdependingfields="false"&gt;&lt;settings&gt;&lt;ToolbarSet&gt;SimpleEdit&lt;/ToolbarSet&gt;&lt;Width&gt;700&lt;/Width&gt;&lt;Dialogs_Libraries_Site&gt;##all##&lt;/Dialogs_Libraries_Site&gt;&lt;DisplayEmailTabSetting&gt;True&lt;/DisplayEmailTabSetting&gt;&lt;Height&gt;150&lt;/Height&gt;&lt;Dialogs_Libraries_Hide&gt;True&lt;/Dialogs_Libraries_Hide&gt;&lt;Dialogs_Content_Site&gt;##all##&lt;/Dialogs_Content_Site&gt;&lt;Dialogs_Content_Hide&gt;True&lt;/Dialogs_Content_Hide&gt;&lt;DisplayAutoResize&gt;True&lt;/DisplayAutoResize&gt;&lt;Autoresize_Hashtable&gt;True&lt;/Autoresize_Hashtable&gt;&lt;MediaDialogConfiguration&gt;True&lt;/MediaDialogConfiguration&gt;&lt;controlname&gt;htmlareacontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="NewsText" fieldtype="CustomUserControl" ismacro="false" hasdependingfields="false"&gt;&lt;settings&gt;&lt;Dialogs_Libraries_Hide&gt;True&lt;/Dialogs_Libraries_Hide&gt;&lt;Dialogs_Content_Site&gt;##all##&lt;/Dialogs_Content_Site&gt;&lt;Dialogs_Libraries_Site&gt;##all##&lt;/Dialogs_Libraries_Site&gt;&lt;DisplayAutoResize&gt;True&lt;/DisplayAutoResize&gt;&lt;MediaDialogConfiguration&gt;True&lt;/MediaDialogConfiguration&gt;&lt;Height&gt;350&lt;/Height&gt;&lt;ToolbarSet&gt;SimpleEdit&lt;/ToolbarSet&gt;&lt;Width&gt;700&lt;/Width&gt;&lt;Autoresize_Hashtable&gt;True&lt;/Autoresize_Hashtable&gt;&lt;Dialogs_Content_Hide&gt;True&lt;/Dialogs_Content_Hide&gt;&lt;DisplayEmailTabSetting&gt;True&lt;/DisplayEmailTabSetting&gt;&lt;controlname&gt;htmlareacontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="NewsTeaser" fieldtype="CustomUserControl" ismacro="false" hasdependingfields="false"&gt;&lt;settings&gt;&lt;controlname&gt;directuploadcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;/form&gt;</FormDefinition>
+      <FormGUID>36047963-d6f7-4f0f-8c4b-65a67e4cb728</FormGUID>
+      <FormLastModified>2011-01-12T10:40:06.6-05:00</FormLastModified>
+    </cms_alternativeform>
+    <cms_allowedchildclasses>
+      <ParentClassID>2962</ParentClassID>
+      <ChildClassID>2960</ChildClassID>
+    </cms_allowedchildclasses>
+    <cms_allowedchildclasses>
+      <ParentClassID>2962</ParentClassID>
+      <ChildClassID>2981</ChildClassID>
+    </cms_allowedchildclasses>
+    <cms_allowedchildclasses>
+      <ParentClassID>2981</ParentClassID>
+      <ChildClassID>2962</ChildClassID>
+    </cms_allowedchildclasses>
+  </NewDataSet>
+</cms_documenttype>

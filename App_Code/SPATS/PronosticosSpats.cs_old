@@ -1,0 +1,387 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+
+using System.Collections;
+using System.Configuration;
+using System.Data;
+using System.Linq;
+
+using CMS.EventLog;
+using CMS.Scheduler;
+
+using CMS.DatabaseHelper;
+using CMS.DataEngine;
+using CMS.SettingsProvider;
+
+using SMSNotification;
+
+using CMS.GlobalHelper;
+using CMS.SiteProvider;
+using CMS.CMSHelper;
+
+namespace SPTAS
+{
+    /// <summary>
+    /// Sample task class.
+    /// </summary>
+    public class PronosticosSpats : ITask
+    {
+        /// <summary>
+        /// Executes the task.
+        /// </summary>
+        /// <param name="ti">Task info</param>
+        /// 
+        private void GenLogNotificacion(string msj)
+        {
+            /********REgistrando inicio del proceso de pronostico********/
+            EventLogProvider ev = new EventLogProvider();
+            ev.LogEvent(EventLogProvider.EVENT_TYPE_INFORMATION, DateTime.Now, "PronosticosSpats", "Execute", null, msj);
+   
+        }
+        private DataRowCollection GetTerritorio()
+        {
+             DataSet DataSetdata = (DataSet)CMS.CMSHelper.TreeHelper.GetDocuments(CMS.CMSHelper.CMSContext.CurrentSiteName
+                                    , "/Modulos-en-Implementacion/%", "es-ES", true, "IntranetPortal.Department", "", "", -1, true, -1);
+             if (!DataHelper.DataSourceIsEmpty(DataSetdata))
+             {
+                 return DataSetdata.Tables[0].Rows;
+             }
+             else
+                 return null;
+        }
+        private DateTime GenSPATS_Ejecucion_Pronostico(int TerritorioID)
+        {
+            DateTime FechaEjecucion = DateTime.Now.Date;
+            GenSPATS_Ejecucion_Pronostico(TerritorioID,FechaEjecucion);
+            return FechaEjecucion;
+        }
+        private void GenSPATS_Ejecucion_Pronostico(int TerritorioID, DateTime FechaEjecucion)
+        {
+            
+                string Observacion = "Ejecucion generada automaticamente al no encontrar ejecucion programada, esta ejecucion se programa para el: " + FechaEjecucion.ToShortDateString();
+                string className = "customtable.SPATS_Ejecucion_Pronostico"; // cultivouser.ClassName;
+                CustomTableItem Ejecucion_Pronostico = null;
+                CustomTableItemProvider provider = new CustomTableItemProvider(CMSContext.CurrentUser);
+                Ejecucion_Pronostico = new CustomTableItem(className, provider);
+                Ejecucion_Pronostico.SetValue("TerritorioID", TerritorioID.ToString());
+                Ejecucion_Pronostico.SetValue("FechaEjecucion", FechaEjecucion);
+                Ejecucion_Pronostico.SetValue("IdEstado", "1");
+                Ejecucion_Pronostico.SetValue("Observacion", Observacion);          
+
+                if (Ejecucion_Pronostico.OrderEnabled)
+                {
+                    Ejecucion_Pronostico.ItemOrder = provider.GetLastItemOrder(className) + 1;
+                }
+                Ejecucion_Pronostico.Insert();
+                
+        }
+        private DataRowCollection GetBaseDeConocimiento(int TerritorioID)
+        {
+            GeneralConnection cn = ConnectionHelper.GetConnection();
+            DataSet BaseDeConocimiento = new DataSet();
+            QueryDataParameters parameters = new QueryDataParameters();
+
+            /******************Recuperamos Reglas de condiciones para plagas por cultivo****************************/
+            parameters.Add("@TerritorioID", TerritorioID);
+            BaseDeConocimiento = ConnectionHelper.ExecuteQuery("customtable.Base_Conocimiento.GetBaseDeConocimientobyTerritorioID", parameters);
+
+            if (BaseDeConocimiento.Tables[0] != null)
+            {
+                return BaseDeConocimiento.Tables[0].Rows;
+            }
+            else
+            {
+                return null;
+            }
+        }
+        private DateTime GetFechaInicialLecturas(int TerritorioID)
+        {
+            GeneralConnection cn = ConnectionHelper.GetConnection();
+            DataSet pronosticos = new DataSet();
+            QueryDataParameters parameters = new QueryDataParameters();
+
+            parameters.Add("@TerritorioID", TerritorioID.ToString());
+            pronosticos = ConnectionHelper.ExecuteQuery("customtable.SPATS_Ejecucion_Pronostico.GetFechaInicialLecturas", parameters);
+
+            if (pronosticos.Tables[0] != null)
+            {
+                if (pronosticos.Tables[0].Rows.Count > 0)
+                { return ValidationHelper.GetDateTime(pronosticos.Tables[0].Rows[0][0], DateTime.MinValue); }
+                else
+                {
+                    /**********************Generamos una ejeucion de pronostico con la fecha actual***************************/
+
+                    return GenSPATS_Ejecucion_Pronostico(TerritorioID);
+                }
+            }
+            return DateTime.MinValue;
+            
+        }
+        private DataRowCollection GetPronosticos(int TerritorioID,int PeriodoPronosticos)
+        {
+            GeneralConnection cn = ConnectionHelper.GetConnection();
+            DataSet pronosticos = new DataSet();
+            QueryDataParameters parameters = new QueryDataParameters();
+
+            /******************Recuperamos segun programacion la fecha desde que leeremos los pronosticos****************************/
+            DateTime FechaInicialLectura;
+            FechaInicialLectura = GetFechaInicialLecturas(TerritorioID);
+            
+            parameters.Add("@TerritorioID", TerritorioID);
+            parameters.Add("@PeriodoPronosticos", PeriodoPronosticos);
+            pronosticos = ConnectionHelper.ExecuteQuery("customtable.SPATS_Notificacion_SMS.All_Pendiende", parameters);
+
+            if (pronosticos.Tables[0] != null)
+            {
+                return pronosticos.Tables[0].Rows;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        private DataRowCollection GetReglasByBaseConocimientoID(int BaseConocimientoID)
+        {
+            GeneralConnection cn = ConnectionHelper.GetConnection();
+            DataSet BaseConocimiento = new DataSet();
+            QueryDataParameters parameters = new QueryDataParameters();
+            parameters.Add("@BaseConocimientoID", BaseConocimientoID);
+            BaseConocimiento = ConnectionHelper.ExecuteQuery("customtable.Base_Conocimiento.GetReglasByBaseConocimientoID", parameters);
+
+            if (BaseConocimiento.Tables[0] != null)
+            {
+                return BaseConocimiento.Tables[0].Rows;
+            }
+            else
+            {
+                return null;
+            }
+        }
+        private DataRowCollection GetPronosticosbyCondicionClimaticaID(int BaseConocimientoID, int CondicionClimaticaID, DateTime fechaejecucioninicial, DateTime fechaejecucionfinal)
+        {
+            GeneralConnection cn = ConnectionHelper.GetConnection();
+            DataSet BaseHechos = new DataSet();
+            QueryDataParameters parameters = new QueryDataParameters();
+            parameters.Add("@BaseConocimientoID", BaseConocimientoID);
+            parameters.Add("@CondicionClimaticaID", CondicionClimaticaID);
+            parameters.Add("@fechaejecucioninicial", fechaejecucioninicial);
+            parameters.Add("@fechaejecucionfinal", fechaejecucionfinal);
+
+            BaseHechos = ConnectionHelper.ExecuteQuery("customtable.Base_Hechos_Lecturas.GetPronosticosbyCondicionClimaticaID", parameters);
+
+            if (BaseHechos.Tables[0] != null)
+            {
+                return BaseHechos.Tables[0].Rows;
+            }
+            else
+            {
+                return null;
+            }
+        }
+        private void UpdateEstadoBase_Conocimiento_Lecturas(int TerritorioID, DateTime fechaejecucioninicial, DateTime fechaejecucionfinal)
+        {
+            try
+            {
+
+                GeneralConnection cn = ConnectionHelper.GetConnection();
+
+                QueryDataParameters parameters = new QueryDataParameters();
+                parameters.Add("@TerritorioID", TerritorioID);
+                parameters.Add("@FechaHoraInicialLectura", fechaejecucioninicial);
+                parameters.Add("@FechaHoraFinalLectura", fechaejecucionfinal);
+
+                ConnectionHelper.ExecuteQuery("customtable.Base_Hechos_Lecturas.UpdateEstadoBase_Conocimiento_Lecturas", parameters);
+            }
+            catch (Exception e)
+            {
+                GenLogNotificacion("Error al ejecutar UpdateEstadoBase_Conocimiento_Lecturas, TerritorioId: " + TerritorioID.ToString() + "fechaejecucioninicial: " + fechaejecucioninicial.ToString() + " fechaejecucionfinal: " +fechaejecucionfinal.ToString() + e.Message);
+
+            }         
+        }
+        private void UpdateSPATS_Ejecucion_Pronostico(int TerritorioID, DateTime FechaEjecucion)
+        {
+            try
+            {
+
+                GeneralConnection cn = ConnectionHelper.GetConnection();
+
+                QueryDataParameters parameters = new QueryDataParameters();
+                parameters.Add("@TerritorioID", TerritorioID);
+                parameters.Add("@FechaEjecucion", FechaEjecucion);
+
+                ConnectionHelper.ExecuteQuery("customtable.SPATS_Ejecucion_Pronostico.UpdateSPATS_Ejecucion_Pronostico", parameters);
+            }
+            catch (Exception e)
+            {
+                GenLogNotificacion("Error al ejecutar UpdateEstadoBase_Conocimiento_Lecturas, TerritorioId: " + TerritorioID.ToString() + "fechaejecucioninicial: " + FechaEjecucion.ToString() + e.Message);
+
+            }
+        }
+        private void GenAlertabyBaseConocimientoID(int BaseConocimientoID)
+        {
+            //encolar notificaciones para todos los usuarios pertenecientes al territorio actual
+            /********REgistrando inicio del proceso de pronostico********/
+            EventLogProvider ev = new EventLogProvider();
+            ev.LogEvent(EventLogProvider.EVENT_TYPE_INFORMATION, DateTime.Now, "CreateSMSNotificaciones", "Execute", null, "Generando Notificaciones.");
+            //*********procesando usuarios por territorio
+            GeneralConnection cn = ConnectionHelper.GetConnection();
+            DataSet USERSMS_cola = new DataSet();
+            QueryDataParameters parameters = new QueryDataParameters();
+            parameters.Add("@BaseConocimientoID", BaseConocimientoID);
+            USERSMS_cola = ConnectionHelper.ExecuteQuery("customtable.Base_Conocimiento.GetUserByBaseConocimientoID", parameters);
+            String UsuariosSinCell = "";
+            if (USERSMS_cola.Tables[0] != null)
+            {
+                /***************   Realizar en envio de SMS ******************/
+
+                foreach (DataRow sms_item in USERSMS_cola.Tables[0].Rows)
+                {
+                    if ((sms_item["CelularNotificacion"].ToString() == ""))
+                    {
+                        string cad = "[ UserID:" + sms_item["UserID"].ToString() + " Nombre: " + sms_item["fullname"].ToString();
+                        if (UsuariosSinCell == "")
+                        { UsuariosSinCell = cad; }
+                        else { UsuariosSinCell = UsuariosSinCell + cad; }
+                    }
+                    else
+                    {
+                        //procedemos a insertar una nueva notificacion
+                        string className = "customtable.SPATS_Notificacion_SMS"; // cultivouser.ClassName;
+                        CustomTableItem Notificacion_SMS = null;
+                        CustomTableItemProvider provider = new CustomTableItemProvider(CMSContext.CurrentUser);
+                        Notificacion_SMS = new CustomTableItem(className, provider);
+                        Notificacion_SMS.SetValue("UserID", ValidationHelper.GetInteger(sms_item["UserID"].ToString(), 0));
+                        Notificacion_SMS.SetValue("mensaje", sms_item["AlertaSMS"].ToString());
+                        Notificacion_SMS.SetValue("Estado", 0);
+                        Notificacion_SMS.SetValue("NumeroOrigen", "51975523380");
+                        Notificacion_SMS.SetValue("Celldestino", sms_item["CelularNotificacion"].ToString());
+                        Notificacion_SMS.SetValue("FechaHoraparaEnviar", DateTime.Now);
+                        Notificacion_SMS.SetValue("TerritorioID", sms_item["TerritorioId"].ToString());
+
+                        if (Notificacion_SMS.OrderEnabled)
+                        {
+                            Notificacion_SMS.ItemOrder = provider.GetLastItemOrder(className) + 1;
+                        }
+                        Notificacion_SMS.Insert();
+                    }
+                }
+                if (!(UsuariosSinCell == ""))
+                {
+                    this.GenLogNotificacion("Los siguientes usuarios no registran numero de celular: " + UsuariosSinCell);
+                }
+            }
+        }
+        private void ProcesaPronosticos(int TerritorioID)
+        {
+            try
+            {
+                /********estableciendo parametros de inicio********/
+                int PeriodoPronostico = 120;  // Valor expresado en horas para establecer el numero de muestras de pronostico a utilizar para la generacion de pronosticos
+                int PeriodoMedicionReal = 0;  // Valor expresado en horas para establecer el numero de mediciones reales registradas para la generacion de alertas
+
+                /***********Recuperamos la siguiente ejecucion programada******************/
+                DateTime FechaInicialLecturas, FechaFinalLecturas;
+                FechaInicialLecturas = this.GetFechaInicialLecturas(TerritorioID);
+                FechaFinalLecturas = FechaInicialLecturas.AddHours(PeriodoPronostico);
+                /****************leer reglas definidas para el territorio actual****************************/
+                // una regla se formula para un Cultivo y una plaga en especifico
+                // cada regla se formula en base a los parametros climaticos definidos dentro del territorio
+                // se asume una relacion mandatoria en el cumplimiento de la regla
+               
+                foreach (DataRow ReglaCultivoPlaga in this.GetBaseDeConocimiento(TerritorioID))
+                {
+                    //por cada regla que se recupera analizaremos, el cumplimiento de las
+                    //condiciones establecidas por cada condicion climatica
+                    //recuperamos la definicion de la regla en funcion de las condiciones climaticas
+                    int TempNumeroReglas = 0;
+                    int TempNumeroReglasCumplidas = 0;
+                   
+                    int BaseConocimientoID;
+                   
+                    BaseConocimientoID = ValidationHelper.GetInteger(ReglaCultivoPlaga["BaseConocimientoID"], 0);
+                   
+
+                    foreach (DataRow regla in this.GetReglasByBaseConocimientoID(BaseConocimientoID))
+                    {
+                        TempNumeroReglas = TempNumeroReglas + 1;
+                        int CondicionClimaticaID;
+                        int PeriodoTiempoAcumulado;
+                        int TempTiempoAcumulado = 0;
+                        DateTime TempFechaAcumulado = DateTime.MinValue;
+                        CondicionClimaticaID = ValidationHelper.GetInteger(regla["CondicionClimaticaID"], 0);
+                        PeriodoTiempoAcumulado = ValidationHelper.GetInteger(regla["PerioTiempoAcumulado"], 0);
+                        foreach ( DataRow muestra in this.GetPronosticosbyCondicionClimaticaID(BaseConocimientoID,CondicionClimaticaID,FechaInicialLecturas,FechaFinalLecturas))
+                        {
+                            if (TempFechaAcumulado == DateTime.MinValue) // primera iteracion
+                            {
+                                TempFechaAcumulado = ValidationHelper.GetDateTime(muestra["FechaHoraInicialLectura"], DateTime.MinValue).Date;
+                                TempTiempoAcumulado = 24;
+                            }
+                            else
+                            {
+                                if (TempFechaAcumulado.AddHours(24) == ValidationHelper.GetDateTime(muestra["FechaHoraInicialLectura"], DateTime.MinValue).Date)
+                                {
+                                    TempTiempoAcumulado = TempTiempoAcumulado + 24;
+                                    TempFechaAcumulado = TempFechaAcumulado.AddHours(24);
+                                }
+                                else
+                                {
+                                    TempTiempoAcumulado = 0;
+                                    TempFechaAcumulado = DateTime.MinValue;
+                                }
+                            }
+                        } // fin de recorrido de los pronosticos registrados que cumplen con la definicion de la regla en curso
+                        if (TempTiempoAcumulado >= PeriodoTiempoAcumulado)
+                        {
+                            TempNumeroReglasCumplidas = TempNumeroReglasCumplidas + 1;
+                        }
+                    } // fin recorrido de definicion de reglas (condiciones climaticas) por regla
+                    double gradocumplimientoregla = 0;
+                    if (TempNumeroReglas > 0)
+                    {
+                        gradocumplimientoregla = (TempNumeroReglasCumplidas / TempNumeroReglas) * 100;
+                    }
+                    if (gradocumplimientoregla > 75)
+                    {
+                        // Generar alerta para ese territorio + Cultivo + Plaga
+                        this.GenAlertabyBaseConocimientoID(BaseConocimientoID);
+                    }
+                    this.UpdateEstadoBase_Conocimiento_Lecturas(TerritorioID, FechaInicialLecturas, FechaFinalLecturas);
+                } // fin de recorrido de definicion de reglas por territorio
+
+                this.UpdateSPATS_Ejecucion_Pronostico(TerritorioID, FechaInicialLecturas);
+            }
+            catch
+            {
+                GenLogNotificacion("Error al procesar Pronostico, nivel general, TerritorioId: " + TerritorioID.ToString());
+            }
+            
+        }
+        public string Execute(TaskInfo ti)
+        {
+            GenLogNotificacion("Inicio de Procesamiento de Pronosticos");
+                               /********Recorrer territorios********/
+            {
+                // Loop through all documents
+                foreach (DataRow documentRow in GetTerritorio())
+                {
+                    int TerritorioID = ValidationHelper.GetInteger(documentRow["DocumentId"], 0);
+                    try
+                    {
+                        this.ProcesaPronosticos(TerritorioID);
+                    }
+                    catch
+                    {
+                        GenLogNotificacion("Error al procesar Pronostico, nivel general, TerritorioId: " + TerritorioID.ToString());
+
+                    }
+                }
+            }
+
+            return null;
+        }
+    }
+}

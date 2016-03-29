@@ -1,0 +1,391 @@
+﻿<cms_customtable version="6.0">
+  <NewDataSet>
+    <cms_class>
+      <ClassID>2986</ClassID>
+      <ClassDisplayName>SPATS_Cultivo</ClassDisplayName>
+      <ClassName>customtable.SPATS_Cultivo</ClassName>
+      <ClassUsesVersioning>false</ClassUsesVersioning>
+      <ClassIsDocumentType>false</ClassIsDocumentType>
+      <ClassIsCoupledClass>true</ClassIsCoupledClass>
+      <ClassXmlSchema>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"&gt;
+  &lt;xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true"&gt;
+    &lt;xs:complexType&gt;
+      &lt;xs:choice minOccurs="0" maxOccurs="unbounded"&gt;
+        &lt;xs:element name="customtable_SPATS_Cultivo"&gt;
+          &lt;xs:complexType&gt;
+            &lt;xs:sequence&gt;
+              &lt;xs:element name="ItemID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" /&gt;
+              &lt;xs:element name="ItemCreatedBy" type="xs:int" minOccurs="0" /&gt;
+              &lt;xs:element name="ItemCreatedWhen" type="xs:dateTime" minOccurs="0" /&gt;
+              &lt;xs:element name="ItemModifiedBy" type="xs:int" minOccurs="0" /&gt;
+              &lt;xs:element name="ItemModifiedWhen" type="xs:dateTime" minOccurs="0" /&gt;
+              &lt;xs:element name="ItemOrder" type="xs:int" minOccurs="0" /&gt;
+              &lt;xs:element name="ItemGUID" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" type="xs:string" /&gt;
+              &lt;xs:element name="NombreComun"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="100" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="NombreCientifico"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="100" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+              &lt;xs:element name="DuracionPeriodoVegetativo" type="xs:long" /&gt;
+              &lt;xs:element name="TipoCultivo" type="xs:int" /&gt;
+              &lt;xs:element name="TerritorioId"&gt;
+                &lt;xs:simpleType&gt;
+                  &lt;xs:restriction base="xs:string"&gt;
+                    &lt;xs:maxLength value="20" /&gt;
+                  &lt;/xs:restriction&gt;
+                &lt;/xs:simpleType&gt;
+              &lt;/xs:element&gt;
+            &lt;/xs:sequence&gt;
+          &lt;/xs:complexType&gt;
+        &lt;/xs:element&gt;
+      &lt;/xs:choice&gt;
+    &lt;/xs:complexType&gt;
+    &lt;xs:unique name="Constraint1" msdata:PrimaryKey="true"&gt;
+      &lt;xs:selector xpath=".//customtable_SPATS_Cultivo" /&gt;
+      &lt;xs:field xpath="ItemID" /&gt;
+    &lt;/xs:unique&gt;
+  &lt;/xs:element&gt;
+&lt;/xs:schema&gt;</ClassXmlSchema>
+      <ClassFormDefinition>&lt;form&gt;&lt;field column="ItemID" fieldcaption="ItemID" visible="true" columntype="integer" fieldtype="CustomUserControl" allowempty="false" isPK="true" system="false" publicfield="false" spellcheck="true" guid="ebc7e650-060a-47c0-a94c-19c6d4494696" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;labelcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="ItemCreatedBy" fieldcaption="Created by" visible="false" columntype="integer" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="true" publicfield="false" spellcheck="true" guid="2cea4f79-9aa7-4352-a4a0-1881617d4cc6" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;labelcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="ItemCreatedWhen" fieldcaption="Created when" visible="false" columntype="datetime" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="true" publicfield="false" spellcheck="true" guid="3617fc56-0f07-42cd-8a47-17b3ac6764fc" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;labelcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="ItemModifiedBy" fieldcaption="Modified by" visible="false" columntype="integer" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="true" publicfield="false" spellcheck="true" guid="d485422e-d6b1-438d-845d-32fd09a2d067" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;labelcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="ItemModifiedWhen" fieldcaption="Modified when" visible="false" columntype="datetime" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="true" publicfield="false" spellcheck="true" guid="01cc6741-d0c8-49d1-ac01-9eb2ecbe21eb" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;labelcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="ItemOrder" fieldcaption="Order" visible="false" columntype="integer" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="true" publicfield="false" spellcheck="true" guid="f44138b6-fac6-4dfc-9a3c-94938ed176a7" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;labelcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="ItemGUID" fieldcaption="GUID" visible="false" columntype="guid" fieldtype="CustomUserControl" allowempty="false" isPK="false" system="true" publicfield="false" spellcheck="true" guid="88dc1f1a-56cb-404f-a1b4-30f9b6e70422" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;labelcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="NombreComun" fieldcaption="NombreComun" visible="true" columntype="text" fieldtype="CustomUserControl" allowempty="false" isPK="false" system="false" columnsize="100" publicfield="false" spellcheck="true" guid="f536769f-5247-40a5-8b90-5fcd4fd7c9dd" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="NombreCientifico" fieldcaption="Nombre Cientifico" visible="true" columntype="text" fieldtype="CustomUserControl" allowempty="false" isPK="false" system="false" columnsize="100" publicfield="false" spellcheck="true" guid="81fce3c1-9c89-467d-8c6b-19965ba9e14f" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;Trim&gt;True&lt;/Trim&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="DuracionPeriodoVegetativo" fieldcaption="Duracion Periodo Vegetativo (meses)" visible="true" columntype="longinteger" fieldtype="CustomUserControl" allowempty="false" isPK="false" system="false" publicfield="false" spellcheck="true" guid="6858a05a-17e2-49b3-974a-5c1044fb99e6" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;FilterType&gt;0&lt;/FilterType&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="TipoCultivo" fieldcaption="Tipo de Cultivo" visible="true" columntype="integer" fieldtype="CustomUserControl" allowempty="false" isPK="false" system="false" publicfield="false" spellcheck="true" guid="2b90207a-7936-442e-9794-7fbb79bd7a77" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;radiobuttonscontrol&lt;/controlname&gt;&lt;RepeatDirection&gt;vertical&lt;/RepeatDirection&gt;&lt;Options&gt;1;Perenne
+2;Transitorio&lt;/Options&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="TerritorioId" fieldcaption="Territorio" visible="true" columntype="text" fieldtype="CustomUserControl" allowempty="false" isPK="false" system="false" columnsize="20" publicfield="false" spellcheck="true" guid="7f089a1a-f19e-4fc0-83c5-96c2a6f908c2" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;territorioselector&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;/form&gt;</ClassFormDefinition>
+      <ClassEditingPageUrl></ClassEditingPageUrl>
+      <ClassListPageUrl></ClassListPageUrl>
+      <ClassNodeNameSource></ClassNodeNameSource>
+      <ClassTableName>customtable_SPATS_Cultivo</ClassTableName>
+      <ClassViewPageUrl></ClassViewPageUrl>
+      <ClassPreviewPageUrl></ClassPreviewPageUrl>
+      <ClassFormLayout></ClassFormLayout>
+      <ClassNewPageUrl></ClassNewPageUrl>
+      <ClassShowAsSystemTable>false</ClassShowAsSystemTable>
+      <ClassUsePublishFromTo>false</ClassUsePublishFromTo>
+      <ClassShowTemplateSelection>false</ClassShowTemplateSelection>
+      <ClassSKUMappings></ClassSKUMappings>
+      <ClassIsMenuItemType>false</ClassIsMenuItemType>
+      <ClassNodeAliasSource></ClassNodeAliasSource>
+      <ClassLastModified>2014-02-20T10:15:31.74-05:00</ClassLastModified>
+      <ClassGUID>f6a8e029-5655-46ce-880c-fb2ca9871e4c</ClassGUID>
+      <ClassCreateSKU>false</ClassCreateSKU>
+      <ClassIsProduct>false</ClassIsProduct>
+      <ClassIsCustomTable>true</ClassIsCustomTable>
+      <ClassShowColumns>ItemID;NombreComun;NombreCientifico;DuracionPeriodoVegetativo;TipoCultivo;TerritorioId</ClassShowColumns>
+      <ClassLoadGeneration>0</ClassLoadGeneration>
+      <ClassSearchTitleColumn>NombreComun</ClassSearchTitleColumn>
+      <ClassSearchContentColumn>NombreComun</ClassSearchContentColumn>
+      <ClassSearchImageColumn></ClassSearchImageColumn>
+      <ClassSearchCreationDateColumn>0</ClassSearchCreationDateColumn>
+      <ClassSearchSettings>&lt;search&gt;&lt;item tokenized="False" name="ItemID" content="False" searchable="True" id="e7ddcf93-6327-4ad4-9071-29f7ce6f7e66" /&gt;&lt;item tokenized="False" name="ItemCreatedBy" content="False" searchable="True" id="81a2974c-8e97-4722-9bd3-8295ab8d6d1a" /&gt;&lt;item tokenized="False" name="ItemCreatedWhen" content="False" searchable="True" id="38d09420-9e62-4820-8b1e-355335d2c8fa" /&gt;&lt;item tokenized="False" name="ItemModifiedBy" content="False" searchable="True" id="d290c473-fb1d-4482-ab21-bbea35a36569" /&gt;&lt;item tokenized="False" name="ItemModifiedWhen" content="False" searchable="True" id="cb185cd8-be8e-4a60-8125-4ead92b55032" /&gt;&lt;item tokenized="False" name="ItemOrder" content="False" searchable="True" id="1ef4e556-2b8b-495b-a7fe-6f71639fa73e" /&gt;&lt;item tokenized="False" name="ItemGUID" content="False" searchable="False" id="c38faae9-7021-4b31-a4b5-5dc74aa3bfa5" /&gt;&lt;item tokenized="True" name="NombreComun" content="True" searchable="False" id="c012619f-6453-406e-b40b-3a14490f0b2e" /&gt;&lt;item tokenized="True" name="NombreCientifico" content="True" searchable="False" id="689f52a6-49c4-44ab-af4b-86a517cbc893" /&gt;&lt;item tokenized="False" name="DuracionPeriodoVegetativo" content="False" searchable="True" id="4b61e6bc-66f6-49ca-b2e4-71a842938ed3" /&gt;&lt;item tokenized="False" name="TipoCultivo" content="False" searchable="True" id="77b67582-9030-491e-b292-941efe68986c" /&gt;&lt;/search&gt;</ClassSearchSettings>
+      <ClassSearchEnabled>true</ClassSearchEnabled>
+      <ClassSKUDefaultDepartmentName></ClassSKUDefaultDepartmentName>
+      <ClassContactOverwriteEnabled>false</ClassContactOverwriteEnabled>
+      <ClassSKUDefaultProductType>PRODUCT</ClassSKUDefaultProductType>
+    </cms_class>
+    <cms_class>
+      <ClassID>2987</ClassID>
+      <ClassDisplayName>SPATS_CultivoUser</ClassDisplayName>
+      <ClassName>customtable.SPATS_CultivoUser</ClassName>
+      <ClassUsesVersioning>false</ClassUsesVersioning>
+      <ClassIsDocumentType>false</ClassIsDocumentType>
+      <ClassIsCoupledClass>true</ClassIsCoupledClass>
+      <ClassXmlSchema>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"&gt;
+  &lt;xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true"&gt;
+    &lt;xs:complexType&gt;
+      &lt;xs:choice minOccurs="0" maxOccurs="unbounded"&gt;
+        &lt;xs:element name="customtable_SPATS_CultivoUser"&gt;
+          &lt;xs:complexType&gt;
+            &lt;xs:sequence&gt;
+              &lt;xs:element name="ItemID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" /&gt;
+              &lt;xs:element name="ItemCreatedBy" type="xs:int" minOccurs="0" /&gt;
+              &lt;xs:element name="ItemCreatedWhen" type="xs:dateTime" minOccurs="0" /&gt;
+              &lt;xs:element name="ItemModifiedBy" type="xs:int" minOccurs="0" /&gt;
+              &lt;xs:element name="ItemModifiedWhen" type="xs:dateTime" minOccurs="0" /&gt;
+              &lt;xs:element name="ItemOrder" type="xs:int" minOccurs="0" /&gt;
+              &lt;xs:element name="ItemGUID" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" type="xs:string" /&gt;
+              &lt;xs:element name="UserID" type="xs:int" /&gt;
+              &lt;xs:element name="CultivoID" type="xs:int" /&gt;
+              &lt;xs:element name="EdadPlantacion" type="xs:int" minOccurs="0" /&gt;
+              &lt;xs:element name="MesSiembra" type="xs:int" minOccurs="0" /&gt;
+              &lt;xs:element name="Extension" type="xs:double" minOccurs="0" /&gt;
+              &lt;xs:element name="Latitud" type="xs:double" minOccurs="0" /&gt;
+              &lt;xs:element name="Longitud" type="xs:double" minOccurs="0" /&gt;
+            &lt;/xs:sequence&gt;
+          &lt;/xs:complexType&gt;
+        &lt;/xs:element&gt;
+      &lt;/xs:choice&gt;
+    &lt;/xs:complexType&gt;
+    &lt;xs:unique name="Constraint1" msdata:PrimaryKey="true"&gt;
+      &lt;xs:selector xpath=".//customtable_SPATS_CultivoUser" /&gt;
+      &lt;xs:field xpath="ItemID" /&gt;
+    &lt;/xs:unique&gt;
+  &lt;/xs:element&gt;
+&lt;/xs:schema&gt;</ClassXmlSchema>
+      <ClassFormDefinition>&lt;form&gt;&lt;field column="ItemID" fieldcaption="ItemID" visible="true" columntype="integer" fieldtype="CustomUserControl" allowempty="false" isPK="true" system="false" publicfield="false" spellcheck="true" guid="b806829f-3512-4412-9961-9004a5ecef91" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;labelcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="ItemCreatedBy" fieldcaption="Created by" visible="false" columntype="integer" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="true" publicfield="false" spellcheck="true" guid="acb70e25-e3ea-46ba-9966-8a0a40bc592d" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;labelcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="ItemCreatedWhen" fieldcaption="Created when" visible="false" columntype="datetime" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="true" publicfield="false" spellcheck="true" guid="72c2c036-c126-4b16-9a04-1780fc9c8a6b" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;labelcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="ItemModifiedBy" fieldcaption="Modified by" visible="false" columntype="integer" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="true" publicfield="false" spellcheck="true" guid="0c13ee7f-10c4-48ab-ad53-e60517248e46" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;labelcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="ItemModifiedWhen" fieldcaption="Modified when" visible="false" columntype="datetime" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="true" publicfield="false" spellcheck="true" guid="6a767926-a0b7-4e3c-a1b7-8c0f9069dac8" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;labelcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="ItemOrder" fieldcaption="Order" visible="false" columntype="integer" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="true" publicfield="false" spellcheck="true" guid="7b2b639c-fe01-441a-a6d3-d8722de18404" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;labelcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="ItemGUID" fieldcaption="GUID" visible="false" columntype="guid" fieldtype="CustomUserControl" allowempty="false" isPK="false" system="true" publicfield="false" spellcheck="true" guid="e9f0659b-847e-48f1-842e-87368644c2d8" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;labelcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="UserID" fieldcaption="UserID" visible="true" columntype="integer" fieldtype="CustomUserControl" allowempty="false" isPK="false" system="false" publicfield="false" spellcheck="true" guid="2ce3fd16-c672-4699-95e7-c3b8b696d971" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;userselector&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="CultivoID" fieldcaption="CultivoID" visible="true" columntype="integer" fieldtype="CustomUserControl" allowempty="false" isPK="false" system="false" publicfield="false" spellcheck="true" guid="b446d294-5272-48c7-8fc7-4b9cfb69401b" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="EdadPlantacion" fieldcaption="Edad de la Plantacion" visible="true" columntype="integer" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="false" publicfield="false" spellcheck="true" guid="96345554-4cbd-4575-ad3a-4dcfae34fa23" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;FilterType&gt;0&lt;/FilterType&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="MesSiembra" fieldcaption="Mes de Siembra" visible="true" columntype="integer" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="false" publicfield="false" spellcheck="true" guid="4fc74ee0-73a1-47e3-a6f2-30d54d71ff52" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;controlname&gt;dropdownlistcontrol&lt;/controlname&gt;&lt;Options&gt;1;Enero
+2;Febrero
+3;Marzo
+4;Abril
+5;Mayo
+6;Junio
+7;Julio
+8;Agosto
+9;Septiembre
+10;Octubre
+11;Noviembre
+12;Diciembre&lt;/Options&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="Extension" fieldcaption="Extension" visible="true" columntype="double" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="false" publicfield="false" spellcheck="true" guid="364bb651-f2f9-4097-b60c-e7fd76798661" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="Latitud" fieldcaption="Latitud" visible="true" columntype="double" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="false" publicfield="false" spellcheck="true" guid="2cd0d861-8c19-4590-ad5d-7a4005f18dc3" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;/settings&gt;&lt;/field&gt;&lt;field column="Longitud" fieldcaption="Longitud" visible="true" columntype="double" fieldtype="CustomUserControl" allowempty="true" isPK="false" system="false" publicfield="false" spellcheck="true" guid="e58afc04-c7e2-4565-843c-e275dc3452d6" visibility="none" ismacro="false" hasdependingfields="false" dependsonanotherfield="false"&gt;&lt;settings&gt;&lt;Trim&gt;False&lt;/Trim&gt;&lt;AutoCompleteFirstRowSelected&gt;False&lt;/AutoCompleteFirstRowSelected&gt;&lt;AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;False&lt;/AutoCompleteShowOnlyCurrentWordInCompletionListItem&gt;&lt;FilterMode&gt;False&lt;/FilterMode&gt;&lt;AutoCompleteEnableCaching&gt;False&lt;/AutoCompleteEnableCaching&gt;&lt;controlname&gt;textboxcontrol&lt;/controlname&gt;&lt;/settings&gt;&lt;/field&gt;&lt;/form&gt;</ClassFormDefinition>
+      <ClassEditingPageUrl></ClassEditingPageUrl>
+      <ClassListPageUrl></ClassListPageUrl>
+      <ClassNodeNameSource></ClassNodeNameSource>
+      <ClassTableName>customtable_SPATS_CultivoUser</ClassTableName>
+      <ClassViewPageUrl></ClassViewPageUrl>
+      <ClassPreviewPageUrl></ClassPreviewPageUrl>
+      <ClassFormLayout></ClassFormLayout>
+      <ClassNewPageUrl></ClassNewPageUrl>
+      <ClassShowAsSystemTable>false</ClassShowAsSystemTable>
+      <ClassUsePublishFromTo>false</ClassUsePublishFromTo>
+      <ClassShowTemplateSelection>false</ClassShowTemplateSelection>
+      <ClassSKUMappings></ClassSKUMappings>
+      <ClassIsMenuItemType>false</ClassIsMenuItemType>
+      <ClassNodeAliasSource></ClassNodeAliasSource>
+      <ClassLastModified>2014-02-20T09:54:08.73-05:00</ClassLastModified>
+      <ClassGUID>1b47417f-1e68-4e7b-8bb6-c281a7ba7aca</ClassGUID>
+      <ClassCreateSKU>false</ClassCreateSKU>
+      <ClassIsProduct>false</ClassIsProduct>
+      <ClassIsCustomTable>true</ClassIsCustomTable>
+      <ClassShowColumns></ClassShowColumns>
+      <ClassLoadGeneration>0</ClassLoadGeneration>
+      <ClassSearchTitleColumn></ClassSearchTitleColumn>
+      <ClassSearchContentColumn></ClassSearchContentColumn>
+      <ClassSearchImageColumn></ClassSearchImageColumn>
+      <ClassSearchCreationDateColumn></ClassSearchCreationDateColumn>
+      <ClassSearchSettings></ClassSearchSettings>
+      <ClassSearchEnabled>true</ClassSearchEnabled>
+      <ClassSKUDefaultDepartmentName></ClassSKUDefaultDepartmentName>
+      <ClassContactOverwriteEnabled>false</ClassContactOverwriteEnabled>
+      <ClassSKUDefaultProductType>PRODUCT</ClassSKUDefaultProductType>
+    </cms_class>
+    <cms_query>
+      <QueryID>14210</QueryID>
+      <QueryName>CultivoByUser</QueryName>
+      <QueryTypeID>0</QueryTypeID>
+      <QueryText>SELECT ##COLUMNS## FROM Fn_SPATS_CultivoJoinUser(@ID,@TerritorioID)</QueryText>
+      <QueryRequiresTransaction>false</QueryRequiresTransaction>
+      <ClassID>2987</ClassID>
+      <QueryIsLocked>true</QueryIsLocked>
+      <QueryLastModified>2014-02-20T09:54:08.72-05:00</QueryLastModified>
+      <QueryGUID>5b9f57a2-30d7-47da-8ca8-9952dbce6fe8</QueryGUID>
+      <QueryLoadGeneration>0</QueryLoadGeneration>
+      <QueryIsCustom>true</QueryIsCustom>
+    </cms_query>
+    <cms_transformation>
+      <TransformationID>2674</TransformationID>
+      <TransformationName>Default</TransformationName>
+      <TransformationCode>&lt;table&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Created by:&lt;/td&gt;
+    &lt;td&gt;&lt;%# Eval("ItemCreatedBy") %&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Created when:&lt;/td&gt;
+    &lt;td&gt;&lt;%# Eval("ItemCreatedWhen") %&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Modified by:&lt;/td&gt;
+    &lt;td&gt;&lt;%# Eval("ItemModifiedBy") %&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Modified when:&lt;/td&gt;
+    &lt;td&gt;&lt;%# Eval("ItemModifiedWhen") %&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Order:&lt;/td&gt;
+    &lt;td&gt;&lt;%# Eval("ItemOrder") %&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;GUID:&lt;/td&gt;
+    &lt;td&gt;&lt;%# Eval("ItemGUID") %&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;NombreComun:&lt;/td&gt;
+    &lt;td&gt;&lt;%# Eval("NombreComun") %&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Nombre Cientifico:&lt;/td&gt;
+    &lt;td&gt;&lt;%# Eval("NombreCientifico") %&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Duracion Periodo Vegetativo (meses):&lt;/td&gt;
+    &lt;td&gt;&lt;%# Eval("DuracionPeriodoVegetativo") %&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Tipo de Cultivo:&lt;/td&gt;
+    &lt;td&gt;&lt;%# Eval("TipoCultivo") %&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+</TransformationCode>
+      <TransformationType>ascx</TransformationType>
+      <TransformationClassID>2986</TransformationClassID>
+      <TransformationCheckedOutMachineName></TransformationCheckedOutMachineName>
+      <TransformationCheckedOutFilename></TransformationCheckedOutFilename>
+      <TransformationVersionGUID>f205dac3-1107-402f-9f80-ebbc4bbd4cf0</TransformationVersionGUID>
+      <TransformationGUID>a0d2d207-7659-40a7-bb43-771d6860ee23</TransformationGUID>
+      <TransformationLastModified>2014-02-11T00:00:32.177-05:00</TransformationLastModified>
+      <TransformationIsHierarchical>false</TransformationIsHierarchical>
+      <TransformationHierarchicalXML></TransformationHierarchicalXML>
+      <TransformationCSS></TransformationCSS>
+    </cms_transformation>
+    <cms_transformation>
+      <TransformationID>2675</TransformationID>
+      <TransformationName>Preview</TransformationName>
+      <TransformationCode>&lt;table&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Created by:&lt;/td&gt;
+    &lt;td&gt;&lt;%# Eval("ItemCreatedBy") %&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Created when:&lt;/td&gt;
+    &lt;td&gt;&lt;%# Eval("ItemCreatedWhen") %&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Modified by:&lt;/td&gt;
+    &lt;td&gt;&lt;%# Eval("ItemModifiedBy") %&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Modified when:&lt;/td&gt;
+    &lt;td&gt;&lt;%# Eval("ItemModifiedWhen") %&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Order:&lt;/td&gt;
+    &lt;td&gt;&lt;%# Eval("ItemOrder") %&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;GUID:&lt;/td&gt;
+    &lt;td&gt;&lt;%# Eval("ItemGUID") %&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;NombreComun:&lt;/td&gt;
+    &lt;td&gt;&lt;%# Eval("NombreComun") %&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Nombre Cientifico:&lt;/td&gt;
+    &lt;td&gt;&lt;%# Eval("NombreCientifico") %&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Duracion Periodo Vegetativo (meses):&lt;/td&gt;
+    &lt;td&gt;&lt;%# Eval("DuracionPeriodoVegetativo") %&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Tipo de Cultivo:&lt;/td&gt;
+    &lt;td&gt;&lt;%# Eval("TipoCultivo") %&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+</TransformationCode>
+      <TransformationType>ascx</TransformationType>
+      <TransformationClassID>2986</TransformationClassID>
+      <TransformationCheckedOutMachineName></TransformationCheckedOutMachineName>
+      <TransformationCheckedOutFilename></TransformationCheckedOutFilename>
+      <TransformationVersionGUID>0ec257e0-6877-47b3-8d03-61d015b4053d</TransformationVersionGUID>
+      <TransformationGUID>5f68b6e3-1a52-4ca8-89fc-b2facccf833a</TransformationGUID>
+      <TransformationLastModified>2014-02-11T00:00:32.273-05:00</TransformationLastModified>
+      <TransformationIsHierarchical>false</TransformationIsHierarchical>
+      <TransformationHierarchicalXML></TransformationHierarchicalXML>
+      <TransformationCSS></TransformationCSS>
+    </cms_transformation>
+    <cms_permission>
+      <PermissionID>7900</PermissionID>
+      <PermissionDisplayName>{$permissionnames.create$}</PermissionDisplayName>
+      <PermissionName>Create</PermissionName>
+      <ClassID>2986</ClassID>
+      <PermissionGUID>ddbd5d7b-a472-442a-92d5-74d06cb24416</PermissionGUID>
+      <PermissionLastModified>2014-02-10T23:48:11.337-05:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.customtable.create$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>3</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>7901</PermissionID>
+      <PermissionDisplayName>{$general.delete$}</PermissionDisplayName>
+      <PermissionName>Delete</PermissionName>
+      <ClassID>2986</ClassID>
+      <PermissionGUID>0867f0c1-faca-4d76-8719-62af168182fe</PermissionGUID>
+      <PermissionLastModified>2014-02-10T23:48:11.343-05:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.customtable.delete$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>4</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>7899</PermissionID>
+      <PermissionDisplayName>{$permissionnames.modify$}</PermissionDisplayName>
+      <PermissionName>Modify</PermissionName>
+      <ClassID>2986</ClassID>
+      <PermissionGUID>3065055b-81db-4938-9165-092b25c4f6c1</PermissionGUID>
+      <PermissionLastModified>2014-02-10T23:48:11.313-05:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.customtable.modify$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>2</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>7898</PermissionID>
+      <PermissionDisplayName>{$permissionnames.read$}</PermissionDisplayName>
+      <PermissionName>Read</PermissionName>
+      <ClassID>2986</ClassID>
+      <PermissionGUID>48ac33aa-2441-4b24-b544-fbc4274f10ac</PermissionGUID>
+      <PermissionLastModified>2014-02-10T23:48:11.213-05:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.customtable.read$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>1</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>7904</PermissionID>
+      <PermissionDisplayName>{$permissionnames.create$}</PermissionDisplayName>
+      <PermissionName>Create</PermissionName>
+      <ClassID>2987</ClassID>
+      <PermissionGUID>8360d797-75cc-4e33-96da-05539d858f59</PermissionGUID>
+      <PermissionLastModified>2014-02-11T00:06:49.967-05:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.customtable.create$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>3</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>7905</PermissionID>
+      <PermissionDisplayName>{$general.delete$}</PermissionDisplayName>
+      <PermissionName>Delete</PermissionName>
+      <ClassID>2987</ClassID>
+      <PermissionGUID>b492f2c6-48f4-44c9-85b6-62967b2f6180</PermissionGUID>
+      <PermissionLastModified>2014-02-11T00:06:49.973-05:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.customtable.delete$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>4</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>7903</PermissionID>
+      <PermissionDisplayName>{$permissionnames.modify$}</PermissionDisplayName>
+      <PermissionName>Modify</PermissionName>
+      <ClassID>2987</ClassID>
+      <PermissionGUID>e3da6748-01f8-4445-b204-f5eaae0c9113</PermissionGUID>
+      <PermissionLastModified>2014-02-11T00:06:49.963-05:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.customtable.modify$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>2</PermissionOrder>
+    </cms_permission>
+    <cms_permission>
+      <PermissionID>7902</PermissionID>
+      <PermissionDisplayName>{$permissionnames.read$}</PermissionDisplayName>
+      <PermissionName>Read</PermissionName>
+      <ClassID>2987</ClassID>
+      <PermissionGUID>c50fb17a-7c88-4eb2-b166-811750c34163</PermissionGUID>
+      <PermissionLastModified>2014-02-11T00:06:49.947-05:00</PermissionLastModified>
+      <PermissionDescription>{$permissiondescription.customtable.read$}</PermissionDescription>
+      <PermissionDisplayInMatrix>true</PermissionDisplayInMatrix>
+      <PermissionOrder>1</PermissionOrder>
+    </cms_permission>
+  </NewDataSet>
+</cms_customtable>

@@ -60,8 +60,10 @@ public partial class CMSWebParts_SPATS_SMSNotificacionSender : CMSAbstractWebPar
         Notificaciones = ConnectionHelper.ExecuteQuery("customtable.SPATS_Notificacion_SMS.GetSMSNotificacionesWhere", parameters);
 
         this.GrdNotificaciones.DataSource = Notificaciones;
+
         this.DataBind();
-        
+
+        this.DataBindChildren();
 
     }
 

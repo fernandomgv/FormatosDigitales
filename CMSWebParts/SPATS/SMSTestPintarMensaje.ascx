@@ -3,3 +3,6 @@
 <asp:Button ID="BtnIngresar" runat="server" CssClass="PnlBtn" 
     onclick="Button1_Click" Text="Ingresar" />
 <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+
+
+
